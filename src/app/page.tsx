@@ -30,7 +30,7 @@ export default async function Home() {
           <a
             key={post.id}
             href={post.link}
-            className="block border border-gray-300 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 dark:border-neutral-700"
+            className="block border border-gray-300 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white"
             target="_blank"
             rel="noopener noreferrer"
           >
@@ -45,10 +45,10 @@ export default async function Home() {
               />
             )}
             <div className="p-6">
-              <h2 className="text-xl font-semibold mb-2">
+              <h2 className="text-xl font-semibold mb-2 text-gray-900">
               {post.title.rendered.replace(/&#8211;/g, '–').replace(/&/g, '&').replace(/&nbsp;/g, ' ').replace(/&#8217;/g, "'").replace(/"/g, '"')}
             </h2>
-            <p className="text-sm text-gray-700 dark:text-gray-300">
+            <p className="text-sm text-gray-700">
               {post.excerpt.rendered.replace(/<[^>]*>/g, '').replace(/&#8211;/g, '–').replace(/&/g, '&').replace(/&hellip;/g, '...').replace(/&nbsp;/g, ' ').replace(/&#8217;/g, "'").replace(/"/g, '"')}
             </p>
             </div>
