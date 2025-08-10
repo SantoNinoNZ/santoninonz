@@ -3,6 +3,7 @@ import Image from "next/image";
 interface Post {
   id: number;
   link: string;
+  slug: string; // Added slug property
   title: {
     rendered: string;
   };
@@ -56,10 +57,8 @@ export default async function Home() {
         {posts.map((post: Post) => (
           <a
             key={post.id}
-            href={post.link}
+            href={`/posts/${post.slug}`}
             className="block border border-gray-300 rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white"
-            target="_blank"
-            rel="noopener noreferrer"
           >
             {post.imageUrl && (
               <Image
