@@ -5,8 +5,8 @@ import "./globals.css";
 const inter = Inter({ subsets: ["latin"] });
 
 export const metadata: Metadata = {
-  title: "Santonino NZ",
-  description: "Official website for Santonino NZ - Keeping the Faith",
+  title: "Santo Niño NZ",
+  description: "Official website for Santo Nin NZ - Keeping the Faith",
 };
 
 export default function RootLayout({
@@ -20,7 +20,7 @@ export default function RootLayout({
         <div className="flex flex-col min-h-screen">
           <header className="bg-red-700 text-white p-4 shadow-md">
             <nav className="container mx-auto flex justify-between items-center">
-              <h1 className="text-2xl font-bold text-yellow-400">Santonino NZ</h1>
+              <h1 className="text-2xl font-bold text-yellow-400">Santo Niño NZ</h1>
               <ul className="flex space-x-4">
                 <li><a href="#" className="hover:text-yellow-400">Home</a></li>
                 <li><a href="#" className="hover:text-yellow-400">About Us</a></li>
