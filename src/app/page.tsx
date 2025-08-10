@@ -1,14 +1,41 @@
 import Image from "next/image";
 
-async function getPosts() {
+interface Post {
+  id: number;
+  link: string;
+  title: {
+    rendered: string;
+  };
+  content: {
+    rendered: string;
+  };
+  excerpt: {
+    rendered: string;
+  };
+  _embedded?: {
+    'wp:featuredmedia'?: Array<{
+      media_details?: {
+        sizes?: {
+          medium?: {
+            source_url: string;
+          };
+        };
+      };
+      source_url?: string;
+    }>;
+  };
+  imageUrl?: string | null;
+}
+
+async function getPosts(): Promise<Post[]> {
   const postsRes = await fetch('https://santonino-nz.org/wp-json/wp/v2/posts?_embed');
   if (!postsRes.ok) {
     throw new Error('Failed to fetch posts');
   }
-  const posts = await postsRes.json();
+  const posts: Post[] = await postsRes.json();
 
   // Map over posts to include featured image URL if available
-  const postsWithImages = posts.map((post: any) => {
+  const postsWithImages = posts.map((post: Post) => {
     const imageUrlMatch = post.content.rendered.match(/<img[^>]+src="([^">]+)"/);
     const imageUrl = imageUrlMatch ? imageUrlMatch[1].replace(/&#038;/g, '&') : null;
     return {
@@ -26,7 +53,7 @@ export default async function Home() {
   return (
     <main className="flex min-h-screen flex-col items-center p-8">
       <div className="w-full max-w-4xl grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-        {posts.map((post: any) => (
+        {posts.map((post: Post) => (
           <a
             key={post.id}
             href={post.link}
