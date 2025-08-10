@@ -34,7 +34,7 @@ export default function RootLayout({
             {children}
           </main>
           <footer className="bg-[#861D1D] text-[#E8E2D1] p-4 text-center shadow-md mt-8">
-            <p>&copy; {new Date().getFullYear()} Santonino NZ. All rights reserved.</p>
+            <p>&copy; {new Date().getFullYear()} Santo Niño NZ. All rights reserved.</p>
           </footer>
         </div>
       </body>
