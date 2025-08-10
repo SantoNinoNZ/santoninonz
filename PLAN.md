@@ -1,4 +1,4 @@
-# Project Modernization Plan: Santonino NZ Website
+# Project Modernization Plan: Santonino NZ
 
 ## 1. Introduction
 This document outlines the plan to modernize the Santonino NZ website, transitioning from its current WordPress platform to a modern, scalable, and maintainable stack. The goal is to create a visually appealing, mobile-friendly, and feature-rich blog site for the Catholic organization, incorporating modern UI/UX principles and AI-assisted content generation.
@@ -10,6 +10,8 @@ Based on the requirements, the following technology stack is proposed:
 *   **Hosting**: Vercel for seamless deployment and optimal performance, leveraging Next.js's capabilities.
 *   **Styling**: A modern UI library (e.g., Tailwind CSS, Chakra UI, or Material UI) for themeable components, with a focus on red and gold color schemes.
 *   **Content Migration**: Custom scripts to fetch data from the existing WordPress site (via WordPress REST API or direct MySQL DB access if possible).
+
+This project repository is named `santoninonz`.
 
 ## 3. Core Features & Design Principles
 
