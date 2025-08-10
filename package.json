@@ -1,7 +1,7 @@
 {
   "name": "santoninonz-web-app",
   "version": "0.1.0",
-  "homepage": "https://SantoNinoNZ.github.io/santoninonz/",
+  "homepage": "https://SantoNinoNZ.github.io/",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
