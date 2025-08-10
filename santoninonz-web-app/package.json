@@ -1,12 +1,14 @@
 {
   "name": "santoninonz-web-app",
   "version": "0.1.0",
+  "homepage": "https://SantoNinoNZ.github.io/santoninonz/",
   "private": true,
   "scripts": {
     "dev": "next dev --turbopack",
     "build": "next build",
     "start": "next start",
-    "lint": "next lint"
+    "lint": "next lint",
+    "deploy": "next build && gh-pages --nojekyll -d out"
   },
   "dependencies": {
     "react": "19.1.0",
@@ -22,6 +24,7 @@
     "tailwindcss": "^4",
     "eslint": "^9",
     "eslint-config-next": "15.4.6",
-    "@eslint/eslintrc": "^3"
+    "@eslint/eslintrc": "^3",
+    "gh-pages": "^6.1.1"
   }
 }
