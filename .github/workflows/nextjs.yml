@@ -74,6 +74,8 @@ jobs:
           # Remove the original closing brace and export default
           sed -i '$d' next.config.ts # Remove last line (export default nextConfig;)
           sed -i '$d' next.config.ts # Remove second to last line (};)
+      - name: Debug next.config.ts
+        run: cat next.config.ts
       - name: Restore cache
         uses: actions/cache@v4
         with:
