@@ -29,6 +29,7 @@ async function getPostContent(slug: string): Promise<Post> {
   interface FrontMatter {
     title: string;
     date: string;
+    imageUrl?: string; // Add imageUrl to FrontMatter interface
     [key: string]: unknown;
   }
 
@@ -47,15 +48,19 @@ async function getPostContent(slug: string): Promise<Post> {
   const processedContent = await remark().use(html).process(markdownContent);
   const contentHtml = processedContent.toString();
 
-  const imageUrlMatch = contentHtml.match(/<img[^>]+src="([^">]+)"/);
-  const imageUrl = imageUrlMatch ? imageUrlMatch[1] : null;
+  let imageUrl = (frontMatter.imageUrl as string) || undefined;
+
+  // Ensure local image URLs are correctly prefixed for static assets
+  if (imageUrl && !imageUrl.startsWith('http') && !imageUrl.startsWith('/')) {
+    imageUrl = `/posts/${imageUrl}`;
+  }
 
   return {
     slug,
     title: frontMatter.title || slug,
     date: frontMatter.date || '',
     excerpt: rawExcerpt,
-    imageUrl: imageUrl || undefined,
+    imageUrl: imageUrl,
     contentHtml,
   };
 }
@@ -88,13 +93,10 @@ export default async function Home() {
       {featuredPost && (
         <section className="relative w-full h-[500px] overflow-hidden mb-12">
           {featuredPost.imageUrl && (
-            <Image
+            <img
               src={featuredPost.imageUrl}
               alt={decodeHtmlEntities(featuredPost.title)}
-              fill
-              style={{ objectFit: 'cover' }}
-              className="z-0"
-              priority={true}
+              className="z-0 w-full h-full object-cover absolute"
             />
           )}
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-center p-8 z-10">

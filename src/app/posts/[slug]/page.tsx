@@ -25,7 +25,8 @@ async function getPostContent(slug: string): Promise<Post | null> {
     interface FrontMatter {
       title: string;
       date: string;
-      [key: string]: unknown; // Use unknown instead of any
+      imageUrl?: string; // Add imageUrl to FrontMatter interface
+      [key: string]: unknown;
     }
 
     let frontMatter: FrontMatter = { title: '', date: '' };
@@ -39,9 +40,12 @@ async function getPostContent(slug: string): Promise<Post | null> {
     const processedContent = await remark().use(html).process(markdownContent);
     const contentHtml = processedContent.toString();
 
-    // Extract first image as imageUrl
-    const imageUrlMatch = contentHtml.match(/<img[^>]+src="([^">]+)"/);
-    const imageUrl = imageUrlMatch ? imageUrlMatch[1] : null;
+    let imageUrl = (frontMatter.imageUrl as string) || undefined;
+
+    // Ensure local image URLs are correctly prefixed for static assets
+    if (imageUrl && !imageUrl.startsWith('http') && !imageUrl.startsWith('/')) {
+      imageUrl = `/posts/${imageUrl}`;
+    }
 
     return {
       slug,
@@ -99,12 +103,10 @@ export default async function PostPage({ params }: { params: { slug: string } })
       <p className="text-gray-600 text-sm mb-6 font-roboto">Published on: {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
       {post.imageUrl && (
         <div className="relative w-full h-64 md:h-96 overflow-hidden rounded-lg shadow-md mb-8">
-          <Image
+          <img
             src={post.imageUrl}
             alt={post.title}
-            fill
-            style={{ objectFit: 'cover' }}
-            priority={true}
+            className="w-full h-full object-cover"
           />
         </div>
       )}
