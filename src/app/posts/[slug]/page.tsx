@@ -4,7 +4,8 @@ import path from 'path';
 import { remark } from 'remark';
 import html from 'remark-html';
 import yaml from 'js-yaml';
-import Image from 'next/image'; // Import Image component
+import Image from 'next/image';
+import Link from 'next/link';
 
 interface Post {
   slug: string;
@@ -21,13 +22,17 @@ async function getPostContent(slug: string): Promise<Post | null> {
     const fileContent = await fs.readFile(filePath, 'utf8');
 
     const frontMatterMatch = fileContent.match(/^---\n([\s\S]*?)\n---/);
-    // eslint-disable-next-line @typescript-eslint/no-explicit-any
-    let frontMatter: Record<string, any> = {};
+    interface FrontMatter {
+      title: string;
+      date: string;
+      [key: string]: unknown; // Use unknown instead of any
+    }
+
+    let frontMatter: FrontMatter = { title: '', date: '' };
     let markdownContent = fileContent;
 
     if (frontMatterMatch && frontMatterMatch[1]) {
-      // eslint-disable-next-line @typescript-eslint/no-explicit-any
-      frontMatter = yaml.load(frontMatterMatch[1]) as Record<string, any>;
+      frontMatter = yaml.load(frontMatterMatch[1]) as FrontMatter;
       markdownContent = fileContent.substring(frontMatterMatch[0].length);
     }
 
@@ -68,7 +73,6 @@ export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
 }
 
 export default async function PostPage({ params }: { params: { slug: string } }) {
-  // Explicitly cast params.slug to string to satisfy TypeScript if needed
   const slug = params.slug as string;
   const post = await getPostContent(slug);
 
@@ -76,30 +80,52 @@ export default async function PostPage({ params }: { params: { slug: string } })
     notFound();
   }
 
-  // Removed decodeHtmlEntities function and its usage for title and alt text
-  // Assuming remark-html handles most entities, or titles are clean.
-  // If entities still appear, a different decoding strategy will be needed.
+  const allSlugs = await getAllPostSlugs();
+  const sortedSlugs = allSlugs.sort((a, b) => {
+    // Assuming slugs are sortable by date or some inherent order for next/prev
+    // For now, a simple string comparison or index-based sorting
+    return a.slug.localeCompare(b.slug);
+  });
+
+  const currentIndex = sortedSlugs.findIndex(s => s.slug === slug);
+  const previousPost = currentIndex > 0 ? sortedSlugs[currentIndex - 1] : null;
+  const nextPost = currentIndex < sortedSlugs.length - 1 ? sortedSlugs[currentIndex + 1] : null;
 
   return (
-    <div className="container mx-auto p-8">
-      <h1 className="text-4xl font-bold mb-4 text-[#2B1E1A]">
+    <div className="container mx-auto px-4 py-8 max-w-screen-md">
+      <h1 className="text-4xl md:text-5xl font-lora font-bold mb-4 text-[#2B1E1A] leading-tight">
         {post.title}
       </h1>
-      <p className="text-gray-600 mb-6">Published on: {new Date(post.date).toLocaleDateString()}</p>
+      <p className="text-gray-600 text-sm mb-6 font-roboto">Published on: {new Date(post.date).toLocaleDateString()}</p>
       {post.imageUrl && (
-        <Image
-          src={post.imageUrl}
-          alt={post.title}
-          width={900} // Adjust based on your design needs
-          height={600} // Adjust based on your design needs
-          className="w-full h-auto max-h-96 object-cover mb-8 rounded-lg shadow-md"
-          priority={true}
-        />
+        <div className="relative w-full h-64 md:h-96 overflow-hidden rounded-lg shadow-md mb-8">
+          <Image
+            src={post.imageUrl}
+            alt={post.title}
+            fill
+            style={{ objectFit: 'cover' }}
+            priority={true}
+          />
+        </div>
       )}
       <div
-        className="prose lg:prose-xl text-[#2B1E1A]"
+        className="prose prose-lg max-w-none text-[#2B1E1A] font-roboto"
         dangerouslySetInnerHTML={{ __html: post.contentHtml }}
       />
+
+      {/* Next/Previous Post Navigation */}
+      <nav className="flex justify-between mt-12 pt-8 border-t border-gray-200">
+        {previousPost && (
+          <Link href={`/posts/${previousPost.slug}`} className="text-[#861D1D] hover:text-[#F4B34C] transition-colors duration-300 font-semibold">
+            &larr; Previous Post
+          </Link>
+        )}
+        {nextPost && (
+          <Link href={`/posts/${nextPost.slug}`} className="text-[#861D1D] hover:text-[#F4B34C] transition-colors duration-300 font-semibold ml-auto">
+            Next Post &rarr;
+          </Link>
+        )}
+      </nav>
     </div>
   );
 }
