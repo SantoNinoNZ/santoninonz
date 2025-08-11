@@ -1,8 +1,11 @@
-"use client";
-
 import Image from "next/image";
 import Link from "next/link";
-import { useState, useEffect, useRef, useCallback } from "react";
+import { promises as fs } from 'fs';
+import path from 'path';
+import { remark } from 'remark';
+import html from 'remark-html';
+import yaml from 'js-yaml';
+import PostGrid from "@/components/PostGrid";
 
 interface Post {
   slug: string;
@@ -10,6 +13,51 @@ interface Post {
   date: string;
   excerpt?: string;
   imageUrl?: string;
+  contentHtml?: string;
+}
+
+async function getPostsIndex(): Promise<Post[]> {
+  const indexPath = path.join(process.cwd(), 'public', 'posts-index.json');
+  const fileContent = await fs.readFile(indexPath, 'utf8');
+  return JSON.parse(fileContent);
+}
+
+async function getPostContent(slug: string): Promise<Post> {
+  const filePath = path.join(process.cwd(), 'public', 'posts', `${slug}.md`);
+  const fileContent = await fs.readFile(filePath, 'utf8');
+
+  interface FrontMatter {
+    title: string;
+    date: string;
+    [key: string]: unknown;
+  }
+
+  const frontMatterMatch = fileContent.match(/^---\n([\s\S]*?)\n---/);
+  let frontMatter: FrontMatter = { title: '', date: '' };
+  let markdownContent = fileContent;
+
+  if (frontMatterMatch && frontMatterMatch[1]) {
+    frontMatter = yaml.load(frontMatterMatch[1]) as FrontMatter;
+    markdownContent = fileContent.substring(frontMatterMatch[0].length);
+  }
+
+  const firstParagraphMatch = markdownContent.match(/^(.*?)\n\n/s);
+  const rawExcerpt = firstParagraphMatch ? firstParagraphMatch[1].trim() : markdownContent.split('\n')[0].trim();
+
+  const processedContent = await remark().use(html).process(markdownContent);
+  const contentHtml = processedContent.toString();
+
+  const imageUrlMatch = contentHtml.match(/<img[^>]+src="([^">]+)"/);
+  const imageUrl = imageUrlMatch ? imageUrlMatch[1] : null;
+
+  return {
+    slug,
+    title: frontMatter.title || slug,
+    date: frontMatter.date || '',
+    excerpt: rawExcerpt,
+    imageUrl: imageUrl || undefined,
+    contentHtml,
+  };
 }
 
 function decodeHtmlEntities(htmlString: string) {
@@ -21,83 +69,18 @@ function decodeHtmlEntities(htmlString: string) {
     .replace(/&hellip;/g, '...');
 }
 
-const POSTS_PER_PAGE = 12; // Define how many posts to load per page
+export default async function Home() {
+  const allPostsData = await getPostsIndex();
 
-export default function Home() {
-  const [posts, setPosts] = useState<Post[]>([]);
-  const [page, setPage] = useState(1);
-  const [loading, setLoading] = useState(false);
-  const [hasMore, setHasMore] = useState(true);
-  const loader = useRef(null);
+  // Sort all posts by date in descending order
+  const sortedAllPosts = allPostsData.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-  const fetchPosts = useCallback(async (pageNumber: number) => {
-    setLoading(true);
-    try {
-      const response = await fetch(`/api/posts?page=${pageNumber}&limit=${POSTS_PER_PAGE}`);
-      if (!response.ok) {
-        throw new Error(`HTTP error! status: ${response.status}`);
-      }
-      const data = await response.json();
-      
-      // Assuming the first post is always the featured one and should not be duplicated in the grid
-      // This logic needs to be refined if the API doesn't guarantee the first post is always the featured one.
-      // For now, we'll filter out the first post if it's already in the `posts` state (as the featured post).
-      const newPosts = data.posts.filter((newPost: Post) => !posts.some(existingPost => existingPost.slug === newPost.slug));
-      
-      setPosts((prevPosts) => {
-        // If it's the first page, set the posts directly. Otherwise, append.
-        if (pageNumber === 1) {
-          return data.posts;
-        }
-        return [...prevPosts, ...newPosts];
-      });
-      setHasMore(data.hasMore);
-    } catch (error) {
-      console.error("Failed to fetch posts:", error);
-      setHasMore(false); // Stop trying to load more if there's an error
-    } finally {
-      setLoading(false);
-    }
-  }, [posts]); // Dependency on `posts` to filter out duplicates
+  // Fetch full content for all posts at build time
+  const postsWithContentPromises = sortedAllPosts.map(post => getPostContent(post.slug));
+  const allPosts = await Promise.all(postsWithContentPromises);
 
-  useEffect(() => {
-    fetchPosts(1); // Fetch initial posts on component mount
-  }, [fetchPosts]);
-
-  useEffect(() => {
-    const observer = new IntersectionObserver(
-      (entries) => {
-        const target = entries[0];
-        if (target.isIntersecting && hasMore && !loading) {
-          setPage((prevPage) => prevPage + 1);
-        }
-      },
-      {
-        root: null,
-        rootMargin: "20px",
-        threshold: 1.0,
-      }
-    );
-
-    if (loader.current) {
-      observer.observe(loader.current);
-    }
-
-    return () => {
-      if (loader.current) {
-        observer.unobserve(loader.current);
-      }
-    };
-  }, [hasMore, loading]);
-
-  useEffect(() => {
-    if (page > 1) {
-      fetchPosts(page);
-    }
-  }, [page, fetchPosts]);
-
-  const featuredPost = posts.length > 0 ? posts[0] : null;
-  const otherPosts = posts.slice(1);
+  const featuredPost = allPosts.length > 0 ? allPosts[0] : null;
+  const otherPosts = allPosts.slice(1);
 
   return (
     <main className="flex min-h-screen flex-col items-center">
@@ -133,42 +116,7 @@ export default function Home() {
       {/* Other Articles Grid */}
       <section className="w-full max-w-screen-xl px-4">
         <h2 className="text-4xl font-lora font-bold text-[#2B1E1A] mb-8 text-center">Latest Articles</h2>
-        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
-          {otherPosts.map((post: Post) => (
-            <Link
-              key={post.slug}
-              href={`/posts/${post.slug}`}
-              className="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white group"
-            >
-              {post.imageUrl && (
-                <div className="relative w-full h-48">
-                  <Image
-                    src={post.imageUrl}
-                    alt={decodeHtmlEntities(post.title)}
-                    fill
-                    style={{ objectFit: 'cover' }}
-                    className="transition-transform duration-300 group-hover:scale-105"
-                    priority={true}
-                  />
-                </div>
-              )}
-              <div className="p-6">
-                <h3 className="text-xl font-lora font-semibold mb-2 text-gray-900 group-hover:text-[#861D1D] transition-colors duration-300">
-                  {decodeHtmlEntities(post.title)}
-                </h3>
-                <p className="text-sm font-roboto text-gray-700 mb-4">
-                  {decodeHtmlEntities(post.excerpt || '')}
-                </p>
-                <p className="text-xs font-roboto text-gray-500">
-                  {new Date(post.date).toLocaleDateString()}
-                </p>
-              </div>
-            </Link>
-          ))}
-        </div>
-        {loading && <p className="text-center text-gray-600 mt-8">Loading more posts...</p>}
-        {!hasMore && !loading && posts.length > 0 && <p className="text-center text-gray-600 mt-8">You've reached the end of the posts!</p>}
-        <div ref={loader} className="h-1"></div> {/* Invisible element to trigger IntersectionObserver */}
+        <PostGrid initialPosts={otherPosts} />
       </section>
     </main>
   );

@@ -96,7 +96,7 @@ export default async function PostPage({ params }: { params: { slug: string } })
       <h1 className="text-4xl md:text-5xl font-lora font-bold mb-4 text-[#2B1E1A] leading-tight">
         {post.title}
       </h1>
-      <p className="text-gray-600 text-sm mb-6 font-roboto">Published on: {new Date(post.date).toLocaleDateString()}</p>
+      <p className="text-gray-600 text-sm mb-6 font-roboto">Published on: {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
       {post.imageUrl && (
         <div className="relative w-full h-64 md:h-96 overflow-hidden rounded-lg shadow-md mb-8">
           <Image
