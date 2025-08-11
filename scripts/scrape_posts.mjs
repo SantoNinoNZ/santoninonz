@@ -69,9 +69,7 @@ async function downloadFile(url, filepath) {
 
 async function scrapePosts() {
   const posts = await getAllPosts();
-  const __filename = fileURLToPath(import.meta.url);
-  const __dirname = path.dirname(__filename);
-  const outputDir = path.join(__dirname, 'scraped_posts');
+  const outputDir = path.join(process.cwd(), 'public', 'posts'); // Directly write to public/posts
   const assetsDir = path.join(outputDir, 'assets'); // New directory for other assets like PDFs
   const imagesDir = path.join(assetsDir, 'images');
 
@@ -96,37 +94,81 @@ async function scrapePosts() {
     const formattedDate = date.toLocaleDateString();
 
     let imageUrl = null;
+    let localImageUrl = null; // To store the local path for the front matter
     const imageUrlMatch = contentHtml.match(/<img[^>]+src="([^">]+)"/);
     if (imageUrlMatch) {
-      imageUrl = imageUrlMatch[1].replace(/&#038;/g, '&');
+      imageUrl = imageUrlMatch[1].replace(/&#038;/g, '&').replace(/\\/g, '/'); // Normalize original URL
+      const imageFileName = path.basename(new URL(imageUrl).pathname);
+      localImageUrl = path.posix.join('assets', 'images', imageFileName); // Relative path for front matter
     } else if (post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'].length > 0) {
       const featuredMedia = post._embedded['wp:featuredmedia'][0];
-      imageUrl = featuredMedia.media_details?.sizes?.medium?.source_url || featuredMedia.source_url || null;
+      imageUrl = (featuredMedia.media_details?.sizes?.medium?.source_url || featuredMedia.source_url || null)?.replace(/\\/g, '/'); // Normalize original URL
+      if (imageUrl) {
+        const imageFileName = path.basename(new URL(imageUrl).pathname);
+        localImageUrl = path.posix.join('assets', 'images', imageFileName); // Relative path for front matter
+      }
     }
 
     let processedContentHtml = contentHtml;
+
+    // Function to normalize URL and extract filename
+    const normalizeUrlAndGetFilename = (url) => {
+      try {
+        const urlObj = new URL(url);
+        // Remove query parameters and hash for cleaner filename extraction
+        urlObj.search = '';
+        urlObj.hash = '';
+        // Remove /wp-content/uploads/YYYY/MM/ from path if present
+        let pathname = urlObj.pathname.replace(/\/wp-content\/uploads\/\d{4}\/\d{2}\//, '/');
+        // Decode URI components to handle special characters in filenames
+        pathname = decodeURIComponent(pathname);
+        return path.basename(pathname);
+      } catch (e) {
+        console.warn(`Could not parse URL: ${url}. Error: ${e.message}`);
+        return null;
+      }
+    };
+
+    // Helper to create a robust regex for replacement
+    const createReplacementRegex = (url) => {
+      // Escape special regex characters and handle potential variations like &
+      // Also handle the i0.wp.com subdomain for WordPress.com image optimization
+      const escapedUrl = url
+        .replace(/&#038;/g, '&')
+        .replace(/https:\/\/i\d+\.wp\.com\//g, 'https://santonino-nz.org/') // Replace i0.wp.com with original domain
+        .replace(/[.*+?^${}()|[\]\\]/g, '\\$&');
+      // Consider variations with and without query parameters or hashes in the original HTML
+      return new RegExp(`${escapedUrl}(?:\\?|#|$)`, 'g');
+    };
+
     const imageMatches = contentHtml.matchAll(/<img[^>]+src="([^">]+)"/g);
     for (const match of imageMatches) {
-      const originalImageUrl = match[1].replace(/&#038;/g, '&');
-      const imageFileName = path.basename(new URL(originalImageUrl).pathname);
-      const localImagePath = path.join(imagesDir, imageFileName);
-      const relativeImagePath = path.join('assets', 'images', imageFileName);
+      const originalImageUrl = match[1].replace(/&#038;/g, '&'); // Decode & before processing
+      const imageFileName = normalizeUrlAndGetFilename(originalImageUrl);
 
-      if (await downloadFile(originalImageUrl, localImagePath)) {
-        processedContentHtml = processedContentHtml.replace(originalImageUrl, relativeImagePath);
+      if (imageFileName) {
+        const localImagePath = path.join(imagesDir, imageFileName);
+        const relativeImagePath = path.posix.join('/posts', 'assets', 'images', imageFileName);
+
+        if (await downloadFile(originalImageUrl, localImagePath)) {
+          processedContentHtml = processedContentHtml.replace(createReplacementRegex(originalImageUrl), relativeImagePath);
+        }
       }
     }
 
     // Handle PDF links
     const pdfMatches = contentHtml.matchAll(/<a[^>]+href="([^">]+\.pdf)"[^>]*>/g);
     for (const match of pdfMatches) {
-      const originalPdfUrl = match[1].replace(/&#038;/g, '&');
-      const pdfFileName = path.basename(new URL(originalPdfUrl).pathname);
-      const localPdfPath = path.join(assetsDir, pdfFileName);
-      const relativePdfPath = path.join('assets', pdfFileName);
+      const originalPdfUrl = match[1].replace(/&#038;/g, '&'); // Decode & before processing
+      const pdfFileName = normalizeUrlAndGetFilename(originalPdfUrl);
 
-      if (await downloadFile(originalPdfUrl, localPdfPath)) {
-        processedContentHtml = processedContentHtml.replace(originalPdfUrl, relativePdfPath);
+      if (pdfFileName) {
+        const localPdfPath = path.join(assetsDir, pdfFileName);
+        const relativePdfPath = path.posix.join('/posts', 'assets', pdfFileName);
+
+        if (await downloadFile(originalPdfUrl, localPdfPath)) {
+          processedContentHtml = processedContentHtml.replace(createReplacementRegex(originalPdfUrl), relativePdfPath);
+        }
       }
     }
 
@@ -136,7 +178,7 @@ async function scrapePosts() {
 title: "${title}"
 date: "${formattedDate}"
 slug: "${slug}"
-${imageUrl ? `imageUrl: "${imageUrl}"` : ''}
+${localImageUrl ? `imageUrl: "${localImageUrl}"` : ''}
 ---
 
 `;

@@ -1,8 +1,0 @@
----
-title: "A Dinner-Dance Fundraising Event"
-date: "24/11/2013"
-slug: "a-dinner-dance-fundraising-event"
-imageUrl: "https://i0.wp.com/santonino-nz.org/wp-content/uploads/2013/11/gift-wrap-681x1024.jpg?resize=681%2C1024"
----
-
-[![gift wrap](assets\images\gift-wrap-681x1024.jpg)](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2013/11/gift-wrap.jpg)
