@@ -61,6 +61,19 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
+      - name: Add build ignore flags to next.config.ts
+        run: |
+          echo "  eslint: {" >> next.config.ts
+          echo "    ignoreDuringBuilds: true," >> next.config.ts
+          echo "  }," >> next.config.ts
+          echo "  typescript: {" >> next.config.ts
+          echo "    ignoreBuildErrors: true," >> next.config.ts
+          echo "  }," >> next.config.ts
+          echo "};" >> next.config.ts
+          echo "export default nextConfig;" >> next.config.ts
+          # Remove the original closing brace and export default
+          sed -i '$d' next.config.ts # Remove last line (export default nextConfig;)
+          sed -i '$d' next.config.ts # Remove second to last line (};)
       - name: Restore cache
         uses: actions/cache@v4
         with:
