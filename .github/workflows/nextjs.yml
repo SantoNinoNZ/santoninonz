@@ -61,19 +61,27 @@ jobs:
           #
           # You may remove this line if you want to manage the configuration yourself.
           static_site_generator: next
-      - name: Add build ignore flags to next.config.ts
+      - name: Overwrite next.config.ts with correct configuration
         run: |
-          echo "  eslint: {" >> next.config.ts
-          echo "    ignoreDuringBuilds: true," >> next.config.ts
-          echo "  }," >> next.config.ts
-          echo "  typescript: {" >> next.config.ts
-          echo "    ignoreBuildErrors: true," >> next.config.ts
-          echo "  }," >> next.config.ts
-          echo "};" >> next.config.ts
-          echo "export default nextConfig;" >> next.config.ts
-          # Remove the original closing brace and export default
-          sed -i '$d' next.config.ts # Remove last line (export default nextConfig;)
-          sed -i '$d' next.config.ts # Remove second to last line (};)
+          cat > next.config.ts <<EOF
+          import type { NextConfig } from "next";
+
+          const nextConfig: NextConfig = {
+            output: 'export',
+            images: {
+              domains: ['santonino-nz.org'],
+              unoptimized: true,
+            },
+            eslint: {
+              ignoreDuringBuilds: true,
+            },
+            typescript: {
+              ignoreBuildErrors: true,
+            },
+          };
+
+          export default nextConfig;
+          EOF
       - name: Debug next.config.ts
         run: cat next.config.ts
       - name: Restore cache
