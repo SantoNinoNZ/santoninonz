@@ -34,7 +34,7 @@ function formatPostDate(dateString: string): string {
     if (isNaN(date.getTime())) {
       return 'N/A'; // Return 'N/A' for invalid dates
     }
-    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    return date.toLocaleString('en-NZ', { year: 'numeric', month: 'long', day: 'numeric' });
   } catch (error) {
     console.error("Error formatting date:", error);
     return 'N/A';
@@ -86,12 +86,26 @@ async function getPostContent(slug: string): Promise<Post | null> {
   }
 }
 
-async function getAllPostSlugs(): Promise<{ slug: string }[]> {
+async function getAllPostsSortedByDate(): Promise<Post[]> {
   const indexPath = path.join(process.cwd(), 'public', 'posts-index.json');
   try {
     const fileContent = await fs.readFile(indexPath, 'utf8');
     const postsIndex: { slug: string; title: string; date: string }[] = JSON.parse(fileContent);
-    return postsIndex.map(post => ({ slug: post.slug }));
+
+    // Sort posts by date in descending order (newest first)
+    const sortedPosts = postsIndex.sort((a, b) => {
+      const dateA = new Date(a.date.split('/').reverse().join('-')); // Convert dd/mm/yyyy to yyyy-mm-dd for Date object
+      const dateB = new Date(b.date.split('/').reverse().join('-'));
+      return dateB.getTime() - dateA.getTime();
+    });
+
+    return sortedPosts.map(post => ({
+      slug: post.slug,
+      title: post.title,
+      date: post.date,
+      contentHtml: '', // Not needed for navigation, but required by Post interface
+      imageUrl: undefined, // Not needed for navigation
+    }));
   } catch (error) {
     console.error('Error reading posts-index.json:', error);
     return [];
@@ -99,7 +113,8 @@ async function getAllPostSlugs(): Promise<{ slug: string }[]> {
 }
 
 export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
-  return getAllPostSlugs();
+  const allPosts = await getAllPostsSortedByDate();
+  return allPosts.map(post => ({ slug: post.slug }));
 }
 
 export default async function PostPage({ params }: { params: { slug: string } }) {
@@ -110,16 +125,10 @@ export default async function PostPage({ params }: { params: { slug: string } })
     notFound();
   }
 
-  const allSlugs = await getAllPostSlugs();
-  const sortedSlugs = allSlugs.sort((a, b) => {
-    // Assuming slugs are sortable by date or some inherent order for next/prev
-    // For now, a simple string comparison or index-based sorting
-    return a.slug.localeCompare(b.slug);
-  });
-
-  const currentIndex = sortedSlugs.findIndex(s => s.slug === slug);
-  const previousPost = currentIndex > 0 ? sortedSlugs[currentIndex - 1] : null;
-  const nextPost = currentIndex < sortedSlugs.length - 1 ? sortedSlugs[currentIndex + 1] : null;
+  const allPosts = await getAllPostsSortedByDate();
+  const currentIndex = allPosts.findIndex(p => p.slug === slug);
+  const previousPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
+  const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
 
   return (
     <main className="relative flex min-h-screen flex-col items-center pt-24"> {/* Added pt-24 for padding */}

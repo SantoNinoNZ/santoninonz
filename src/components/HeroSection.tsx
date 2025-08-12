@@ -26,7 +26,7 @@ const HeroSection: React.FC<HeroSectionProps> = ({ latestPost }) => {
           {latestPost && (
             <a href={`/posts/${latestPost.slug}`} className="block">
               <h4 className="text-xl font-bold group-hover:text-gray-300 transition-colors duration-300">{latestPost.title}</h4>
-              <p className="text-gray-200 text-sm mb-2">{new Date(latestPost.date).toLocaleDateString()}</p>
+              <p className="text-gray-200 text-sm mb-2">{new Date(latestPost.date.split('/').reverse().join('-')).toLocaleString('en-NZ', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
               <p className="text-gray-100">{latestPost.excerpt || 'Click to read more...'}</p>
               {/* Transparent overlay on hover */}
               <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
@@ -36,10 +36,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ latestPost }) => {
 
         {/* Right Column: Today's Gospel Reading and Catholic Season */}
         <div className="bg-white/10 p-6 rounded-lg shadow-lg">
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <h3 className="text-2xl font-lora font-bold mb-4">Today's Gospel Reading</h3>
           <p className="mb-4">
+            {/* eslint-disable-next-line react/no-unescaped-entities */}
             "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life." (John 3:16)
           </p>
+          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <h3 className="text-2xl font-lora font-bold mb-4">Today's Catholic Season</h3>
           <p>
             Ordinary Time
