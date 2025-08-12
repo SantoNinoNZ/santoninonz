@@ -13,6 +13,31 @@ interface Post {
   contentHtml?: string; // contentHtml is not used in the grid, but kept for consistency
 }
 
+// Helper function to safely format dates
+function formatPostDate(dateString: string): string {
+  try {
+    // Attempt to parse dd/mm/yyyy format
+    const parts = dateString.split('/');
+    let date: Date;
+    if (parts.length === 3) {
+      // Reassemble to YYYY-MM-DD for consistent parsing
+      const isoDateString = `${parts[2]}-${parts[1]}-${parts[0]}`;
+      date = new Date(isoDateString);
+    } else {
+      // Fallback for other formats or if it's already YYYY-MM-DD
+      date = new Date(dateString);
+    }
+
+    if (isNaN(date.getTime())) {
+      return 'N/A'; // Return 'N/A' for invalid dates
+    }
+    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  } catch (error) {
+    console.error("Error formatting date:", error);
+    return 'N/A';
+  }
+}
+
 function decodeHtmlEntities(htmlString: string) {
   return htmlString
     .replace(/&#8211;/g, '–')
@@ -97,7 +122,7 @@ export default function PostGrid({ initialPosts }: PostGridProps) {
               {decodeHtmlEntities(post.excerpt || '')}
             </p>
             <p className="text-xs font-roboto text-gray-500">
-              {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}
+              {formatPostDate(post.date)}
             </p>
           </div>
         </Link>

@@ -29,7 +29,7 @@ export default async function Home() {
   const otherPosts = sortedAllPosts; // All posts will be displayed in the grid below the carousel
 
   return (
-    <main className="relative flex min-h-screen flex-col items-center">
+    <main className="relative flex min-h-screen flex-col items-center pt-24"> {/* Added pt-24 for padding */}
       <Header />
       <HeroSection latestPost={latestPost} />
 

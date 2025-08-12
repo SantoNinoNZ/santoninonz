@@ -6,6 +6,7 @@ import html from 'remark-html';
 import yaml from 'js-yaml';
 import Image from 'next/image';
 import Link from 'next/link';
+import Header from "@/components/Header"; // Import the Header component
 
 interface Post {
   slug: string;
@@ -13,6 +14,31 @@ interface Post {
   date: string;
   contentHtml: string;
   imageUrl?: string;
+}
+
+// Helper function to safely format dates
+function formatPostDate(dateString: string): string {
+  try {
+    // Attempt to parse dd/mm/yyyy format
+    const parts = dateString.split('/');
+    let date: Date;
+    if (parts.length === 3) {
+      // Reassemble to YYYY-MM-DD for consistent parsing
+      const isoDateString = `${parts[2]}-${parts[1]}-${parts[0]}`;
+      date = new Date(isoDateString);
+    } else {
+      // Fallback for other formats or if it's already YYYY-MM-DD
+      date = new Date(dateString);
+    }
+
+    if (isNaN(date.getTime())) {
+      return 'N/A'; // Return 'N/A' for invalid dates
+    }
+    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+  } catch (error) {
+    console.error("Error formatting date:", error);
+    return 'N/A';
+  }
 }
 
 async function getPostContent(slug: string): Promise<Post | null> {
@@ -96,11 +122,13 @@ export default async function PostPage({ params }: { params: { slug: string } })
   const nextPost = currentIndex < sortedSlugs.length - 1 ? sortedSlugs[currentIndex + 1] : null;
 
   return (
-    <div className="container mx-auto px-4 py-8 max-w-screen-md">
-      <h1 className="text-4xl md:text-5xl font-lora font-bold mb-4 text-[#2B1E1A] leading-tight">
+    <main className="relative flex min-h-screen flex-col items-center pt-24"> {/* Added pt-24 for padding */}
+      <Header />
+      <div className="container mx-auto px-4 py-8 max-w-screen-md bg-white rounded-lg shadow-lg">
+        <h1 className="text-4xl md:text-5xl font-lora font-bold mb-4 text-[#2B1E1A] leading-tight">
         {post.title}
       </h1>
-      <p className="text-gray-600 text-sm mb-6 font-roboto">Published on: {new Date(post.date).toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
+      <p className="text-gray-600 text-sm mb-6 font-roboto">Published on: {formatPostDate(post.date)}</p>
       {post.imageUrl && (
         <div className="relative w-full h-64 md:h-96 overflow-hidden rounded-lg shadow-md mb-8">
           <img
@@ -129,5 +157,6 @@ export default async function PostPage({ params }: { params: { slug: string } })
         )}
       </nav>
     </div>
+    </main>
   );
 }
