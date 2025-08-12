@@ -1,7 +1,12 @@
 import React from 'react';
 import Link from 'next/link';
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  onSearchChange?: (query: string) => void;
+  searchQuery?: string;
+}
+
+const Header: React.FC<HeaderProps> = ({ onSearchChange, searchQuery }) => {
   return (
     <header className="absolute top-0 left-0 right-0 z-20 p-4 md:p-6 flex justify-between items-center max-w-screen-xl mx-auto bg-transparent text-white">
       {/* Logo */}
@@ -18,13 +23,17 @@ const Header: React.FC = () => {
           <li><Link href="/events" className="hover:text-gray-300 transition-colors duration-300">Events</Link></li>
           <li><Link href="/contact" className="hover:text-gray-300 transition-colors duration-300">Contact</Link></li>
         </ul>
-        <div className="relative">
-          <input
-            type="text"
-            placeholder="Search..."
-            className="p-2 rounded-full bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white transition-all duration-300 w-24 sm:w-40 md:w-48"
-          />
-        </div>
+        {onSearchChange && searchQuery !== undefined && (
+          <div className="relative">
+            <input
+              type="text"
+              placeholder="Search..."
+              value={searchQuery}
+              onChange={(e) => onSearchChange(e.target.value)}
+              className="p-2 rounded-full bg-white/20 text-white placeholder-gray-300 focus:outline-none focus:ring-2 focus:ring-white transition-all duration-300 w-24 sm:w-40 md:w-48"
+            />
+          </div>
+        )}
       </nav>
     </header>
   );

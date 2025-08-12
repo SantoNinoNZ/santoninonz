@@ -1,20 +1,13 @@
 import { notFound } from 'next/navigation';
-import { promises as fs } from 'fs';
-import path from 'path';
 import { remark } from 'remark';
 import html from 'remark-html';
 import yaml from 'js-yaml';
 import Image from 'next/image';
 import Link from 'next/link';
-import Header from "@/components/Header"; // Import the Header component
-
-interface Post {
-  slug: string;
-  title: string;
-  date: string;
-  contentHtml: string;
-  imageUrl?: string;
-}
+import Header from "@/components/Header";
+import { getSortedPostsData, Post } from '@/lib/posts';
+import path from 'path';
+import { promises as fs } from 'fs';
 
 // Helper function to safely format dates
 function formatPostDate(dateString: string): string {
@@ -51,7 +44,7 @@ async function getPostContent(slug: string): Promise<Post | null> {
     interface FrontMatter {
       title: string;
       date: string;
-      imageUrl?: string; // Add imageUrl to FrontMatter interface
+      imageUrl?: string;
       [key: string]: unknown;
     }
 
@@ -86,34 +79,8 @@ async function getPostContent(slug: string): Promise<Post | null> {
   }
 }
 
-async function getAllPostsSortedByDate(): Promise<Post[]> {
-  const indexPath = path.join(process.cwd(), 'public', 'posts-index.json');
-  try {
-    const fileContent = await fs.readFile(indexPath, 'utf8');
-    const postsIndex: { slug: string; title: string; date: string }[] = JSON.parse(fileContent);
-
-    // Sort posts by date in descending order (newest first)
-    const sortedPosts = postsIndex.sort((a, b) => {
-      const dateA = new Date(a.date.split('/').reverse().join('-')); // Convert dd/mm/yyyy to yyyy-mm-dd for Date object
-      const dateB = new Date(b.date.split('/').reverse().join('-'));
-      return dateB.getTime() - dateA.getTime();
-    });
-
-    return sortedPosts.map(post => ({
-      slug: post.slug,
-      title: post.title,
-      date: post.date,
-      contentHtml: '', // Not needed for navigation, but required by Post interface
-      imageUrl: undefined, // Not needed for navigation
-    }));
-  } catch (error) {
-    console.error('Error reading posts-index.json:', error);
-    return [];
-  }
-}
-
 export async function generateStaticParams(): Promise<Array<{ slug: string }>> {
-  const allPosts = await getAllPostsSortedByDate();
+  const allPosts = await getSortedPostsData();
   return allPosts.map(post => ({ slug: post.slug }));
 }
 
@@ -125,13 +92,13 @@ export default async function PostPage({ params }: { params: { slug: string } })
     notFound();
   }
 
-  const allPosts = await getAllPostsSortedByDate();
+  const allPosts = await getSortedPostsData();
   const currentIndex = allPosts.findIndex(p => p.slug === slug);
   const previousPost = currentIndex > 0 ? allPosts[currentIndex - 1] : null;
   const nextPost = currentIndex < allPosts.length - 1 ? allPosts[currentIndex + 1] : null;
 
   return (
-    <main className="relative flex min-h-screen flex-col items-center pt-24"> {/* Added pt-24 for padding */}
+    <main className="relative flex min-h-screen flex-col items-center pt-24">
       <Header />
       <div className="container mx-auto px-4 py-8 max-w-screen-md bg-white rounded-lg shadow-lg">
         <h1 className="text-4xl md:text-5xl font-lora font-bold mb-4 text-[#2B1E1A] leading-tight">

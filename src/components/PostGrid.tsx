@@ -1,17 +1,9 @@
 "use client";
 
-import Image from "next/image";
 import Link from "next/link";
 import { useState, useEffect, useRef, useCallback } from "react";
 
-interface Post {
-  slug: string;
-  title: string;
-  date: string;
-  excerpt?: string;
-  imageUrl?: string;
-  contentHtml?: string; // contentHtml is not used in the grid, but kept for consistency
-}
+import { Post } from '@/lib/posts'; // Import Post interface from lib/posts
 
 // Helper function to safely format dates
 function formatPostDate(dateString: string): string {
@@ -59,6 +51,12 @@ export default function PostGrid({ initialPosts }: PostGridProps) {
   const [loading, setLoading] = useState(false);
   const [hasMore, setHasMore] = useState(initialPosts.length > POSTS_PER_LOAD);
   const loader = useRef(null);
+
+  useEffect(() => {
+    setDisplayedPosts(initialPosts.slice(0, POSTS_PER_LOAD));
+    setNextPageIndex(POSTS_PER_LOAD);
+    setHasMore(initialPosts.length > POSTS_PER_LOAD);
+  }, [initialPosts]);
 
   const loadMorePosts = useCallback(() => {
     if (loading || !hasMore) return;
