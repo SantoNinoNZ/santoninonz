@@ -1,8 +1,8 @@
 ---
 title: "One Beat"
-date: "18/11/2008"
+date: "2008-11-18T10:22:50.000Z"
 slug: "one-beat"
-imageUrl: "assets/images/frpulanco.jpg"
+imageUrl: "/posts/assets/images/frpulanco.jpg"
 ---
 
 [![](http://stonino.files.wordpress.com/2011/05/frpulanco.jpg?resize=300%2C225 "FrPulanco")](http://stonino.files.wordpress.com/2011/05/frpulanco.jpg)

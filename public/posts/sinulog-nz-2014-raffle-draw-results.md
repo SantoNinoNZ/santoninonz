@@ -1,6 +1,6 @@
 ---
 title: "Sinulog NZ 2014 Raffle Draw Results"
-date: "27/01/2014"
+date: "2014-01-26T20:10:42.000Z"
 slug: "sinulog-nz-2014-raffle-draw-results"
 
 ---

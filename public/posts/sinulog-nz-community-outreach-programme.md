@@ -1,8 +1,8 @@
 ---
 title: "August Sinulog NZ Community Outreach Programme"
-date: "13/08/2017"
+date: "2017-08-13T06:51:24.000Z"
 slug: "sinulog-nz-community-outreach-programme"
-imageUrl: "assets/images/20800282_1811127029199489_9107270113255625789_n.jpg"
+imageUrl: "/posts/assets/images/20800282_1811127029199489_9107270113255625789_n.jpg"
 ---
 
 A very heartfelt thank you to ALL volunteers at the Sto Nino – Sinulog NZ Community Outreach Programme at the Ryman Healthcare – Sir Edmund Hillary Village.  

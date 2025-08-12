@@ -91,7 +91,7 @@ async function scrapePosts() {
     const title = decodeHtmlEntities(post.title.rendered);
     const contentHtml = decodeHtmlEntities(post.content.rendered);
     const date = new Date(post.date);
-    const formattedDate = date.toLocaleDateString();
+    const formattedDate = date.toISOString(); // Store full ISO string including time
 
     let imageUrl = null;
     let localImageUrl = null; // To store the local path for the front matter
@@ -99,13 +99,13 @@ async function scrapePosts() {
     if (imageUrlMatch) {
       imageUrl = imageUrlMatch[1].replace(/&#038;/g, '&').replace(/\\/g, '/'); // Normalize original URL
       const imageFileName = path.basename(new URL(imageUrl).pathname);
-      localImageUrl = path.posix.join('assets', 'images', imageFileName); // Relative path for front matter
+      localImageUrl = `/posts/assets/images/${imageFileName}`; // Relative path for front matter
     } else if (post._embedded && post._embedded['wp:featuredmedia'] && post._embedded['wp:featuredmedia'].length > 0) {
-      const featuredMedia = post._embedded['wp:featuredmedia'][0];
+      const featuredMedia = post._embedded._embedded['wp:featuredmedia'][0];
       imageUrl = (featuredMedia.media_details?.sizes?.medium?.source_url || featuredMedia.source_url || null)?.replace(/\\/g, '/'); // Normalize original URL
       if (imageUrl) {
         const imageFileName = path.basename(new URL(imageUrl).pathname);
-        localImageUrl = path.posix.join('assets', 'images', imageFileName); // Relative path for front matter
+        localImageUrl = `/posts/assets/images/${imageFileName}`; // Relative path for front matter
       }
     }
 

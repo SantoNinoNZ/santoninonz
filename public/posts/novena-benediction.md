@@ -1,8 +1,8 @@
 ---
 title: "Perpetual Novena to Sto Niño &#038; Benediction"
-date: "1/01/2009"
+date: "2008-12-31T12:52:07.000Z"
 slug: "novena-benediction"
-imageUrl: "assets/images/82D9333A-2B81-4470-AC16-F78DBEFFBA8E.jpeg"
+imageUrl: "/posts/assets/images/82D9333A-2B81-4470-AC16-F78DBEFFBA8E.jpeg"
 ---
 
 > ![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2009/01/82D9333A-2B81-4470-AC16-F78DBEFFBA8E.jpeg?resize=720%2C480&ssl=1)

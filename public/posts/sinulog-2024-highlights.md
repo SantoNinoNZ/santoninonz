@@ -1,6 +1,6 @@
 ---
 title: "Sinulog 2024 Highlights"
-date: "26/01/2024"
+date: "2024-01-26T03:32:18.000Z"
 slug: "sinulog-2024-highlights"
 
 ---

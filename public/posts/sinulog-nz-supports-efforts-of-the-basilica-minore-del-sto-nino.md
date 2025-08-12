@@ -1,8 +1,8 @@
 ---
 title: "Sinulog NZ supports efforts of the Basilica Minore del Sto Nino"
-date: "27/09/2018"
+date: "2018-09-26T13:49:06.000Z"
 slug: "sinulog-nz-supports-efforts-of-the-basilica-minore-del-sto-nino"
-imageUrl: "assets/images/42450989_2062271550471093_674417115100348416_n.jpg"
+imageUrl: "/posts/assets/images/42450989_2062271550471093_674417115100348416_n.jpg"
 ---
 
 The devotees of Senyor Sto Niño here in New Zealand is supporting the fundraising efforts of the Basilica Minore del Sto Niño for the Victims of the recent Naga Cebu landslide.

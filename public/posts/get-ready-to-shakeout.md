@@ -1,8 +1,8 @@
 ---
 title: "Supporting Local Communities – Get Ready to ShakeOut!"
-date: "14/08/2012"
+date: "2012-08-14T05:23:04.000Z"
 slug: "get-ready-to-shakeout"
-imageUrl: "assets/images/image001.png"
+imageUrl: "/posts/assets/images/image001.png"
 ---
 
 Spread the word – get your charity (and family and friends) ready to ShakeOut !

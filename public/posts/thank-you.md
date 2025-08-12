@@ -1,6 +1,6 @@
 ---
 title: "THANK YOU"
-date: "7/02/2013"
+date: "2013-02-07T01:41:51.000Z"
 slug: "thank-you"
 
 ---

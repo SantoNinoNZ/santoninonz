@@ -1,6 +1,6 @@
 ---
 title: "Santo Nino – Sinulog NZ group supports Cooperative Bank Limited New Debt Consolidation program"
-date: "29/11/2014"
+date: "2014-11-28T23:35:05.000Z"
 slug: "debt-consolidation-offer-from-the-co-operative-bank"
 
 ---

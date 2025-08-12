@@ -1,8 +1,8 @@
 ---
 title: "9 Days to our Milestone Year"
-date: "2/01/2019"
+date: "2019-01-02T01:22:37.000Z"
 slug: "9-days-to-our-milestone-year"
-imageUrl: "assets/images/25-header.jpg"
+imageUrl: "/posts/assets/images/25-header.jpg"
 ---
 
 VIVA SENYOR SANTO NINO!!! PIT SENYOR!!!

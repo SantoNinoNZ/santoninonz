@@ -1,8 +1,8 @@
 ---
 title: "July Sinulog NZ Community Outreach Programme"
-date: "3/07/2017"
+date: "2017-07-03T09:55:49.000Z"
 slug: "july-sinulog-nz-community-outreach-programme"
-imageUrl: "assets/images/19599025_10213723350216525_6212162396255217003_n.jpg"
+imageUrl: "/posts/assets/images/19599025_10213723350216525_6212162396255217003_n.jpg"
 ---
 
 Thank you to the Sinulog NZ Community Programme Volunteers who came to the Edmund Hillary Retirement Village

@@ -1,6 +1,6 @@
 ---
 title: "Santa Parade (pre-parade) Notes"
-date: "23/11/2017"
+date: "2017-11-23T09:46:55.000Z"
 slug: "santa-parade-pre-parade-notes"
 
 ---

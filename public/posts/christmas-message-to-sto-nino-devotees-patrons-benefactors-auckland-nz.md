@@ -1,8 +1,8 @@
 ---
 title: "CHRISTMAS MESSAGE TO STO NINO DEVOTEES, PATRONS &#038; BENEFACTORS  Auckland, NZ"
-date: "21/12/2017"
+date: "2017-12-21T09:59:48.000Z"
 slug: "christmas-message-to-sto-nino-devotees-patrons-benefactors-auckland-nz"
-imageUrl: "assets/images/1610448-bigthumbnail.jpg"
+imageUrl: "/posts/assets/images/1610448-bigthumbnail.jpg"
 ---
 
 **To ALL Devotees of Senor Santo Nino, Patrons, Benefactors, Supporters and Friends****,**

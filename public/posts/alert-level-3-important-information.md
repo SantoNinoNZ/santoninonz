@@ -1,8 +1,8 @@
 ---
 title: "Alert Level 3 Important Information"
-date: "13/08/2020"
+date: "2020-08-13T06:43:39.000Z"
 slug: "alert-level-3-important-information"
-imageUrl: "assets/images/117301748_10158055570461523_6694480519700393715_o.jpg"
+imageUrl: "/posts/assets/images/117301748_10158055570461523_6694480519700393715_o.jpg"
 ---
 
 ![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2020/08/117301748_10158055570461523_6694480519700393715_o.jpg?fit=740%2C1024&ssl=1)

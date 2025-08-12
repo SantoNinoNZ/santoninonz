@@ -1,6 +1,6 @@
 ---
 title: "An Enduring Spanish Legacy"
-date: "26/11/2009"
+date: "2009-11-26T10:38:16.000Z"
 slug: "an-enduring-spanish-legacy"
 
 ---

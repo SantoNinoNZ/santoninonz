@@ -1,8 +1,8 @@
 ---
 title: "A Message from 2017 Sinulog NZ Queen 1st Runner up Lianne Zhao"
-date: "1/01/2018"
+date: "2017-12-31T22:50:29.000Z"
 slug: "a-message-from-2017-sinulog-nz-queen-1st-runner-up-lianne-zhao"
-imageUrl: "assets/images/26856831_1550760075038867_1272125857_n-1.jpg"
+imageUrl: "/posts/assets/images/26856831_1550760075038867_1272125857_n-1.jpg"
 ---
 
 ![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2018/01/26856831_1550760075038867_1272125857_n-1.jpg?resize=428%2C428)

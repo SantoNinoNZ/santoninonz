@@ -1,8 +1,8 @@
 ---
 title: "2016 9-DAYS NOVENA/MASS SCHEDULE"
-date: "2/01/2016"
+date: "2016-01-02T07:24:07.000Z"
 slug: "2016-9-days-novenamass-schedule"
-imageUrl: "assets/images/sinulog2016FLYER-722x1024.jpg"
+imageUrl: "/posts/assets/images/sinulog2016FLYER-722x1024.jpg"
 ---
 
 ### **January 8 to 16, 2016**

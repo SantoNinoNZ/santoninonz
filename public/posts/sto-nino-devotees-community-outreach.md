@@ -1,8 +1,8 @@
 ---
 title: "Sto Nino Devotees Community Outreach"
-date: "2/03/2016"
+date: "2016-03-01T15:20:38.000Z"
 slug: "sto-nino-devotees-community-outreach"
-imageUrl: "assets/images/9ceca87c-55d0-48c7-b6cd-b835bc625ce1.jpeg"
+imageUrl: "/posts/assets/images/9ceca87c-55d0-48c7-b6cd-b835bc625ce1.jpeg"
 ---
 
 You are invited to a Lenten Retreat on the 11th of March 2016 at St Benedict’s  Church as part of our preparation for Holy Week.

@@ -1,8 +1,8 @@
 ---
 title: "Ginang at Mutya 2025"
-date: "8/12/2024"
+date: "2024-12-07T23:50:10.000Z"
 slug: "ginang-at-mutya-2025"
-imageUrl: "assets/images/469544588_986342960199105_7912176842091349038_n.jpg"
+imageUrl: "/posts/assets/images/469544588_986342960199105_7912176842091349038_n.jpg"
 ---
 
 A beautiful example of Christ love featuring a like Mother, like Daughter pageant showcasing the core values they share is on for Sinulog 2025. Be part of this timely event that brings to the red carpet the journey of Mothers and Daughters together showcasing an overflowing spring of love that aims to inspire and transform.

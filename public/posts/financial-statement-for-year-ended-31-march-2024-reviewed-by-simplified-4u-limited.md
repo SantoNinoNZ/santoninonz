@@ -1,6 +1,6 @@
 ---
 title: "Financial Statement for year ended 31 March 2024 reviewed by Simplified 4U Limited"
-date: "19/09/2024"
+date: "2024-09-19T07:10:43.000Z"
 slug: "financial-statement-for-year-ended-31-march-2024-reviewed-by-simplified-4u-limited"
 
 ---

@@ -1,8 +1,8 @@
 ---
 title: "2022 9-Days Novena/Mass Schedule"
-date: "4/01/2022"
+date: "2022-01-04T05:19:42.000Z"
 slug: "2022-9-days-novena-mass-schedule"
-imageUrl: "assets/images/270741399_10159220704696523_2433504595194832101_n.jpg"
+imageUrl: "/posts/assets/images/270741399_10159220704696523_2433504595194832101_n.jpg"
 ---
 
 **_January 6 to 14, 2022  

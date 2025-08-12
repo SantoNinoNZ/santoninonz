@@ -1,6 +1,6 @@
 ---
 title: "Sto. Niño devotee tops June 2013 nursing board exams"
-date: "9/07/2013"
+date: "2013-07-09T01:05:58.000Z"
 slug: "sto-nino-devotee-tops-june-2013-nursing-board-exams"
 
 ---

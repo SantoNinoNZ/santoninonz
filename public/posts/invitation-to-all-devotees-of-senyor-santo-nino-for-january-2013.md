@@ -1,6 +1,6 @@
 ---
 title: "INVITATION TO ALL DEVOTEES OF SENYOR SANTO NINO FOR JANUARY 2013"
-date: "14/12/2012"
+date: "2012-12-14T01:18:44.000Z"
 slug: "invitation-to-all-devotees-of-senyor-santo-nino-for-january-2013"
 
 ---

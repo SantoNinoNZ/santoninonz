@@ -1,8 +1,8 @@
 ---
 title: "2019 Parol Making Contest Winners"
-date: "23/01/2019"
+date: "2019-01-22T11:10:55.000Z"
 slug: "2019-parol-making-contest-winners"
-imageUrl: "assets/images/parol-christmas-lantern.jpg"
+imageUrl: "/posts/assets/images/parol-christmas-lantern.jpg"
 ---
 
 Congratulations to the 2019 Parol (Christmas Lantern) Making Contest Winners

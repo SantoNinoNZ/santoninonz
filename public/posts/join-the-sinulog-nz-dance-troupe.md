@@ -1,6 +1,6 @@
 ---
 title: "Join the Sinulog NZ Dance Troupe"
-date: "19/10/2011"
+date: "2011-10-19T01:42:47.000Z"
 slug: "join-the-sinulog-nz-dance-troupe"
 
 ---

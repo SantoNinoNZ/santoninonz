@@ -1,8 +1,8 @@
 ---
 title: "Spare a Gold Coin Appeal"
-date: "20/05/2011"
+date: "2011-05-20T03:55:24.000Z"
 slug: "spare-a-gold-coin-appeal"
-imageUrl: "assets/images/1928964-golden-bucket-spilling-coins3-e1310612774558-201x300.jpg"
+imageUrl: "/posts/assets/images/1928964-golden-bucket-spilling-coins3-e1310612774558-201x300.jpg"
 ---
 
 [![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2011/05/1928964-golden-bucket-spilling-coins3-e1310612774558-201x300.jpg?resize=201%2C300 "1928964-golden-bucket-spilling-coins")](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2011/05/1928964-golden-bucket-spilling-coins3-e1310612774558.jpg)Help us raise funds…

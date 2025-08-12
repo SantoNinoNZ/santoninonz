@@ -1,8 +1,8 @@
 ---
 title: "Sinulog NZ 2019 Festival Queen Winners"
-date: "21/01/2019"
+date: "2019-01-20T14:10:46.000Z"
 slug: "sinulog-nz-2019-festival-queen-winners"
-imageUrl: "assets/images/50064333_2259176201073477_1318823768990154752_n.jpg"
+imageUrl: "/posts/assets/images/50064333_2259176201073477_1318823768990154752_n.jpg"
 ---
 
 Congratulations !

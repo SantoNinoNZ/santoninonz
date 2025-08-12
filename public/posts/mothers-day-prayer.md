@@ -1,8 +1,8 @@
 ---
 title: "Mother's Day Prayer"
-date: "10/05/2018"
+date: "2018-05-10T10:38:26.000Z"
 slug: "mothers-day-prayer"
-imageUrl: "assets/images/Happy-Mother%E2%80%99s-Day-Flowers-Image.jpg"
+imageUrl: "/posts/assets/images/Happy-Mother%E2%80%99s-Day-Flowers-Image.jpg"
 ---
 
 ![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2018/05/Happy-Mother%E2%80%99s-Day-Flowers-Image.jpg?resize=656%2C393)

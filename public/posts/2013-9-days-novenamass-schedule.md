@@ -1,6 +1,6 @@
 ---
 title: "2013 9-DAYS NOVENA/MASS SCHEDULE"
-date: "15/12/2012"
+date: "2012-12-14T19:34:42.000Z"
 slug: "2013-9-days-novenamass-schedule"
 
 ---

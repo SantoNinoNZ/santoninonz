@@ -1,8 +1,8 @@
 ---
 title: "Senyor Sto. Niño at home at St. Benedict's Church"
-date: "1/08/2014"
+date: "2014-08-01T01:38:16.000Z"
 slug: "senyor-sto-nino-at-home-at-st-benedicts-church"
-imageUrl: "assets/images/2-stonino1-300x198.jpg"
+imageUrl: "/posts/assets/images/2-stonino1-300x198.jpg"
 ---
 
 by ROWENA OREJANA

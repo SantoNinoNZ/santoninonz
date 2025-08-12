@@ -1,8 +1,8 @@
 ---
 title: "A Message from 2015 Sinulog NZ Queens – Chloe Edds &#038; Althea Daculan"
-date: "1/01/2016"
+date: "2015-12-31T13:30:36.000Z"
 slug: "a-message-from-2015-sinulog-nz-queen-chloe-edds"
-imageUrl: "assets/images/12402235_10153390542746523_482343026053108491_o-683x1024.jpg"
+imageUrl: "/posts/assets/images/12402235_10153390542746523_482343026053108491_o-683x1024.jpg"
 ---
 
 Being one of the 2015 Sinulog Festival Queens was definitely a great opportunity. 2015 itself was a great year, and being able to participate in such a religious and culture-filled fiesta has helped start it all. I can't find words to describe it all, but what lessons I learned from such an experience is worth while. I learned how to be confident, to be proud, to be involved, to be religious and to be a Filipino. I met fellow devotees to Señor Santo Niño, forming lasting friendships and creating life long memories that I will never forget. The year went by too fast, but that won't stop me from continuing my devotion to Señor Santo Niño for he was the reason I accepted this opportunity. So I wish good luck to the 2016 Sinulog Festival Queens, remember to enjoy every moment of this journey. Viva Pit Senyor!

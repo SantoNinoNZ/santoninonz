@@ -1,6 +1,6 @@
 ---
 title: "Financial Statement for year ended 31 March 2022 reviewed by SBA – Onehunga"
-date: "23/06/2022"
+date: "2022-06-23T04:57:28.000Z"
 slug: "financial-statement-for-year-ended-31-march-2022-reviewed-by-sba-onehunga"
 
 ---

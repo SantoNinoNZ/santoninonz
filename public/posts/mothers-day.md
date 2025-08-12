@@ -1,8 +1,8 @@
 ---
 title: "You Are Invited to A FREE Mother's Day Event (18th of May 2013)"
-date: "25/04/2013"
+date: "2013-04-25T02:47:01.000Z"
 slug: "mothers-day"
-imageUrl: "assets/images/mothersday2013_A41-724x1024.jpg"
+imageUrl: "/posts/assets/images/mothersday2013_A41-724x1024.jpg"
 ---
 
 _**[Click here to register](http://bit.ly/10Brobk "Mother's Day Registeration")**_

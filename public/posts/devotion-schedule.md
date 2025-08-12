@@ -1,8 +1,8 @@
 ---
 title: "Devotion Schedule"
-date: "26/10/2021"
+date: "2021-10-26T09:21:29.000Z"
 slug: "devotion-schedule"
-imageUrl: "assets/images/devotion1.jpg"
+imageUrl: "/posts/assets/images/devotion1.jpg"
 ---
 
 [![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2011/05/devotion1.jpg?resize=640%2C400 "devotion")](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2011/05/devotion1.jpg)

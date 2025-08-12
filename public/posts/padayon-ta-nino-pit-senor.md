@@ -1,8 +1,8 @@
 ---
 title: "PADAYON TA NIÑO! Pit Senor!"
-date: "17/01/2025"
+date: "2025-01-16T21:37:14.000Z"
 slug: "padayon-ta-nino-pit-senor"
-imageUrl: "assets/images/jubilee2025-logo.jpg"
+imageUrl: "/posts/assets/images/jubilee2025-logo.jpg"
 ---
 
 **Jubilee Year 2025 – Pilgrims of Hope**

@@ -1,8 +1,8 @@
 ---
 title: "Search for Sinulog Festival Queen 2016"
-date: "12/12/2015"
+date: "2015-12-11T12:00:42.000Z"
 slug: "search-for-sinulog-festival-queen-2016"
-imageUrl: "assets/images/FINALfestivalQueen4PrintingFINAL-747x1024.jpg"
+imageUrl: "/posts/assets/images/FINALfestivalQueen4PrintingFINAL-747x1024.jpg"
 ---
 
 Register here:

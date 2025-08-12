@@ -1,8 +1,8 @@
 ---
 title: "Installation &#038; Blessing of the Chapel for Senyor Sto Niño (Gratitude List)"
-date: "20/07/2014"
+date: "2014-07-19T23:10:13.000Z"
 slug: "installation-blessing-of-the-chapel-for-senyor-sto-nino-gratitude-list"
-imageUrl: "assets/images/10550968_668778149865694_7122227387802089862_n-e1407511510460.jpg"
+imageUrl: "/posts/assets/images/10550968_668778149865694_7122227387802089862_n-e1407511510460.jpg"
 ---
 
 VIVA SENOR SANTO NINO!!! PIT SENOR!!!

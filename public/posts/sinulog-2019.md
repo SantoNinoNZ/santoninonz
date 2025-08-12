@@ -1,6 +1,6 @@
 ---
 title: "Sinulog 2019"
-date: "11/12/2018"
+date: "2018-12-10T15:35:02.000Z"
 slug: "sinulog-2019"
 
 ---

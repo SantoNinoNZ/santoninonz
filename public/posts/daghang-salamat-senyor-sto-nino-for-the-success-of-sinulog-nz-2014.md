@@ -1,6 +1,6 @@
 ---
 title: "Daghang Salamat Senyor Sto Niño for the Success of Sinulog NZ 2014)"
-date: "20/01/2014"
+date: "2014-01-20T00:23:12.000Z"
 slug: "daghang-salamat-senyor-sto-nino-for-the-success-of-sinulog-nz-2014"
 
 ---

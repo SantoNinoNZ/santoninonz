@@ -1,6 +1,6 @@
 ---
 title: "Fish Story"
-date: "27/11/2009"
+date: "2009-11-26T11:00:27.000Z"
 slug: "fish-story"
 
 ---

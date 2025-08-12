@@ -1,6 +1,6 @@
 ---
 title: "SINULOG 2012 Special Acknowledgements"
-date: "16/01/2012"
+date: "2012-01-16T04:51:07.000Z"
 slug: "2012-sinulog-special-acknowledgements"
 
 ---

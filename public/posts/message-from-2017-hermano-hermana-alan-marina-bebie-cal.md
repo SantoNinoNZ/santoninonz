@@ -1,8 +1,8 @@
 ---
 title: "Message from 2017 Hermano &#038; Hermana – Alan &#038; Marina &#8216;Bebie' Cal"
-date: "1/01/2018"
+date: "2017-12-31T23:50:19.000Z"
 slug: "message-from-2017-hermano-hermana-alan-marina-bebie-cal"
-imageUrl: "assets/images/26803275_1755698301128453_216495781_n.jpg"
+imageUrl: "/posts/assets/images/26803275_1755698301128453_216495781_n.jpg"
 ---
 
 ![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2018/01/26803275_1755698301128453_216495781_n.jpg?resize=221%2C411)

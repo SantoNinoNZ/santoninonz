@@ -1,8 +1,8 @@
 ---
 title: "May 2014 Novena Mass for Senyor Sto Niño"
-date: "18/05/2014"
+date: "2014-05-18T11:25:35.000Z"
 slug: "may-2014-novena-mass-for-senyor-sto-nino"
-imageUrl: "assets/images/photo2-1024x581.jpg"
+imageUrl: "/posts/assets/images/photo2-1024x581.jpg"
 ---
 
 Thank you to all devotees especially our Pilgrim Sponsors: Filipino Catholic Community, Lady of Penafrancia Devotees, Divine Mercy Devotees, Mga Bicolanos, Kababayans from Western Visayas (Bacolod, Iloilo, Negros) – Our Lady of Candelaria – Western Visayas Region VI, Illongo Integrated Assn, Inc

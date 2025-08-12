@@ -1,8 +1,8 @@
 ---
 title: "2025 9-Days Novena/Mass Schedule"
-date: "18/12/2024"
+date: "2024-12-18T02:10:56.000Z"
 slug: "2025-9-days-novena-mass-schedule"
-imageUrl: "assets/images/Sinulog2025.jpeg"
+imageUrl: "/posts/assets/images/Sinulog2025.jpeg"
 ---
 
 _**January 10 to 18, 2025**_**_  

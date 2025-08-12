@@ -1,8 +1,8 @@
 ---
 title: "It’s Christmas Picnic Time"
-date: "25/11/2014"
+date: "2014-11-25T05:42:12.000Z"
 slug: "its-christmas-picnic-time"
-imageUrl: "assets/images/Picnic.jpg"
+imageUrl: "/posts/assets/images/Picnic.jpg"
 ---
 
 **To everyone who have worked so hard to make all our activities, novena-masses and events for Senyor Santo Nino so blessed by God and by your presence, we would like to celebrate.**

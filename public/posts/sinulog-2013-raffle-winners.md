@@ -1,8 +1,8 @@
 ---
 title: "Sinulog 2013 Raffle Winners"
-date: "21/01/2013"
+date: "2013-01-21T10:18:56.000Z"
 slug: "sinulog-2013-raffle-winners"
-imageUrl: "assets/images/ticket2013-250x300.jpg"
+imageUrl: "/posts/assets/images/ticket2013-250x300.jpg"
 ---
 
 Thank you for purchasing a ticket for the fundraising raffles in support of the Shrine for Sto Nino Project and the Sto Nino Sinulog NZ Project.

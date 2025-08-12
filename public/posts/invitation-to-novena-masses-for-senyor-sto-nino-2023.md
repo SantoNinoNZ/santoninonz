@@ -1,8 +1,8 @@
 ---
 title: "Invitation to Novena Masses for Senyor Sto Nino 2023"
-date: "13/12/2022"
+date: "2022-12-13T05:24:00.000Z"
 slug: "invitation-to-novena-masses-for-senyor-sto-nino-2023"
-imageUrl: "assets/images/305230210_1788865424795430_3182611370615622357_n-1.jpg"
+imageUrl: "/posts/assets/images/305230210_1788865424795430_3182611370615622357_n-1.jpg"
 ---
 
 MOVING ON! STAYING STRONG! PADAYON TA NINO!!!

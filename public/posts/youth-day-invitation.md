@@ -1,8 +1,8 @@
 ---
 title: "Youth Day Invitation"
-date: "17/10/2011"
+date: "2011-10-16T12:44:05.000Z"
 slug: "youth-day-invitation"
-imageUrl: "assets/images/YouthDayPosterA42-724x1024.jpg"
+imageUrl: "/posts/assets/images/YouthDayPosterA42-724x1024.jpg"
 ---
 
 To register for the Youth Day Event, simply click on the “Youth Day Registration Form” link to enter your details. This will bring up a new window.[  

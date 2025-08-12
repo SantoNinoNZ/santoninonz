@@ -1,6 +1,6 @@
 ---
 title: "Mother's Day 2013 Opening Remarks by Miriam Batucan"
-date: "18/05/2013"
+date: "2013-05-18T00:21:18.000Z"
 slug: "mothers-day-2013-opening-remarks-by-miriam-batucan"
 
 ---

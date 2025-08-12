@@ -1,6 +1,6 @@
 ---
 title: "Ties Renewed. Faith Affirmed."
-date: "19/12/2009"
+date: "2009-12-18T11:17:17.000Z"
 slug: "sinulog-2010"
 
 ---

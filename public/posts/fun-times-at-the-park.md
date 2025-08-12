@@ -1,8 +1,8 @@
 ---
 title: "Fun Times at the Park"
-date: "31/12/2017"
+date: "2017-12-30T19:06:25.000Z"
 slug: "fun-times-at-the-park"
-imageUrl: "assets/images/8AE50E5B-589D-4D66-95C4-FAF19EBF4A9A.jpeg"
+imageUrl: "/posts/assets/images/8AE50E5B-589D-4D66-95C4-FAF19EBF4A9A.jpeg"
 ---
 
 THANK YOU ONCE AGAIN!!!! Sto Nino Devotees Groups, Voice of God Family Choir, Friends, Families and Supporters for making our End-Of- Year 2017 and Christmas in the Park gathering an overwhelming success and a very enjoyable one. Thank you to everyone who brought food and gifts. Thank you Cherry C. Thelmo-Fernandez for organising the games.  

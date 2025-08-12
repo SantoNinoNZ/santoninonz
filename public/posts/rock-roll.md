@@ -1,6 +1,6 @@
 ---
 title: "Rock &#038; Roll"
-date: "21/10/2013"
+date: "2013-10-21T06:27:50.000Z"
 slug: "rock-roll"
 
 ---

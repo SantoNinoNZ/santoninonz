@@ -1,8 +1,8 @@
 ---
 title: "Get your Groove on. Come to the Sinulog NZ Spring Disco Fever."
-date: "15/09/2013"
+date: "2013-09-14T20:26:46.000Z"
 slug: "get-your-groove-on-come-to-the-sinulog-nz-spring-disco-fever"
-imageUrl: "assets/images/springdisco-copy1-801x1024.jpg"
+imageUrl: "/posts/assets/images/springdisco-copy1-801x1024.jpg"
 ---
 
 **To REGISTER click on**   [tinyurl.com/SinulogNZSpringDiscoFever](http://tinyurl.com/SinulogNZSpringDiscoFever)

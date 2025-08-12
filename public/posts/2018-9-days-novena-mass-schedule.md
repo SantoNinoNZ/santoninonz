@@ -1,8 +1,8 @@
 ---
 title: "2018 9-Days Novena/Mass Schedule"
-date: "9/01/2018"
+date: "2018-01-08T12:06:55.000Z"
 slug: "2018-9-days-novena-mass-schedule"
-imageUrl: "assets/images/24115267_10154796390508239_506741366_o-753x1024.jpg"
+imageUrl: "/posts/assets/images/24115267_10154796390508239_506741366_o-753x1024.jpg"
 ---
 
 2018 9-DAYS NOVENA/MASS SCHEDULE

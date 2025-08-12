@@ -1,8 +1,8 @@
 ---
 title: "Sinulog Festival Wear my Design 2015 Contest"
-date: "12/10/2014"
+date: "2014-10-12T07:30:35.000Z"
 slug: "sinulog-festival-wear-my-design-2015-contest"
-imageUrl: "assets/images/n6_zpse18264bb.jpg"
+imageUrl: "/posts/assets/images/n6_zpse18264bb.jpg"
 ---
 
 Wear my Design 2015 is the first ever Sinulog Festival Gown Design Contest. If you are a fashion designer ready to unleash your creative magic on our Sinulog Festival Queens, this contest is for you.  

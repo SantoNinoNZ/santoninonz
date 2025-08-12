@@ -1,8 +1,8 @@
 ---
 title: "Message of Thanks to ALL"
-date: "18/01/2017"
+date: "2017-01-18T08:15:48.000Z"
 slug: "message-of-thanks-to-all"
-imageUrl: "assets/images/f2f02dd1dd9aa493f1186fb3272f9592.jpg"
+imageUrl: "/posts/assets/images/f2f02dd1dd9aa493f1186fb3272f9592.jpg"
 ---
 
 ![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2017/01/f2f02dd1dd9aa493f1186fb3272f9592.jpg?resize=261%2C175)

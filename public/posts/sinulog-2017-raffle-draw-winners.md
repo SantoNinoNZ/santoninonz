@@ -1,8 +1,8 @@
 ---
 title: "SINULOG 2017 Raffle Draw Winners"
-date: "18/01/2017"
+date: "2017-01-18T07:53:34.000Z"
 slug: "sinulog-2017-raffle-draw-winners"
-imageUrl: "assets/images/WINNING-TICKET-NUMBERS-2017-1024x540.jpg"
+imageUrl: "/posts/assets/images/WINNING-TICKET-NUMBERS-2017-1024x540.jpg"
 ---
 
 Congratulations to the SINULOG 2017 RAFFLE WINNERS

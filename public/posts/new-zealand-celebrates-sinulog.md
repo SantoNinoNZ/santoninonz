@@ -1,8 +1,8 @@
 ---
 title: "New Zealand celebrates Sinulog"
-date: "15/01/2012"
+date: "2012-01-15T01:48:45.000Z"
 slug: "new-zealand-celebrates-sinulog"
-imageUrl: "assets/images/6736424369_0d154ed84e_z.jpg"
+imageUrl: "/posts/assets/images/6736424369_0d154ed84e_z.jpg"
 ---
 
 TAKING off with a procession of the image of the Santo Niño and the Virgin Mary at 10:30 a.m., nearly 10,000 people gathered together for this year’s Sinulog at the North Shore Events Centre in Auckland, New Zealand on January 15.

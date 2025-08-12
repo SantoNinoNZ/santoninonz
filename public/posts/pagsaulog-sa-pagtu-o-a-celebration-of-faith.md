@@ -1,6 +1,6 @@
 ---
 title: "PAGSAULOG SA PAGTU-O (A Celebration of Faith)"
-date: "1/01/2012"
+date: "2011-12-31T12:20:20.000Z"
 slug: "pagsaulog-sa-pagtu-o-a-celebration-of-faith"
 
 ---

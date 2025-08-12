@@ -1,6 +1,6 @@
 ---
 title: "Sinulog Festival 2015 Winners"
-date: "18/01/2015"
+date: "2015-01-18T10:59:23.000Z"
 slug: "sinulog-festival-2015-winners"
 
 ---

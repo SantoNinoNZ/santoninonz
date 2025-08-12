@@ -1,8 +1,8 @@
 ---
 title: "Invitation to the Installation &#038; Blessing of the Chapel for Senyor Sto Niño"
-date: "6/07/2014"
+date: "2014-07-06T09:29:37.000Z"
 slug: "invitation-to-the-installation-blessing-of-the-chapel-for-senyor-sto-nino"
-imageUrl: "assets/images/3178885442_e2a267383d.jpg"
+imageUrl: "/posts/assets/images/3178885442_e2a267383d.jpg"
 ---
 
 Inviting you all to join us for the Installation and Blessing of the Chapel of Senor Santo Nino (Holy Infant Jesus) on Friday, the 18th of July 2014. This will be at the St. Benedict's Church. Mass starts at 7:30 pm.

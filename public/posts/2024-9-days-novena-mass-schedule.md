@@ -1,8 +1,8 @@
 ---
 title: "2024 9-Days Novena/Mass Schedule"
-date: "5/12/2023"
+date: "2023-12-05T09:06:18.000Z"
 slug: "2024-9-days-novena-mass-schedule"
-imageUrl: "assets/images/SinulogPosterAdverts.jpg"
+imageUrl: "/posts/assets/images/SinulogPosterAdverts.jpg"
 ---
 
 **_January 12 to 20, 2024  

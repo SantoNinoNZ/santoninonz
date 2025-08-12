@@ -1,8 +1,8 @@
 ---
 title: "Pray the Rosary"
-date: "21/03/2020"
+date: "2020-03-20T22:53:47.000Z"
 slug: "pray-the-rosary"
-imageUrl: "assets/images/FB_IMG_1570766656391.jpg"
+imageUrl: "/posts/assets/images/FB_IMG_1570766656391.jpg"
 ---
 
 **The Holy Father, Pope Francis, initiated the worldwide prayer of the Holy Rosary.**

@@ -1,6 +1,6 @@
 ---
 title: "Valuable Read: Payroll Giving and your Charity"
-date: "14/08/2012"
+date: "2012-08-14T04:55:22.000Z"
 slug: "valuable-read-payroll-giving-and-your-charity"
 
 ---

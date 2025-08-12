@@ -1,8 +1,8 @@
 ---
 title: "Sinulog Welfare Assistance"
-date: "10/12/2022"
+date: "2022-12-10T03:56:12.000Z"
 slug: "sinulog-welfare-assistance"
-imageUrl: "assets/images/Screenshot-2022-12-10-165121.png"
+imageUrl: "/posts/assets/images/Screenshot-2022-12-10-165121.png"
 ---
 
 [![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2022/12/Screenshot-2022-12-10-165121.png?resize=778%2C775&ssl=1)](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2022/12/Screenshot-2022-12-10-165121.png?ssl=1)

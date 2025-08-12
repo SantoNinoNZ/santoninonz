@@ -1,6 +1,6 @@
 ---
 title: "Typhoon Ruping"
-date: "27/11/2009"
+date: "2009-11-26T11:02:58.000Z"
 slug: "typhoon-ruping"
 
 ---

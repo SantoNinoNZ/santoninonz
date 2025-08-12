@@ -1,8 +1,8 @@
 ---
 title: "Meet our 2015 Sinulog Festival Queen Candidates"
-date: "9/12/2014"
+date: "2014-12-08T21:41:29.000Z"
 slug: "meet-our-2015-sinulog-festival-queen-candidates"
-imageUrl: "assets/images/DSC_0036-576x1024.jpg"
+imageUrl: "/posts/assets/images/DSC_0036-576x1024.jpg"
 ---
 
 Now that entries for the 2015 Sinulog Festival Queen have closed, we are excited to announce that this year we have six entrants. We are proud to introduce them and wish them luck in their fund raising efforts leading up to the fiesta weekend.

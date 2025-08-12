@@ -1,8 +1,8 @@
 ---
 title: "Sinulog 2012 Raffle Winners"
-date: "21/01/2012"
+date: "2012-01-20T21:14:37.000Z"
 slug: "sinulog-2012-raffle-winners"
-imageUrl: "assets/images/raffleticketfor2012-1024x370.jpg"
+imageUrl: "/posts/assets/images/raffleticketfor2012-1024x370.jpg"
 ---
 
 CONGRATULATIONS

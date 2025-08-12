@@ -1,8 +1,8 @@
 ---
 title: "Simbang Gabi 2015"
-date: "12/11/2015"
+date: "2015-11-12T09:46:25.000Z"
 slug: "simbang-gabi-2015"
-imageUrl: "assets/images/simbang-gabi-642x1024.jpg"
+imageUrl: "/posts/assets/images/simbang-gabi-642x1024.jpg"
 ---
 
 Blessings of love and peace to everyone in our faith journey.

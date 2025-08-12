@@ -1,6 +1,6 @@
 ---
 title: "2012 9-DAYS NOVENA SCHEDULE"
-date: "6/01/2012"
+date: "2012-01-05T23:25:30.000Z"
 slug: "2012-9-days-novena-schedule"
 
 ---

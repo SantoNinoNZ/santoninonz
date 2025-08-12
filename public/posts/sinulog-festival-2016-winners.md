@@ -1,8 +1,8 @@
 ---
 title: "Sinulog Festival 2016 Winners"
-date: "17/01/2016"
+date: "2016-01-17T09:53:13.000Z"
 slug: "sinulog-festival-2016-winners"
-imageUrl: "assets/images/12548868_10207123588101581_3149423710804593406_n.jpg"
+imageUrl: "/posts/assets/images/12548868_10207123588101581_3149423710804593406_n.jpg"
 ---
 
 Congratulations !

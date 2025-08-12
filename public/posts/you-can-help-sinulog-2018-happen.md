@@ -1,8 +1,8 @@
 ---
 title: "You can help Sinulog 2018 happen"
-date: "4/12/2017"
+date: "2017-12-04T10:05:58.000Z"
 slug: "you-can-help-sinulog-2018-happen"
-imageUrl: "assets/images/24301986_10155365031971523_7194250866848473807_o-731x1024.jpg"
+imageUrl: "/posts/assets/images/24301986_10155365031971523_7194250866848473807_o-731x1024.jpg"
 ---
 
 ![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2017/12/24301986_10155365031971523_7194250866848473807_o-731x1024.jpg?resize=293%2C411)

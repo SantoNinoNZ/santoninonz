@@ -1,6 +1,6 @@
 ---
 title: "Sinulog Drumline"
-date: "29/06/2012"
+date: "2012-06-29T03:18:28.000Z"
 slug: "sinulog-drumline"
 
 ---

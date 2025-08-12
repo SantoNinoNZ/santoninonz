@@ -1,8 +1,8 @@
 ---
 title: "UFCSA NZ &#038; Sinulog NZ 13U, 15U &#038; 19U Basketball League Finals"
-date: "5/06/2014"
+date: "2014-06-04T15:16:14.000Z"
 slug: "ufcsa-nz-sinulog-nz-13u-15u-19u-basketball-league-finals"
-imageUrl: "assets/images/1601148_10202197577560890_9145196862703452696_n.jpg"
+imageUrl: "/posts/assets/images/1601148_10202197577560890_9145196862703452696_n.jpg"
 ---
 
 #FlaGallery\_sc3\_35 .flagPhantom\_ThumbContainer {width:200px; height:180px;}#FlaGallery\_sc3\_35 .flagPhantom\_MobileView .flagPhantom\_ThumbContainer {width:150px; height:135px;}#FlaGallery\_sc3\_35 .flagPhantom\_Container {margin-left:auto;margin-right:auto;}#FlaGallery\_sc3\_35 .flagPhantom\_ThumbContainer {margin:8px 0 0 8px;}#FlaGallery\_sc3\_35 .flagPhantom\_ThumbContainer {padding:2px;}#FlaGallery\_sc3\_35 .flagPhantom\_LabelBottom .flagPhantom\_ThumbContainer {padding-bottom:36px;}#FlaGallery\_sc3\_35 .flagPhantom\_ThumbContainer,#FlaGallery\_sc3\_35 .flagPhantom\_LabelBottom .flagPhantom\_ThumbLabel {background-color:#ffffff;}#FlaGallery\_sc3\_35 .flagPhantom\_ThumbContainer .flagPhantom\_Thumb {opacity:0.9;}#FlaGallery\_sc3\_35 .flagPhantom\_ThumbContainer:hover .flagPhantom\_Thumb {opacity:1;}#FlaGallery\_sc3\_35 .flagPhantom\_ThumbContainer {border:1px solid #cccccc;}#FlaGallery\_sc3\_35 .flagPhantom\_ThumbContainer {box-shadow:0 0 5px -2px #cccccc;}#FlaGallery\_sc3\_35 .flagPhantom\_ThumbLabel {color:#0b0b0b;}#FlaGallery\_sc3\_35 .flagPhantom\_ThumbLabel a {color:#3695E7;}#FlaGallery\_sc3\_35 .flagPhantom\_LabelInside .flagPhantom\_ThumbLabel,#FlaGallery\_sc3\_35 .flagPhantom\_LabelHover .flagPhantom\_ThumbLabel {color:#ffffff;}#FlaGallery\_sc3\_35 .flagPhantom\_LabelInside .flagPhantom\_ThumbLabel a,#FlaGallery\_sc3\_35 .flagPhantom\_LabelHover .flagPhantom\_ThumbLabel a,#FlaGallery\_sc3\_35 .flagPhantom\_LabelInside .flagPhantom\_ThumbLabel a:hover,#FlaGallery\_sc3\_35 .flagPhantom\_LabelHover .flagPhantom\_ThumbLabel a:hover {color:#e7e179;}

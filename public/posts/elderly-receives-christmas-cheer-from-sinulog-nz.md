@@ -1,8 +1,8 @@
 ---
 title: "Elderly receives Christmas Cheer from Sinulog NZ"
-date: "9/12/2018"
+date: "2018-12-09T08:51:39.000Z"
 slug: "elderly-receives-christmas-cheer-from-sinulog-nz"
-imageUrl: "assets/images/Ex1.jpg"
+imageUrl: "/posts/assets/images/Ex1.jpg"
 ---
 
 This community outreach program is about showing that you can do an act of kindness that doesn't cost anything. Men, women and children volunteered to sing, dance and present their talents and time for residents at their local aged-care homes

@@ -1,8 +1,8 @@
 ---
 title: "Ignacio de Loyola Movie"
-date: "9/10/2016"
+date: "2016-10-09T08:53:10.000Z"
 slug: "ignacio-de-loyola-movie"
-imageUrl: "assets/images/14642487_10210196771414144_5108741873824412464_n.jpg"
+imageUrl: "/posts/assets/images/14642487_10210196771414144_5108741873824412464_n.jpg"
 ---
 
 Ignacio de Loyola made its way to Auckland, New Zealand!  

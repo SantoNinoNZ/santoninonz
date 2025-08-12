@@ -1,8 +1,8 @@
 ---
 title: "Thank you Holy Cross Papatoetoe-Filipino Choir"
-date: "17/01/2017"
+date: "2017-01-17T06:04:18.000Z"
 slug: "thank-you-holy-cross-papatoetoe-filipino-choir"
-imageUrl: "assets/images/15965443_10212013457030264_6501886282815939977_n.jpg"
+imageUrl: "/posts/assets/images/15965443_10212013457030264_6501886282815939977_n.jpg"
 ---
 
 ![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2017/01/15965443_10212013457030264_6501886282815939977_n.jpg?resize=671%2C386)

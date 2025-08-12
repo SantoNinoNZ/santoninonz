@@ -1,6 +1,6 @@
 ---
 title: "Filipino Heroes – Faith Community Leaders"
-date: "9/03/2020"
+date: "2020-03-09T08:58:17.000Z"
 slug: "filipino-heroes-faith-community-leaders"
 
 ---

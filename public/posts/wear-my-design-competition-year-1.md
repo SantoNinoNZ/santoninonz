@@ -1,8 +1,8 @@
 ---
 title: "Wear My Design Competition Year 1"
-date: "27/12/2014"
+date: "2014-12-27T04:43:43.000Z"
 slug: "wear-my-design-competition-year-1"
-imageUrl: "assets/images/yassssssssss-680x1024.jpg"
+imageUrl: "/posts/assets/images/yassssssssss-680x1024.jpg"
 ---
 
 This year, we are launching the ‘Wear My Design Competition' . Our 2015 Sinulog Festival Queens will be parading the designs of 6 Auckland Couturiers.

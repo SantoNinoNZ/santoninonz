@@ -1,8 +1,8 @@
 ---
 title: "Sinulog 2017 Information Evening"
-date: "1/10/2016"
+date: "2016-10-01T01:31:49.000Z"
 slug: "sinulog-2017-information-evening"
-imageUrl: "assets/images/Sinulog-Festival-2013-Grand-Parade-Winners-List.jpg"
+imageUrl: "/posts/assets/images/Sinulog-Festival-2013-Grand-Parade-Winners-List.jpg"
 ---
 
 ![sinulog-festival-2013-grand-parade-winners-list](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2016/10/Sinulog-Festival-2013-Grand-Parade-Winners-List.jpg?resize=622%2C419)

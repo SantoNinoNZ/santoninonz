@@ -1,8 +1,8 @@
 ---
 title: "Lantern Making Contest 2018 Registration Page"
-date: "13/01/2018"
+date: "2018-01-13T10:39:04.000Z"
 slug: "lantern-making-contest-2018-registration-page"
-imageUrl: "assets/images/6233771559_f6e591b853_m.jpg"
+imageUrl: "/posts/assets/images/6233771559_f6e591b853_m.jpg"
 ---
 
 Bring Paskong Filipino to Auckland. Join the Lantern Making Contest 2018 by registering.

@@ -1,8 +1,8 @@
 ---
 title: "2020 9-Days Novena/Mass Schedule"
-date: "30/12/2019"
+date: "2019-12-30T09:37:50.000Z"
 slug: "2020-9-days-novena-mass-schedule"
-imageUrl: "assets/images/78883017_10157229594146523_6191090422543024128_n.jpg"
+imageUrl: "/posts/assets/images/78883017_10157229594146523_6191090422543024128_n.jpg"
 ---
 
 2020 9-DAYS NOVENA/MASS SCHEDULE

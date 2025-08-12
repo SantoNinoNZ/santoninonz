@@ -1,8 +1,8 @@
 ---
 title: "2015 Hermanos/Hermanas"
-date: "16/01/2016"
+date: "2016-01-15T22:26:28.000Z"
 slug: "2015-hermanoshermanas"
-imageUrl: "assets/images/644179_4426892273529_656186026_n.jpg"
+imageUrl: "/posts/assets/images/644179_4426892273529_656186026_n.jpg"
 ---
 
 ![644179_4426892273529_656186026_n](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2016/01/644179_4426892273529_656186026_n.jpg?resize=375%2C418)

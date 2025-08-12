@@ -1,8 +1,8 @@
 ---
 title: "LANTERN MAKING CONTEST"
-date: "16/12/2016"
+date: "2016-12-16T08:12:55.000Z"
 slug: "lantern-making-contest"
-imageUrl: "assets/images/electoral.png"
+imageUrl: "/posts/assets/images/electoral.png"
 ---
 
 **NZ – Filipino Sto Nino Devotees Trust in partnership with The Electoral Commission  

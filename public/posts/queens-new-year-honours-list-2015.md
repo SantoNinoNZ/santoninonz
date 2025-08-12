@@ -1,8 +1,8 @@
 ---
 title: "Queen's New Year Honours List 2015"
-date: "25/05/2015"
+date: "2015-05-24T14:09:01.000Z"
 slug: "queens-new-year-honours-list-2015"
-imageUrl: "assets/images/MESSAGE-FROM-COUNCIL-OF-PRIEST-CATHOLIC-DIOCESE-OF-AUCKLAND-791x1024.jpg"
+imageUrl: "/posts/assets/images/MESSAGE-FROM-COUNCIL-OF-PRIEST-CATHOLIC-DIOCESE-OF-AUCKLAND-791x1024.jpg"
 ---
 
 _**Congratulations to our very own Oscar Pioquinto Batucan and Miriam Alvez Batucan for receiving the Queen's Service Medal 2015.**_

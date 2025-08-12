@@ -1,8 +1,8 @@
 ---
 title: "2019 9-Days Novena/Mass Schedule"
-date: "3/01/2019"
+date: "2019-01-03T01:23:14.000Z"
 slug: "2019-9-days-novena-mass-schedule"
-imageUrl: "assets/images/sinulog-poster.jpg"
+imageUrl: "/posts/assets/images/sinulog-poster.jpg"
 ---
 
 2019 9-DAYS NOVENA/MASS SCHEDULE

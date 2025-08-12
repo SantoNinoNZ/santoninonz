@@ -31,7 +31,7 @@ function formatPostDate(dateString: string): string {
     if (isNaN(date.getTime())) {
       return 'N/A'; // Return 'N/A' for invalid dates
     }
-    return date.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
+    return date.toLocaleString('en-NZ', { year: 'numeric', month: 'long', day: 'numeric' });
   } catch (error) {
     console.error("Error formatting date:", error);
     return 'N/A';
@@ -103,7 +103,7 @@ export default function PostGrid({ initialPosts }: PostGridProps) {
         <Link
           key={post.slug}
           href={`/posts/${post.slug}`}
-          className="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white group"
+          className="block rounded-lg overflow-hidden shadow-lg hover:shadow-xl transition-shadow duration-300 bg-white/10 group"
         >
           {post.imageUrl && (
             <div className="relative w-full h-48">
@@ -115,13 +115,13 @@ export default function PostGrid({ initialPosts }: PostGridProps) {
             </div>
           )}
           <div className="p-6">
-            <h3 className="text-xl font-lora font-semibold mb-2 text-gray-900 group-hover:text-[#861D1D] transition-colors duration-300">
+            <h3 className="text-xl font-lora font-semibold mb-2 text-white group-hover:text-gray-300 transition-colors duration-300">
               {decodeHtmlEntities(post.title)}
             </h3>
-            <p className="text-sm font-roboto text-gray-700 mb-4">
+            <p className="text-sm font-roboto text-gray-100 mb-4">
               {decodeHtmlEntities(post.excerpt || '')}
             </p>
-            <p className="text-xs font-roboto text-gray-500">
+            <p className="text-xs font-roboto text-gray-200">
               {formatPostDate(post.date)}
             </p>
           </div>

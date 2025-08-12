@@ -1,8 +1,8 @@
 ---
 title: "A Message from 2017 Sinulog NZ Queen Grand Winner – Kimberly Tabar"
-date: "1/01/2018"
+date: "2017-12-31T22:51:58.000Z"
 slug: "a-message-from-2017-sinulog-nz-queen-kimberly-tabar"
-imageUrl: "assets/images/15977425_10212004922056895_698194514731377823_n.jpg"
+imageUrl: "/posts/assets/images/15977425_10212004922056895_698194514731377823_n.jpg"
 ---
 
 ![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2017/01/15977425_10212004922056895_698194514731377823_n.jpg?resize=480%2C240)

@@ -1,8 +1,8 @@
 ---
 title: "May Sinulog NZ Community Outreach Programme"
-date: "28/05/2017"
+date: "2017-05-28T10:08:42.000Z"
 slug: "may-sinulog-nz-community-outreach-programme"
-imageUrl: "assets/images/18670932_10213351313035828_1492424413589316050_n.jpg"
+imageUrl: "/posts/assets/images/18670932_10213351313035828_1492424413589316050_n.jpg"
 ---
 
 Sinulog NZ Community Outreach program at the Edmund Hillary Retirement Village. Kindness and love for the elderly makes for a happy spirit. Pit Senyor!

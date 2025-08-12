@@ -1,6 +1,6 @@
 ---
 title: "Sinulog NZ 2014 Festival Queen Voting Results"
-date: "31/12/2013"
+date: "2013-12-30T12:44:34.000Z"
 slug: "sinulog-2014-festival-queen-voting-results"
 
 ---

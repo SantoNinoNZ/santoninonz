@@ -1,8 +1,8 @@
 ---
 title: "Invitation to Join Sinulog NZ's 2019 Festival Queen Competition"
-date: "16/09/2018"
+date: "2018-09-16T10:36:01.000Z"
 slug: "invitation-to-join-sinulog-nzs-2019-festival-queen-competition"
-imageUrl: "assets/images/41758897_249973418997114_6256335992291065856_n.png"
+imageUrl: "/posts/assets/images/41758897_249973418997114_6256335992291065856_n.png"
 ---
 
 The Sinulog NZ Festival Queen competition is back for 2019 as Auckland celebrates its 25th year anniversary. Expect another vibrant and colourful grand Mardi Gras.

@@ -1,6 +1,6 @@
 ---
 title: "Sto Niño returns to Cebu"
-date: "26/11/2009"
+date: "2009-11-26T10:56:14.000Z"
 slug: "sto-nino-returns-to-cebu"
 
 ---

@@ -1,8 +1,8 @@
 ---
 title: "2015 9-DAYS NOVENA/MASS SCHEDULE"
-date: "9/01/2015"
+date: "2015-01-09T10:51:36.000Z"
 slug: "2015-9-days-novenamass-schedule"
-imageUrl: "assets/images/1796862_10152478150171523_3748430730018750983_o-724x1024.jpg"
+imageUrl: "/posts/assets/images/1796862_10152478150171523_3748430730018750983_o-724x1024.jpg"
 ---
 
 ### [![1796862_10152478150171523_3748430730018750983_o](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2015/01/1796862_10152478150171523_3748430730018750983_o-724x1024.jpg?resize=724%2C1024)](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2015/01/1796862_10152478150171523_3748430730018750983_o.jpg)

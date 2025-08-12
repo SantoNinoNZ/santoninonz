@@ -1,6 +1,6 @@
 ---
 title: "A Prayer for Mothers"
-date: "10/05/2014"
+date: "2014-05-09T23:04:06.000Z"
 slug: "a-prayer-for-mothers"
 
 ---

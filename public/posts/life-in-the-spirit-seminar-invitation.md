@@ -1,8 +1,8 @@
 ---
 title: "Life in the Spirit Seminar Invitation"
-date: "16/04/2016"
+date: "2016-04-16T07:30:35.000Z"
 slug: "life-in-the-spirit-seminar-invitation"
-imageUrl: "assets/images/1934677_10209098380515173_7811472347216994411_n.jpg"
+imageUrl: "/posts/assets/images/1934677_10209098380515173_7811472347216994411_n.jpg"
 ---
 
 ![1934677_10209098380515173_7811472347216994411_n](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2016/04/1934677_10209098380515173_7811472347216994411_n.jpg?resize=259%2C194)

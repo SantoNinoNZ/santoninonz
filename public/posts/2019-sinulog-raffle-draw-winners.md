@@ -1,8 +1,8 @@
 ---
 title: "2019 Sinulog Raffle Draw Winners"
-date: "22/01/2019"
+date: "2019-01-22T10:59:25.000Z"
 slug: "2019-sinulog-raffle-draw-winners"
-imageUrl: "assets/images/Gold-Coast.jpg"
+imageUrl: "/posts/assets/images/Gold-Coast.jpg"
 ---
 
 Congratulations to the 2019 Sinulog Raffle Draw Winners

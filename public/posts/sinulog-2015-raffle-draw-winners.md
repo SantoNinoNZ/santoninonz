@@ -1,6 +1,6 @@
 ---
 title: "SINULOG 2015 Raffle Draw Winners"
-date: "19/01/2015"
+date: "2015-01-18T19:02:08.000Z"
 slug: "sinulog-2015-raffle-draw-winners"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "History of Sto Niño de Cebu"
-date: "26/11/2009"
+date: "2009-11-26T10:34:24.000Z"
 slug: "history-of-sto-nino-de-cebu"
 
 ---

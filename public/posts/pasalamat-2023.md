@@ -1,8 +1,8 @@
 ---
 title: "Pasalamat 2023"
-date: "16/01/2023"
+date: "2023-01-16T09:02:23.000Z"
 slug: "pasalamat-2023"
-imageUrl: "assets/images/ab67616d0000b2734e305d6f9541af4a0cddb136.jpg"
+imageUrl: "/posts/assets/images/ab67616d0000b2734e305d6f9541af4a0cddb136.jpg"
 ---
 
 The 29th Annual Santo Nino Fiesta & Sinulog in New Zealand – 15 Jan 2023 is always an exceptional expression of Filipinos' love and devotion to the Holy Child Jesus, Senyor Santo Nino.

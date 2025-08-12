@@ -1,6 +1,6 @@
 ---
 title: "Letter Invitation to Join Sinulog 2014 Festival Queen Competition"
-date: "1/09/2013"
+date: "2013-09-01T11:39:18.000Z"
 slug: "letter-invitation-to-join-sinulog-2014-festival-queen-competition"
 
 ---

@@ -1,8 +1,8 @@
 ---
 title: "Christmas Picnic at the Park"
-date: "17/12/2017"
+date: "2017-12-17T09:11:02.000Z"
 slug: "christmas-picnic-at-the-park"
-imageUrl: "assets/images/picnic-in-the-park-1.jpg"
+imageUrl: "/posts/assets/images/picnic-in-the-park-1.jpg"
 ---
 
 ![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2015/12/picnic-in-the-park-1.jpg?resize=462%2C274)

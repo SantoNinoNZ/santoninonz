@@ -1,6 +1,6 @@
 ---
 title: "SINULOG 2013 Special Acknowledgements"
-date: "21/01/2013"
+date: "2013-01-21T09:51:06.000Z"
 slug: "thank-you-message-from-the-batucans-for-fiesta-2013"
 
 ---

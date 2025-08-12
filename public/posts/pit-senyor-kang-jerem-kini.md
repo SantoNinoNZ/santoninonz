@@ -1,8 +1,8 @@
 ---
 title: "Pit Senyor kang Jerem kini!"
-date: "4/01/2010"
+date: "2010-01-04T03:24:22.000Z"
 slug: "pit-senyor-kang-jerem-kini"
-imageUrl: "assets/images/3178885442_e2a267383d.jpg"
+imageUrl: "/posts/assets/images/3178885442_e2a267383d.jpg"
 ---
 
 One day at the beginning of spring – September 2009, my nephew Jeremiah complained of pains in his tummy.  His parent’s were away on conference at the time so Nana took care of the kids in their absence.  He was taken to the local hospital in Whakatane and admitted there until their parents managed to get back.  Jeremiah was in so much pain and doctors couldn’t make out what was wrong with him.  Soon after he was airlifted to Starship Children’s Hospital where he remained for the next three months.

@@ -1,6 +1,6 @@
 ---
 title: "The Pencilmaker"
-date: "2/01/2012"
+date: "2012-01-01T19:34:24.000Z"
 slug: "the-pencilmaker"
 
 ---

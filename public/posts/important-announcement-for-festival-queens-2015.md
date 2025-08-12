@@ -1,6 +1,6 @@
 ---
 title: "IMPORTANT ANNOUNCEMENT for Festival Queens 2015"
-date: "16/11/2014"
+date: "2014-11-16T00:51:23.000Z"
 slug: "important-announcement-for-festival-queens-2015"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "SINULOG 2012 MAGAZINE"
-date: "11/10/2011"
+date: "2011-10-11T02:19:03.000Z"
 slug: "sinulog-2012-magazine"
 
 ---

@@ -1,8 +1,8 @@
 ---
 title: "Thanksgiving for Christmas"
-date: "6/12/2015"
+date: "2015-12-06T04:27:40.000Z"
 slug: "thanksgiving-for-christmas"
-imageUrl: "assets/images/Sto-Nino.png"
+imageUrl: "/posts/assets/images/Sto-Nino.png"
 ---
 
 [![Sto Nino](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2015/12/Sto-Nino.png?resize=276%2C296)](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2015/12/Sto-Nino.png)

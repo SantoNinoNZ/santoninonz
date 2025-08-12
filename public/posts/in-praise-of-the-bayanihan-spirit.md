@@ -1,8 +1,8 @@
 ---
 title: "In Praise of the Bayanihan Spirit"
-date: "9/03/2020"
+date: "2020-03-09T09:12:03.000Z"
 slug: "in-praise-of-the-bayanihan-spirit"
-imageUrl: "assets/images/santo-nino-bigger.jpg"
+imageUrl: "/posts/assets/images/santo-nino-bigger.jpg"
 ---
 
 [https://www.filipinonews.nz/featured/in-praise-of-the-bayanihan-spirit/](https://www.filipinonews.nz/featured/in-praise-of-the-bayanihan-spirit/)

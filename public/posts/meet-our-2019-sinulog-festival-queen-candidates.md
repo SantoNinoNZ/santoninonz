@@ -1,8 +1,8 @@
 ---
 title: "Meet our 2019 Sinulog Festival Queen Candidates"
-date: "28/12/2018"
+date: "2018-12-27T21:04:57.000Z"
 slug: "meet-our-2019-sinulog-festival-queen-candidates"
-imageUrl: "assets/images/Harliquine-Malinao-Casual.jpg"
+imageUrl: "/posts/assets/images/Harliquine-Malinao-Casual.jpg"
 ---
 
 We are excited to introduce to our 2019 Sinulog Festival Queen candidates for 2019.

@@ -1,8 +1,8 @@
 ---
 title: "Sinulog 2016 Raffle Draw Winners"
-date: "17/01/2016"
+date: "2016-01-17T10:44:01.000Z"
 slug: "sinulog-2016-raffle-draw-winners-2"
-imageUrl: "assets/images/12645045_10209066072155477_8971199530060807090_n.jpg"
+imageUrl: "/posts/assets/images/12645045_10209066072155477_8971199530060807090_n.jpg"
 ---
 
 Congratulations Delia Espenido (2nd prize winner of the Sinulog 2016 Raffle draw) for winning a Round Trip Ticket for 2 to Queenstown. Delia Espenido receiving her prize from Oscar & Miriam Batucan. Pit Senyor!

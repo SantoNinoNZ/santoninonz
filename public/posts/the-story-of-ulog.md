@@ -1,6 +1,6 @@
 ---
 title: "The Story of Ulog"
-date: "27/11/2009"
+date: "2009-11-26T11:04:52.000Z"
 slug: "the-story-of-ulog"
 
 ---

@@ -1,8 +1,8 @@
 ---
 title: "2015 Farmer's Santa Parade Invitation"
-date: "27/09/2015"
+date: "2015-09-26T14:04:37.000Z"
 slug: "2015-farmers-santa-parade-invitation"
-imageUrl: "assets/images/FBwebsiteStoNinochristmasParade-724x1024.jpg"
+imageUrl: "/posts/assets/images/FBwebsiteStoNinochristmasParade-724x1024.jpg"
 ---
 
 For the first time ever, the NZ-Filipino Devotees of Senyor Sto. Niῆo has committed to participate in the 2015 Santa Parade (in Auckland)!  

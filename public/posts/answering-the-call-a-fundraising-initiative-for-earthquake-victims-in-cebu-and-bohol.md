@@ -1,6 +1,6 @@
 ---
 title: "Answering the Call: A Fundraising Initiative for Earthquake Victims in Cebu and Bohol"
-date: "17/10/2013"
+date: "2013-10-17T08:03:52.000Z"
 slug: "answering-the-call-a-fundraising-initiative-for-earthquake-victims-in-cebu-and-bohol"
 
 ---

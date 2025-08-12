@@ -35,7 +35,7 @@ export default async function Home() {
 
       {/* Other Articles Grid */}
       <section className="w-full max-w-screen-xl px-4 py-12">
-        <h2 className="text-4xl font-lora font-bold text-[#2B1E1A] mb-8 text-center">Latest Articles</h2>
+        <h2 className="text-4xl font-lora font-bold text-white mb-8 text-center">Latest Articles</h2>
         <PostGrid initialPosts={otherPosts} />
       </section>
     </main>

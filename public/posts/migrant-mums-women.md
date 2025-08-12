@@ -1,8 +1,8 @@
 ---
 title: "Migrant Mums &#038; Women"
-date: "2/05/2015"
+date: "2015-05-02T10:56:47.000Z"
 slug: "migrant-mums-women"
-imageUrl: "assets/images/migrantmums_poster_lowres1-724x1024.jpg"
+imageUrl: "/posts/assets/images/migrantmums_poster_lowres1-724x1024.jpg"
 ---
 
 [![migrantmums_poster_lowres](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2015/05/migrantmums_poster_lowres1-724x1024.jpg?resize=724%2C1024)](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2015/05/migrantmums_poster_lowres1.jpg)

@@ -1,8 +1,8 @@
 ---
 title: "Lantern Making Contest 2017 Winners"
-date: "15/01/2017"
+date: "2017-01-15T05:29:17.000Z"
 slug: "lantern-making-contest-2017-winners"
-imageUrl: "assets/images/LANTERN-MAKING-CONTEST-FINAL-POSTER-753x1024.jpg"
+imageUrl: "/posts/assets/images/LANTERN-MAKING-CONTEST-FINAL-POSTER-753x1024.jpg"
 ---
 
 Congratulations to the Winners of the Lantern Making Contest 2017  

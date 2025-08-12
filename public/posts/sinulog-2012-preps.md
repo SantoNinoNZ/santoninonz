@@ -1,6 +1,6 @@
 ---
 title: "Sinulog 2012 Preps"
-date: "15/10/2012"
+date: "2012-10-15T10:34:40.000Z"
 slug: "sinulog-2012-preps"
 
 ---

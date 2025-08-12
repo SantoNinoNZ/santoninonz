@@ -1,8 +1,8 @@
 ---
 title: "2021 9-Days Novena/Mass Schedule"
-date: "23/12/2020"
+date: "2020-12-23T05:22:58.000Z"
 slug: "2021-9-days-novena-mass-schedule"
-imageUrl: "assets/images/128528653_10158363336981523_451343696054967113_o.jpg"
+imageUrl: "/posts/assets/images/128528653_10158363336981523_451343696054967113_o.jpg"
 ---
 
 **_January 7 to 15, 2021  

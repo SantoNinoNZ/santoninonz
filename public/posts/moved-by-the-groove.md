@@ -1,8 +1,8 @@
 ---
 title: "Moved by the Groove"
-date: "16/01/2011"
+date: "2011-01-15T22:13:42.000Z"
 slug: "moved-by-the-groove"
-imageUrl: "assets/images/20100116-dsc_1766-300x199.jpg"
+imageUrl: "/posts/assets/images/20100116-dsc_1766-300x199.jpg"
 ---
 
 [![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2011/01/20100116-dsc_1766-300x199.jpg?resize=300%2C199 "20100116-dsc_1766")](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2011/01/20100116-dsc_1766.jpg)

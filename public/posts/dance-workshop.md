@@ -1,8 +1,8 @@
 ---
 title: "Dance Workshop"
-date: "19/02/2016"
+date: "2016-02-19T04:49:45.000Z"
 slug: "dance-workshop"
-imageUrl: "assets/images/fitness.jpeg"
+imageUrl: "/posts/assets/images/fitness.jpeg"
 ---
 
 ![fitness](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2016/02/fitness.jpeg?resize=480%2C302)

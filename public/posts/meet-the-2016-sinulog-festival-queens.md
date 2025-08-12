@@ -1,8 +1,8 @@
 ---
 title: "Meet the 2016 Sinulog Festival Queens"
-date: "19/12/2015"
+date: "2015-12-19T09:51:15.000Z"
 slug: "meet-the-2016-sinulog-festival-queens"
-imageUrl: "assets/images/12394785_939107536136547_1609976684_o-1024x683.jpg"
+imageUrl: "/posts/assets/images/12394785_939107536136547_1609976684_o-1024x683.jpg"
 ---
 
 **Contestant #1 Zhyryll Krystynn Parado**

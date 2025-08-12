@@ -1,8 +1,8 @@
 ---
 title: "SANTO NINO FIESTA 2022 THANK YOU MESSAGE"
-date: "16/01/2022"
+date: "2022-01-16T08:32:06.000Z"
 slug: "santo-nino-fiesta-2022-thank-you-message"
-imageUrl: "assets/images/image.png"
+imageUrl: "/posts/assets/images/image.png"
 ---
 
 A BIG THANK YOU!!! Daghang Salamat (Many Thanks)

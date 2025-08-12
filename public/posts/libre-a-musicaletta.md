@@ -1,8 +1,8 @@
 ---
 title: "Libre: A ‘musicaletta’"
-date: "8/01/2012"
+date: "2012-01-08T00:15:50.000Z"
 slug: "libre-a-musicaletta"
-imageUrl: "assets/images/398642_10150508189511523_225601086522_9159388_81266402_n.jpg"
+imageUrl: "/posts/assets/images/398642_10150508189511523_225601086522_9159388_81266402_n.jpg"
 ---
 
 By [Mel Libre](http://www.sunstar.com.ph/taxonomy/term/139)

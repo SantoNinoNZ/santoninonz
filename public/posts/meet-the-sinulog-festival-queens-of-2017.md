@@ -1,8 +1,8 @@
 ---
 title: "Sinulog Festival Queen Candidates of 2017"
-date: "25/11/2016"
+date: "2016-11-25T03:08:07.000Z"
 slug: "meet-the-sinulog-festival-queens-of-2017"
-imageUrl: "assets/images/147-683x1024.jpg"
+imageUrl: "/posts/assets/images/147-683x1024.jpg"
 ---
 
 ![147](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2016/11/147-683x1024.jpg?resize=300%2C450)![143](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2016/11/143-683x1024.jpg?resize=300%2C450)

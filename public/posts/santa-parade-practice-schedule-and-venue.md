@@ -1,8 +1,8 @@
 ---
 title: "Santa Parade Practice Schedule and Venue"
-date: "4/11/2015"
+date: "2015-11-03T16:17:56.000Z"
 slug: "santa-parade-practice-schedule-and-venue"
-imageUrl: "assets/images/2889551_1_O.jpg"
+imageUrl: "/posts/assets/images/2889551_1_O.jpg"
 ---
 
 [![2889551_1_O](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2015/11/2889551_1_O.jpg?resize=450%2C205)](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2015/11/2889551_1_O.jpg)

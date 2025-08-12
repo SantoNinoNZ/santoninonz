@@ -1,8 +1,8 @@
 ---
 title: "SANTO NINO – SINULOG NZ COMMUNITY OUTREACH PROGRAMME 09 Dec 2017 – sharing &#8220;JOY TO THE WORLD&#8221;"
-date: "9/12/2017"
+date: "2017-12-09T08:43:56.000Z"
 slug: "santo-nino-sinulog-nz-community-outreach-programme-09-dec-2017-sharing-joy-to-the-world"
-imageUrl: "assets/images/24796539_10211926484902812_6162254381342917093_n.jpg"
+imageUrl: "/posts/assets/images/24796539_10211926484902812_6162254381342917093_n.jpg"
 ---
 
 Another very blessed, joyful and successful Christmas Extravaganza 2017 at Edmund Hillary Retirement Village.

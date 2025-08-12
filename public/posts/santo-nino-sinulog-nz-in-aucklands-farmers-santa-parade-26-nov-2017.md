@@ -1,8 +1,8 @@
 ---
 title: "SANTO NINO – SINULOG NZ IN AUCKLAND’S FARMERS SANTA PARADE 26 NOV 2017"
-date: "26/11/2017"
+date: "2017-11-26T08:49:59.000Z"
 slug: "santo-nino-sinulog-nz-in-aucklands-farmers-santa-parade-26-nov-2017"
-imageUrl: "assets/images/23844626_10155986411475452_385669718661732215_n.jpg"
+imageUrl: "/posts/assets/images/23844626_10155986411475452_385669718661732215_n.jpg"
 ---
 
 ![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2017/11/23844626_10155986411475452_385669718661732215_n.jpg?resize=641%2C360)

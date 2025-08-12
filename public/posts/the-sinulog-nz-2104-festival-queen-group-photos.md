@@ -1,8 +1,8 @@
 ---
 title: "The Sinulog NZ 2104 Festival Queen – group photos"
-date: "1/12/2013"
+date: "2013-11-30T19:53:04.000Z"
 slug: "the-sinulog-nz-2104-festival-queen-group-photos"
-imageUrl: "assets/images/group1.jpg"
+imageUrl: "/posts/assets/images/group1.jpg"
 ---
 
 The Sinulog NZ 2014 Festival Queen candidates had fun at the Auckland Domain last Sunday, 24th of November. The girls had their photos taken by photographer Joey de Guzman.

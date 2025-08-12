@@ -1,8 +1,8 @@
 ---
 title: "Ardent Senyor Sto Niño Devotee &#038; Organizer Couple receives Papal Award"
-date: "18/01/2010"
+date: "2010-01-18T02:17:26.000Z"
 slug: "ardent-senyor-sto-nino-couple-organizer-receives-papal-award"
-imageUrl: "assets/images/venemerentioscarmiriam-731x1024.jpg"
+imageUrl: "/posts/assets/images/venemerentioscarmiriam-731x1024.jpg"
 ---
 
 [![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2011/05/venemerentioscarmiriam-731x1024.jpg?resize=196%2C254 "venemerentioscar&miriam")](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2011/05/venemerentioscarmiriam.jpg)

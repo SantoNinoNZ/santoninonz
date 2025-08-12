@@ -1,8 +1,8 @@
 ---
 title: "Paskong Pinoy Parol Making Contest"
-date: "11/11/2018"
+date: "2018-11-10T11:49:49.000Z"
 slug: "paskong-pinoy-lantern-making-contest"
-imageUrl: "assets/images/paskong_pinoy_FB-1024x536.jpg"
+imageUrl: "/posts/assets/images/paskong_pinoy_FB-1024x536.jpg"
 ---
 
 ![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2018/11/paskong_pinoy_FB-1024x536.jpg?resize=650%2C340)

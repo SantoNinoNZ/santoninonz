@@ -1,8 +1,8 @@
 ---
 title: "Sinulog 2013 Spring Disco Fever – Message of Thanks"
-date: "30/09/2013"
+date: "2013-09-29T20:23:59.000Z"
 slug: "sinulog-2013-spring-disco-fever-message-of-thanks"
-imageUrl: "assets/images/image01.jpg"
+imageUrl: "/posts/assets/images/image01.jpg"
 ---
 
 [![image01](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2013/09/image01.jpg?resize=624%2C137)](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2013/09/image01.jpg)

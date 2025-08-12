@@ -1,6 +1,6 @@
 ---
 title: "Sinulog Witnessing – January 2012"
-date: "6/01/2012"
+date: "2012-01-05T22:41:37.000Z"
 slug: "sinulog-witnessing-january-2012"
 
 ---

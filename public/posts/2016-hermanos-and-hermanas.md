@@ -1,8 +1,8 @@
 ---
 title: "2016 Hermanos and Hermanas"
-date: "1/01/2017"
+date: "2017-01-01T03:37:33.000Z"
 slug: "2016-hermanos-and-hermanas"
-imageUrl: "assets/images/Christopher-and-Janice-Cruz-1.jpg"
+imageUrl: "/posts/assets/images/Christopher-and-Janice-Cruz-1.jpg"
 ---
 
 ![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2016/01/Christopher-and-Janice-Cruz-1.jpg?resize=381%2C381)

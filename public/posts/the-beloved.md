@@ -1,8 +1,8 @@
 ---
 title: "The Beloved"
-date: "12/01/2013"
+date: "2013-01-12T02:52:29.000Z"
 slug: "the-beloved"
-imageUrl: "assets/images/scan0010-300x145.jpg"
+imageUrl: "/posts/assets/images/scan0010-300x145.jpg"
 ---
 
 [![scan0010](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2013/01/scan0010-300x145.jpg?resize=554%2C295)](http://santonino-nz.org/the-beloved/scan0010/)

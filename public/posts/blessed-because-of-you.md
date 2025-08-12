@@ -1,6 +1,6 @@
 ---
 title: "Blessed because of You"
-date: "6/01/2009"
+date: "2009-01-06T09:01:12.000Z"
 slug: "blessed-because-of-you"
 
 ---

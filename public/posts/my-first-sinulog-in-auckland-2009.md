@@ -1,8 +1,8 @@
 ---
 title: "My First Sinulog in Auckland 2009"
-date: "19/01/2009"
+date: "2009-01-18T11:00:34.000Z"
 slug: "my-first-sinulog-in-auckland-2009"
-imageUrl: "assets/images/clothes.jpg"
+imageUrl: "/posts/assets/images/clothes.jpg"
 ---
 
 [![](http://stonino.files.wordpress.com/2011/05/clothes.jpg?w=300&resize=354%2C269 "clothes")](http://stonino.files.wordpress.com/2011/05/clothes.jpg)

@@ -1,8 +1,8 @@
 ---
 title: "A Message from 2016 Sinulog NZ Queen"
-date: "31/12/2016"
+date: "2016-12-31T07:49:38.000Z"
 slug: "a-message-from-2016-sinulog-nz-queen"
-imageUrl: "assets/images/14686504_10211415221962754_667429039_n.jpg"
+imageUrl: "/posts/assets/images/14686504_10211415221962754_667429039_n.jpg"
 ---
 
 ![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2016/12/14686504_10211415221962754_667429039_n.jpg?resize=488%2C735)

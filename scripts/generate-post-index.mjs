@@ -39,7 +39,8 @@ async function generatePostIndex() {
             posts.push({
               slug,
               title: frontMatter.title,
-              date: parsedDate.toISOString().split('T')[0] // Store date as YYYY-MM-DD string
+              date: parsedDate.toISOString().split('T')[0], // Store date as YYYY-MM-DD string
+              imageUrl: frontMatter.imageUrl || undefined // Include imageUrl if present
             });
           } else {
             console.warn(`Skipping ${filename}: Missing title or date, or invalid date format in front matter.`);

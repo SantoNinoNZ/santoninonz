@@ -1,8 +1,8 @@
 ---
 title: "Sinulog NZ joins Rosary Aotearoa"
-date: "30/09/2018"
+date: "2018-09-30T01:59:41.000Z"
 slug: "sinulog-nz-joins-rosary-aotearoa"
-imageUrl: "assets/images/42650268_10156135116836523_1026109528585797632_n.png"
+imageUrl: "/posts/assets/images/42650268_10156135116836523_1026109528585797632_n.png"
 ---
 
 The NZ-Filipino Sto Nino Devotees and the St Benedict's Devotees of the Mother of Perpetual Help join ROSARY AOTEAROA. On October 7, 2018 at 3pm, parishes and community groups from different parts of New Zealand will pray the Rosary. Such a special offering on the Feast of Our Lady of the Rosary. Please join us at St Benedict's Parish, Newton, Auckland at 3pm to offer our gift to Jesus thru Mary.

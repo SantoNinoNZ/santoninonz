@@ -1,8 +1,8 @@
 ---
 title: "Message of Thanks"
-date: "18/01/2021"
+date: "2021-01-17T11:26:09.000Z"
 slug: "message-of-thanks"
-imageUrl: "assets/images/thank.jpg"
+imageUrl: "/posts/assets/images/thank.jpg"
 ---
 
 DAGHANG SALAMAT SENOR SANTO NINO.

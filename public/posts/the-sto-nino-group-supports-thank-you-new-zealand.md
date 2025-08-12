@@ -1,8 +1,8 @@
 ---
 title: "The Sto Niño Group supports THANK YOU NEW ZEALAND"
-date: "1/12/2013"
+date: "2013-11-30T12:42:53.000Z"
 slug: "the-sto-nino-group-supports-thank-you-new-zealand"
-imageUrl: "assets/images/1486634_688642304494120_1230032218_n.jpg"
+imageUrl: "/posts/assets/images/1486634_688642304494120_1230032218_n.jpg"
 ---
 
 <!-- P { margin-bottom: 0.21cm; } -->

@@ -1,6 +1,6 @@
 ---
 title: "Sinulog NZ 2018 Raffle Draw Winners"
-date: "22/01/2018"
+date: "2018-01-21T11:19:19.000Z"
 slug: "sinulog-nz-2018-raffle-draw-winners"
 
 ---

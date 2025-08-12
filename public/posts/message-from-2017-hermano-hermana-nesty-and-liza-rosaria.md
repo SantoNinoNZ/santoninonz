@@ -1,8 +1,8 @@
 ---
 title: "Message from 2017 Hermano &#038; Hermana – Nesty and Liza Rosaria"
-date: "1/01/2018"
+date: "2018-01-01T02:01:11.000Z"
 slug: "message-from-2017-hermano-hermana-nesty-and-liza-rosaria"
-imageUrl: "assets/images/A7CA236E-5EF8-4088-9640-D3C8A2F915E9.jpeg"
+imageUrl: "/posts/assets/images/A7CA236E-5EF8-4088-9640-D3C8A2F915E9.jpeg"
 ---
 
 ![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2018/01/A7CA236E-5EF8-4088-9640-D3C8A2F915E9.jpeg?resize=571%2C762)

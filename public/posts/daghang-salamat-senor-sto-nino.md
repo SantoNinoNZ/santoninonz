@@ -1,8 +1,8 @@
 ---
 title: "Daghang Salamat Señor Sto. Niño"
-date: "1/01/2010"
+date: "2009-12-31T11:03:59.000Z"
 slug: "daghang-salamat-senor-sto-nino"
-imageUrl: "assets/images/ctc-1463-image5.jpg"
+imageUrl: "/posts/assets/images/ctc-1463-image5.jpg"
 ---
 
 [![](http://stonino.files.wordpress.com/2010/01/ctc-1463-image5.jpg?w=300&resize=334%2C227 "CTC-1463-image5")](http://stonino.files.wordpress.com/2010/01/ctc-1463-image5.jpg)

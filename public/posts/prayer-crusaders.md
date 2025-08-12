@@ -1,8 +1,8 @@
 ---
 title: "Prayer Crusaders"
-date: "29/04/2016"
+date: "2016-04-29T05:35:02.000Z"
 slug: "prayer-crusaders"
-imageUrl: "assets/images/90fcb87abd5adc092ec86945b7299411.jpg"
+imageUrl: "/posts/assets/images/90fcb87abd5adc092ec86945b7299411.jpg"
 ---
 
 The Senyor Sto Niño Prayer Crusaders would like to invite volunteer families. Throughout the prayer crusade, we have witnessed healing of the sick and answered petitions through heart-felt worship. The real miracle is that Sto Niño has made a way for us to communicate love for others through means of prayer. Let us know which day of the month you would like to volunteer your prayers for. Let us build this community of faith, one family at a time.

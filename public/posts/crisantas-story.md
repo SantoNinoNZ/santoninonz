@@ -1,6 +1,6 @@
 ---
 title: "Crisanta's Story"
-date: "27/11/2009"
+date: "2009-11-26T11:03:27.000Z"
 slug: "crisantas-story"
 
 ---

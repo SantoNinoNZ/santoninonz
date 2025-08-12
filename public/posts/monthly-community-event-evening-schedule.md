@@ -1,6 +1,6 @@
 ---
 title: "Monthly Community Event – Evening Schedule"
-date: "19/10/2018"
+date: "2018-10-19T02:59:53.000Z"
 slug: "monthly-community-event-evening-schedule"
 
 ---

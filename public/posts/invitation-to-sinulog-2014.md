@@ -1,6 +1,6 @@
 ---
 title: "Invitation to Sinulog 2014"
-date: "1/12/2013"
+date: "2013-11-30T17:38:07.000Z"
 slug: "invitation-to-sinulog-2014"
 
 ---

@@ -1,6 +1,6 @@
 ---
 title: "A Hand to Hold"
-date: "6/01/2011"
+date: "2011-01-05T17:44:12.000Z"
 slug: "a-hand-to-hold"
 
 ---

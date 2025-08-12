@@ -1,8 +1,8 @@
 ---
 title: "June 2014 Thanksgiving Novena Mass for Senyor Sto Niño"
-date: "21/06/2014"
+date: "2014-06-20T16:39:00.000Z"
 slug: "june-2014-thanksgiving-novena-mass-for-senyor-sto-nino-with-devotees-of-senyor-sto-nino-hermanos-and-hermanas-2014-divine-mercy-devotees-fr-rory-morrisey-legion-of-mary-national-leyte-samar-w"
-imageUrl: "assets/images/10401979_10152303299444475_8630739187752719978_n.jpg"
+imageUrl: "/posts/assets/images/10401979_10152303299444475_8630739187752719978_n.jpg"
 ---
 
 Thank you to all devotees of Senyor Sto Niño, Hermanos and Hermanas 2014, Divine Mercy Devotees – Fr. Rory Morrisey, Legion of Mary – National, Leyte-Samar Waraynons NZ; Organization of Cordillerans NZ, Lightbringers Group, Central Auckland Devotees

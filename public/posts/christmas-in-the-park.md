@@ -1,8 +1,8 @@
 ---
 title: "Christmas in the Park"
-date: "15/12/2015"
+date: "2015-12-15T01:56:38.000Z"
 slug: "christmas-in-the-park"
-imageUrl: "assets/images/picnic-in-the-park-1.jpg"
+imageUrl: "/posts/assets/images/picnic-in-the-park-1.jpg"
 ---
 
 ![picnic-in-the-park (1)](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2015/12/picnic-in-the-park-1.jpg?resize=749%2C445)

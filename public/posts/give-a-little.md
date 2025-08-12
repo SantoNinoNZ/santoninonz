@@ -1,6 +1,6 @@
 ---
 title: "Give a Little"
-date: "1/11/2019"
+date: "2019-11-01T04:19:00.000Z"
 slug: "give-a-little"
 
 ---

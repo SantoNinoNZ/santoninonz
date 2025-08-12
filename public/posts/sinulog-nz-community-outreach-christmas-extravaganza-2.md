@@ -1,8 +1,8 @@
 ---
 title: "Sinulog NZ Community Outreach – Christmas Extravaganza #2"
-date: "15/12/2018"
+date: "2018-12-15T00:36:43.000Z"
 slug: "sinulog-nz-community-outreach-christmas-extravaganza-2"
-imageUrl: "assets/images/48266812_10218427054326188_1170737814929670144_n.jpg"
+imageUrl: "/posts/assets/images/48266812_10218427054326188_1170737814929670144_n.jpg"
 ---
 
 ![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2018/12/48266812_10218427054326188_1170737814929670144_n.jpg?resize=275%2C183)

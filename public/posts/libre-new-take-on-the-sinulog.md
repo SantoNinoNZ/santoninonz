@@ -1,8 +1,8 @@
 ---
 title: "Libre: New take on the Sinulog"
-date: "14/01/2011"
+date: "2011-01-14T00:28:17.000Z"
 slug: "libre-new-take-on-the-sinulog"
-imageUrl: "assets/images/165113_498350086522_225601086522_6341340_4509181_n.jpg"
+imageUrl: "/posts/assets/images/165113_498350086522_225601086522_6341340_4509181_n.jpg"
 ---
 
 By [Mel Libre](http://www.sunstar.com.ph/taxonomy/term/139)

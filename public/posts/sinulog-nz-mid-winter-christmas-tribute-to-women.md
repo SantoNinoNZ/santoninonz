@@ -1,8 +1,8 @@
 ---
 title: "Sinulog NZ Mid-Winter Christmas Tribute to Women"
-date: "28/06/2014"
+date: "2014-06-27T17:02:22.000Z"
 slug: "sinulog-nz-mid-winter-christmas-tribute-to-women"
-imageUrl: "assets/images/1239687_10202446550345151_6902816931660640810_n.jpg"
+imageUrl: "/posts/assets/images/1239687_10202446550345151_6902816931660640810_n.jpg"
 ---
 
 #FlaGallery\_sc2\_34 .flagPhantom\_ThumbContainer {width:200px; height:180px;}#FlaGallery\_sc2\_34 .flagPhantom\_MobileView .flagPhantom\_ThumbContainer {width:150px; height:135px;}#FlaGallery\_sc2\_34 .flagPhantom\_Container {margin-left:auto;margin-right:auto;}#FlaGallery\_sc2\_34 .flagPhantom\_ThumbContainer {margin:8px 0 0 8px;}#FlaGallery\_sc2\_34 .flagPhantom\_ThumbContainer {padding:2px;}#FlaGallery\_sc2\_34 .flagPhantom\_LabelBottom .flagPhantom\_ThumbContainer {padding-bottom:36px;}#FlaGallery\_sc2\_34 .flagPhantom\_ThumbContainer,#FlaGallery\_sc2\_34 .flagPhantom\_LabelBottom .flagPhantom\_ThumbLabel {background-color:#ffffff;}#FlaGallery\_sc2\_34 .flagPhantom\_ThumbContainer .flagPhantom\_Thumb {opacity:0.9;}#FlaGallery\_sc2\_34 .flagPhantom\_ThumbContainer:hover .flagPhantom\_Thumb {opacity:1;}#FlaGallery\_sc2\_34 .flagPhantom\_ThumbContainer {border:1px solid #cccccc;}#FlaGallery\_sc2\_34 .flagPhantom\_ThumbContainer {box-shadow:0 0 5px -2px #cccccc;}#FlaGallery\_sc2\_34 .flagPhantom\_ThumbLabel {color:#0b0b0b;}#FlaGallery\_sc2\_34 .flagPhantom\_ThumbLabel a {color:#3695E7;}#FlaGallery\_sc2\_34 .flagPhantom\_LabelInside .flagPhantom\_ThumbLabel,#FlaGallery\_sc2\_34 .flagPhantom\_LabelHover .flagPhantom\_ThumbLabel {color:#ffffff;}#FlaGallery\_sc2\_34 .flagPhantom\_LabelInside .flagPhantom\_ThumbLabel a,#FlaGallery\_sc2\_34 .flagPhantom\_LabelHover .flagPhantom\_ThumbLabel a,#FlaGallery\_sc2\_34 .flagPhantom\_LabelInside .flagPhantom\_ThumbLabel a:hover,#FlaGallery\_sc2\_34 .flagPhantom\_LabelHover .flagPhantom\_ThumbLabel a:hover {color:#e7e179;}

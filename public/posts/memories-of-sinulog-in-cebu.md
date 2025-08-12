@@ -1,8 +1,8 @@
 ---
 title: "Memories of Sinulog in Cebu"
-date: "19/12/2008"
+date: "2008-12-18T11:01:53.000Z"
 slug: "memories-of-sinulog-in-cebu"
-imageUrl: "assets/images/balloons.jpg"
+imageUrl: "/posts/assets/images/balloons.jpg"
 ---
 
 [![](http://stonino.files.wordpress.com/2011/05/balloons.jpg?resize=300%2C225 "balloons")](http://stonino.files.wordpress.com/2011/05/balloons.jpg)

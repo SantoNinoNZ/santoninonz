@@ -1,8 +1,8 @@
 ---
 title: "2023 9-Days Novena/Mass Schedule"
-date: "25/12/2022"
+date: "2022-12-25T08:50:13.000Z"
 slug: "2023-9-days-novena-mass-schedule"
-imageUrl: "assets/images/305230210_1788865424795430_3182611370615622357_n-1-1.jpg"
+imageUrl: "/posts/assets/images/305230210_1788865424795430_3182611370615622357_n-1-1.jpg"
 ---
 
 **_January 6 to 14, 2023  

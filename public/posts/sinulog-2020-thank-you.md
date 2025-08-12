@@ -1,8 +1,8 @@
 ---
 title: "Sinulog 2020 Thank You"
-date: "20/01/2020"
+date: "2020-01-20T10:29:28.000Z"
 slug: "sinulog-2020-thank-you"
-imageUrl: "assets/images/image.png"
+imageUrl: "/posts/assets/images/image.png"
 ---
 
 ![](https://i2.wp.com/santonino-nz.org/wp-content/uploads/2020/01/image.png?fit=1024%2C224&ssl=1)

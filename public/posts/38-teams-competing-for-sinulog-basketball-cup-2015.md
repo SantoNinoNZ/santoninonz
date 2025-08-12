@@ -1,8 +1,8 @@
 ---
 title: "38 Teams competing for Sinulog Basketball Cup 2015"
-date: "15/12/2014"
+date: "2014-12-15T09:53:56.000Z"
 slug: "38-teams-competing-for-sinulog-basketball-cup-2015"
-imageUrl: "assets/images/basketball-e1398248811543.jpeg"
+imageUrl: "/posts/assets/images/basketball-e1398248811543.jpeg"
 ---
 
 [![basketball-e1398248811543](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2014/12/basketball-e1398248811543.jpeg?resize=372%2C403)](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2014/12/basketball-e1398248811543.jpeg)

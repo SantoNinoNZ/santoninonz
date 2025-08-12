@@ -1,8 +1,8 @@
 ---
 title: "Invitation for Sinulog Dancers for Fiesta 2019"
-date: "23/09/2018"
+date: "2018-09-23T02:29:00.000Z"
 slug: "invitation-for-sinulog-dancers-for-fiesta-2019"
-imageUrl: "assets/images/1062435-478969-34.jpg"
+imageUrl: "/posts/assets/images/1062435-478969-34.jpg"
 ---
 
 ![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2018/09/1062435-478969-34.jpg?resize=780%2C336)

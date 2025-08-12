@@ -1,8 +1,8 @@
 ---
 title: "Sinulog 2016 Raffle Draw Winners"
-date: "17/01/2016"
+date: "2016-01-17T07:34:38.000Z"
 slug: "sinulog-2016-raffle-draw-winners"
-imageUrl: "assets/images/12583835_10208626364075057_1548281887_n.jpg"
+imageUrl: "/posts/assets/images/12583835_10208626364075057_1548281887_n.jpg"
 ---
 
 3rd Prize Winners – Basket of Groceries

@@ -1,8 +1,8 @@
 ---
 title: "A Call to Prayer"
-date: "20/08/2011"
+date: "2011-08-19T17:14:06.000Z"
 slug: "a-call-to-prayer"
-imageUrl: "assets/images/sinulog2009photograndwifw9.jpg"
+imageUrl: "/posts/assets/images/sinulog2009photograndwifw9.jpg"
 ---
 
 **[![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2011/05/sinulog2009photograndwifw9.jpg?resize=182%2C245 "sinulog2009photograndwifw9")](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2011/05/sinulog2009photograndwifw9.jpg)**

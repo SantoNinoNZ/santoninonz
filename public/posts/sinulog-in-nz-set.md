@@ -1,6 +1,6 @@
 ---
 title: "Sinulog in NZ Set"
-date: "17/12/2009"
+date: "2009-12-16T23:00:56.000Z"
 slug: "sinulog-in-nz-set"
 
 ---

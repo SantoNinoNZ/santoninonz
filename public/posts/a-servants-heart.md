@@ -1,6 +1,6 @@
 ---
 title: "A Servant's Heart"
-date: "26/02/2010"
+date: "2010-02-26T07:07:53.000Z"
 slug: "a-servants-heart"
 
 ---

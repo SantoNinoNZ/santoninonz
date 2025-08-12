@@ -1,8 +1,8 @@
 ---
 title: "Raffle Fundraiser for Sinulog 2025"
-date: "12/12/2024"
+date: "2024-12-11T12:07:25.000Z"
 slug: "raffle-fundraiser-for-sinulog-2025"
-imageUrl: "assets/images/TicketSantoNino.png"
+imageUrl: "/posts/assets/images/TicketSantoNino.png"
 ---
 
 Here is an opportunity for you to support the 31st Senyor Sto Nino Fiesta and Novena Masses and possibly win yourself a paid gift of adventure and awesome fun for 2025.

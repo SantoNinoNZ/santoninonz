@@ -1,8 +1,8 @@
 ---
 title: "A closer look at our 2015 Sinulog Festival Queens"
-date: "15/12/2014"
+date: "2014-12-15T09:31:30.000Z"
 slug: "a-closer-look-at-our-2015-sinulog-festival-queens"
-imageUrl: "assets/images/MG_8666-1024x682.jpg"
+imageUrl: "/posts/assets/images/MG_8666-1024x682.jpg"
 ---
 
 [![_MG_8666](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2014/12/MG_8666-1024x682.jpg?resize=701%2C467)](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2014/12/MG_8666.jpg)

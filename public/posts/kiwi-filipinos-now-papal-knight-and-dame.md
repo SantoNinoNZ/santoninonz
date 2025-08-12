@@ -1,6 +1,6 @@
 ---
 title: "Kiwi-Filipinos now Papal Knight and Dame"
-date: "9/03/2020"
+date: "2020-03-09T09:24:49.000Z"
 slug: "kiwi-filipinos-now-papal-knight-and-dame"
 
 ---

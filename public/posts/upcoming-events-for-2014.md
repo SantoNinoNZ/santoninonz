@@ -1,6 +1,6 @@
 ---
 title: "Upcoming Events for 2014"
-date: "22/03/2014"
+date: "2014-03-21T23:41:52.000Z"
 slug: "upcoming-events-for-2014"
 
 ---

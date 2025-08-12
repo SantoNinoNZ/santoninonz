@@ -1,6 +1,6 @@
 ---
 title: "Financial Statement for year ended 31 March 2020 reviewed by SBA – Onehunga"
-date: "11/06/2020"
+date: "2020-06-11T07:44:57.000Z"
 slug: "financial-statement-for-year-ended-31-march-2020-reviewed-by-sba-onehunga"
 
 ---

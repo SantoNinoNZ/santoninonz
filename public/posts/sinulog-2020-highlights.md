@@ -1,6 +1,6 @@
 ---
 title: "Sinulog 2020 Highlights"
-date: "21/01/2020"
+date: "2020-01-20T11:57:36.000Z"
 slug: "sinulog-2020-highlights"
 
 ---

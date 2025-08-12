@@ -1,8 +1,8 @@
 ---
 title: "1st Sinulog NZ Basketball Tournament"
-date: "9/01/2012"
+date: "2012-01-08T22:21:43.000Z"
 slug: "1st-sinulog-nz-basketball-tournament"
-imageUrl: "assets/images/400506_10150505290463001_622473000_9078545_87012849_n.jpg"
+imageUrl: "/posts/assets/images/400506_10150505290463001_622473000_9078545_87012849_n.jpg"
 ---
 
 **The UFCSA team bags the 1st Sinulog NZ Basketball Tournament Championship Trophy.**

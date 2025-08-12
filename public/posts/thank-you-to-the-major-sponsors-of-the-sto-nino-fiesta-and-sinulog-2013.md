@@ -1,8 +1,8 @@
 ---
 title: "Thank You to the major Sponsors of the Sto Niño fiesta and Sinulog 2013"
-date: "14/12/2012"
+date: "2012-12-14T01:50:48.000Z"
 slug: "thank-you-to-the-major-sponsors-of-the-sto-nino-fiesta-and-sinulog-2013"
-imageUrl: "assets/images/aucklandcouncil.jpg"
+imageUrl: "/posts/assets/images/aucklandcouncil.jpg"
 ---
 
 Click on the Images below to Support our Sponsors

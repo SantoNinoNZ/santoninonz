@@ -1,6 +1,6 @@
 ---
 title: "PADAYON (Soldier On)"
-date: "1/09/2014"
+date: "2014-09-01T07:44:30.000Z"
 slug: "padayon-soldier-on"
 
 ---

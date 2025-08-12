@@ -1,6 +1,6 @@
 ---
 title: "FLASH NEWS (SINULOG 2015)"
-date: "7/12/2014"
+date: "2014-12-07T05:16:36.000Z"
 slug: "flash-news-sinulog-2015"
 
 ---

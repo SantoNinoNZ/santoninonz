@@ -1,6 +1,6 @@
 ---
 title: "Sinulog: Prayer and Dance as Profession of Faith"
-date: "1/02/2013"
+date: "2013-02-01T03:36:50.000Z"
 slug: "sinulog-prayer-and-dance-as-profession-of-faith"
 
 ---

@@ -1,8 +1,8 @@
 ---
 title: "Installation &#038; Blessing of the Chapel for Senyor Sto Niño (Photos)"
-date: "18/07/2014"
+date: "2014-07-17T17:09:37.000Z"
 slug: "installation-blessing-of-the-chapel-for-senyor-sto-nino-2"
-imageUrl: "assets/images/img_1339.jpg"
+imageUrl: "/posts/assets/images/img_1339.jpg"
 ---
 
 #FlaGallery\_sc1\_33 .flagPhantom\_ThumbContainer {width:200px; height:180px;}#FlaGallery\_sc1\_33 .flagPhantom\_MobileView .flagPhantom\_ThumbContainer {width:150px; height:135px;}#FlaGallery\_sc1\_33 .flagPhantom\_Container {margin-left:auto;margin-right:auto;}#FlaGallery\_sc1\_33 .flagPhantom\_ThumbContainer {margin:8px 0 0 8px;}#FlaGallery\_sc1\_33 .flagPhantom\_ThumbContainer {padding:2px;}#FlaGallery\_sc1\_33 .flagPhantom\_LabelBottom .flagPhantom\_ThumbContainer {padding-bottom:36px;}#FlaGallery\_sc1\_33 .flagPhantom\_ThumbContainer,#FlaGallery\_sc1\_33 .flagPhantom\_LabelBottom .flagPhantom\_ThumbLabel {background-color:#ffffff;}#FlaGallery\_sc1\_33 .flagPhantom\_ThumbContainer .flagPhantom\_Thumb {opacity:0.9;}#FlaGallery\_sc1\_33 .flagPhantom\_ThumbContainer:hover .flagPhantom\_Thumb {opacity:1;}#FlaGallery\_sc1\_33 .flagPhantom\_ThumbContainer {border:1px solid #cccccc;}#FlaGallery\_sc1\_33 .flagPhantom\_ThumbContainer {box-shadow:0 0 5px -2px #cccccc;}#FlaGallery\_sc1\_33 .flagPhantom\_ThumbLabel {color:#0b0b0b;}#FlaGallery\_sc1\_33 .flagPhantom\_ThumbLabel a {color:#3695E7;}#FlaGallery\_sc1\_33 .flagPhantom\_LabelInside .flagPhantom\_ThumbLabel,#FlaGallery\_sc1\_33 .flagPhantom\_LabelHover .flagPhantom\_ThumbLabel {color:#ffffff;}#FlaGallery\_sc1\_33 .flagPhantom\_LabelInside .flagPhantom\_ThumbLabel a,#FlaGallery\_sc1\_33 .flagPhantom\_LabelHover .flagPhantom\_ThumbLabel a,#FlaGallery\_sc1\_33 .flagPhantom\_LabelInside .flagPhantom\_ThumbLabel a:hover,#FlaGallery\_sc1\_33 .flagPhantom\_LabelHover .flagPhantom\_ThumbLabel a:hover {color:#e7e179;}

@@ -1,8 +1,8 @@
 ---
 title: "A Message of Thanks"
-date: "23/01/2018"
+date: "2018-01-22T11:34:17.000Z"
 slug: "a-message-of-thanks"
-imageUrl: "assets/images/Thankyou.png"
+imageUrl: "/posts/assets/images/Thankyou.png"
 ---
 
 ![](https://i0.wp.com/santonino-nz.org/wp-content/uploads/2018/01/Thankyou.png?resize=548%2C503)

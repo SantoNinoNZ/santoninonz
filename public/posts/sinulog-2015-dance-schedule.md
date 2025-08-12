@@ -1,8 +1,8 @@
 ---
 title: "Sinulog 2015 Dance Schedule"
-date: "19/10/2014"
+date: "2014-10-19T06:06:57.000Z"
 slug: "sinulog-2015-dance-schedule"
-imageUrl: "assets/images/411707_10150447019291523_225601086522_8896891_1585877193_o-1024x682.jpg"
+imageUrl: "/posts/assets/images/411707_10150447019291523_225601086522_8896891_1585877193_o-1024x682.jpg"
 ---
 
 **To the Cultural Production Team and Prospective Sinulog Dancers:**

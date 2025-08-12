@@ -1,8 +1,8 @@
 ---
 title: "Sinulog Fundraiser 2018"
-date: "19/12/2017"
+date: "2017-12-19T10:40:23.000Z"
 slug: "sinulog-fundraiser-2018"
-imageUrl: "assets/images/1f64f.png"
+imageUrl: "/posts/assets/images/1f64f.png"
 ---
 
 Sinulog NZ Trust is selling raffle tickets to support the fiesta activities for 2018
