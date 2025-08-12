@@ -1,8 +1,8 @@
 ---
 title: "25TH SANTO NINO FIESTA &#038; SINULOG NZ 2019 MESSAGE OF THANKS AND APPRECIATION ﻿"
-date: "23/01/2019"
+date: "2019-01-22T14:28:53.000Z"
 slug: "25th-santo-nino-fiesta-sinulog-nz-2019-message-of-thanks-and-appreciation-%ef%bb%bf"
-imageUrl: "assets/images/istockphoto-476092520-1024x1024.jpg"
+imageUrl: "/posts/assets/images/istockphoto-476092520-1024x1024.jpg"
 ---
 
 **VIVA SENOR SANTO NINO!!! PIT SENYOR!!!**
