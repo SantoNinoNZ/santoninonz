@@ -31,10 +31,10 @@ export default function RootLayout({
     <html lang="en">
       <body className={`${roboto.variable} ${lora.variable}`}>
         <div className="flex flex-col min-h-screen">
-          <header className="bg-[#861D1D] text-[#E8E2D1] p-4 shadow-md">
-            <nav className="container mx-auto flex flex-col sm:flex-row justify-between items-center py-2">
-              <h1 className="text-3xl font-bold text-[#F4B34C] mb-2 sm:mb-0">Santo Niño NZ</h1>
-              <div className="flex items-center space-x-4 w-full sm:w-auto">
+          <header className="bg-[#861D1D] text-[#E8E2D1] py-12 shadow-md">
+            <nav className="container mx-auto flex flex-col sm:flex-row justify-between items-center py-0 relative">
+              <img src="/assets/images/santoninocebu.png" alt="Santo Niño NZ" className="h-64 w-auto absolute top-18 left-0 transform -translate-y-1/2 z-999999" />
+              <div className="flex items-center space-x-4 w-full sm:w-auto pl-80">
                 <ul className="flex space-x-4 flex-grow justify-center sm:justify-end">
                   <li><Link href="/" className="hover:text-[#F4B34C] transition-colors duration-300">Home</Link></li>
                   <li><Link href="/about" className="hover:text-[#F4B34C] transition-colors duration-300">About Us</Link></li>

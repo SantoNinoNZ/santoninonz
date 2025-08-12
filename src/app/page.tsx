@@ -1,10 +1,5 @@
-import Image from "next/image";
-import Link from "next/link";
 import { promises as fs } from 'fs';
 import path from 'path';
-import { remark } from 'remark';
-import html from 'remark-html';
-import yaml from 'js-yaml';
 import PostGrid from "@/components/PostGrid";
 
 interface Post {
@@ -22,98 +17,44 @@ async function getPostsIndex(): Promise<Post[]> {
   return JSON.parse(fileContent);
 }
 
-async function getPostContent(slug: string): Promise<Post> {
-  const filePath = path.join(process.cwd(), 'public', 'posts', `${slug}.md`);
-  const fileContent = await fs.readFile(filePath, 'utf8');
-
-  interface FrontMatter {
-    title: string;
-    date: string;
-    imageUrl?: string; // Add imageUrl to FrontMatter interface
-    [key: string]: unknown;
-  }
-
-  const frontMatterMatch = fileContent.match(/^---\n([\s\S]*?)\n---/);
-  let frontMatter: FrontMatter = { title: '', date: '' };
-  let markdownContent = fileContent;
-
-  if (frontMatterMatch && frontMatterMatch[1]) {
-    frontMatter = yaml.load(frontMatterMatch[1]) as FrontMatter;
-    markdownContent = fileContent.substring(frontMatterMatch[0].length);
-  }
-
-  const firstParagraphMatch = markdownContent.match(/^(.*?)\n\n/s);
-  const rawExcerpt = firstParagraphMatch ? firstParagraphMatch[1].trim() : markdownContent.split('\n')[0].trim();
-
-  const processedContent = await remark().use(html).process(markdownContent);
-  const contentHtml = processedContent.toString();
-
-  let imageUrl = (frontMatter.imageUrl as string) || undefined;
-
-  // Ensure local image URLs are correctly prefixed for static assets
-  if (imageUrl && !imageUrl.startsWith('http') && !imageUrl.startsWith('/')) {
-    imageUrl = `/posts/${imageUrl}`;
-  }
-
-  return {
-    slug,
-    title: frontMatter.title || slug,
-    date: frontMatter.date || '',
-    excerpt: rawExcerpt,
-    imageUrl: imageUrl,
-    contentHtml,
-  };
-}
-
-function decodeHtmlEntities(htmlString: string) {
-  return htmlString
-    .replace(/&#8211;/g, '–')
-    .replace(/&nbsp;/g, ' ')
-    .replace(/&#8217;/g, "'")
-    .replace(/"/g, '"')
-    .replace(/&hellip;/g, '...');
-}
-
 export default async function Home() {
   const allPostsData = await getPostsIndex();
 
   // Sort all posts by date in descending order
   const sortedAllPosts = allPostsData.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
-  // Fetch full content for all posts at build time
-  const postsWithContentPromises = sortedAllPosts.map(post => getPostContent(post.slug));
-  const allPosts = await Promise.all(postsWithContentPromises);
+  const otherPosts = sortedAllPosts; // All posts will be displayed in the grid below the carousel
 
-  const featuredPost = allPosts.length > 0 ? allPosts[0] : null;
-  const otherPosts = allPosts.slice(1);
+  const imageSlides = [
+    { src: "/assets/image-slides/timthumb1.png", alt: "Ardent Senyor Sto Niño Devotee & Organizer Couple receives Papal Award", text: "Ardent Senyor Sto Niño Devotee & Organizer Couple receives Papal Award\nThe Batucans have done outstanding work in the parishes of Auckland and have inspired people in faith and prayer." },
+    { src: "/assets/image-slides/timthumb2.png", alt: "Contact Us", text: "Contact Us\nWe are compiling stories of prayers answered through Sto Nino devotions. Sto Nino have touched each of us and no matter how insignificant and unworthy you think it is, it will leave a lasting reminder to others. May the miracles continue and grow in us every day. Do reveal your story. We need to proclaim them." },
+    { src: "/assets/image-slides/timthumb3.png", alt: "Empty Text Image 3", text: "" },
+    { src: "/assets/image-slides/timthumb4.png", alt: "Installation & Blessing Chapel for Senyor Sto Nino", text: "Installation & Blessing\nChapel for Senyor Sto Nino" },
+    { src: "/assets/image-slides/timthumb5.png", alt: "DEVOTION SCHEDULE", text: "DEVOTION SCHEDULE\nVenue: St. Benedicts Church, St. Benedicts St., Newton, Auckland 6:30pm Novena every Friday 7:30pm Mass of Santo Nino every 3rd Friday of the month" },
+    { src: "/assets/image-slides/timthumb6.png", alt: "Empty Text Image 6", text: "" },
+    { src: "/assets/image-slides/timthumb7.png", alt: "Empty Text Image 7", text: "" },
+    { src: "/assets/image-slides/timthumb8.png", alt: "Spare a Gold Coin Appeal", text: "Spare a Gold Coin Appeal\nHelp us raise funds… Just one Gold Coin a day can help realize the Sto Niño Shrine project." },
+  ];
 
   return (
     <main className="flex min-h-screen flex-col items-center">
-      {/* Hero Section */}
-      {featuredPost && (
-        <section className="relative w-full h-[500px] overflow-hidden mb-12">
-          {featuredPost.imageUrl && (
-            <img
-              src={featuredPost.imageUrl}
-              alt={decodeHtmlEntities(featuredPost.title)}
-              className="z-0 w-full h-full object-cover absolute"
-            />
-          )}
-          <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center text-center p-8 z-10">
-            <div className="max-w-3xl text-white">
-              <h2 className="text-5xl font-lora font-bold mb-4 leading-tight">
-                {decodeHtmlEntities(featuredPost.title)}
-              </h2>
-              <p className="text-xl font-roboto mb-6 opacity-90">
-                {decodeHtmlEntities(featuredPost.excerpt || '')}
+      {/* Simple Carousel Test */}
+      <section style={{ position: 'relative', width: '100%', height: '500px', overflow: 'hidden', marginBottom: '3rem' }}>
+        <img
+          src={imageSlides[0].src}
+          alt={imageSlides[0].alt}
+          style={{ width: '100%', height: '100%', objectFit: 'cover' }}
+        />
+        <div style={{ position: 'absolute', inset: 0, backgroundColor: 'rgba(0, 0, 0, 0.5)', display: 'flex', alignItems: 'center', justifyContent: 'center', textAlign: 'center', padding: '2rem' }}>
+          <div style={{ maxWidth: '48rem', color: 'white' }}>
+            {imageSlides[0].text && (
+              <p style={{ fontSize: '1.25rem', lineHeight: '1.75rem', marginBottom: '1.5rem', opacity: 0.9 }}>
+                {imageSlides[0].text}
               </p>
-              <Link href={`/posts/${featuredPost.slug}`} className="inline-block bg-[#F4B34C] text-[#2B1E1A] font-bold py-3 px-8 rounded-full hover:bg-[#E8E2D1] transition-colors duration-300">
-                Read More
-              </Link>
-            </div>
+            )}
           </div>
-        </section>
-      )}
+        </div>
+      </section>
 
       {/* Other Articles Grid */}
       <section className="w-full max-w-screen-xl px-4">
