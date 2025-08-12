@@ -25,12 +25,13 @@ export default async function Home() {
   // Sort all posts by date in descending order
   const sortedAllPosts = allPostsData.sort((a, b) => new Date(b.date).getTime() - new Date(a.date).getTime());
 
+  const latestPost = sortedAllPosts.length > 0 ? sortedAllPosts[0] : null;
   const otherPosts = sortedAllPosts; // All posts will be displayed in the grid below the carousel
 
   return (
     <main className="relative flex min-h-screen flex-col items-center">
       <Header />
-      <HeroSection />
+      <HeroSection latestPost={latestPost} />
 
       {/* Other Articles Grid */}
       <section className="w-full max-w-screen-xl px-4 py-12">

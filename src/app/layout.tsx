@@ -18,8 +18,11 @@ const lora = Lora({
 });
 
 export const metadata: Metadata = {
-  title: "Santo Niño NZ",
-  description: "Official website for Santo Nin NZ - Keeping the Faith",
+  title: "Santo Niño New Zealand",
+  description: "Official website for Santo Niño New Zealand - Keeping the Faith",
+  icons: {
+    icon: '/santonino.svg',
+  },
 };
 
 export default function RootLayout({
