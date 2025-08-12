@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState, useEffect, useRef } from 'react';
+import React, { useState, useEffect } from 'react';
 
 interface Post {
   slug: string;
@@ -16,6 +16,38 @@ interface HeroSectionProps {
 }
 
 const HeroSection: React.FC<HeroSectionProps> = ({ latestPost }) => {
+  const [gospelReading, setGospelReading] = useState<string>("");
+  const [liturgicalSeason, setLiturgicalSeason] = useState<string>("");
+
+  useEffect(() => {
+    const fetchLiturgyData = async () => {
+      try {
+        const today = new Date();
+        const year = today.getFullYear();
+        const month = (today.getMonth() + 1).toString().padStart(2, '0');
+        const day = today.getDate().toString().padStart(2, '0');
+        const formattedDate = `${year}-${month}-${day}`;
+
+        // Fetch liturgical season
+        const seasonResponse = await fetch(`https://liturgy.day/api/day/${formattedDate}`);
+        const seasonData = await seasonResponse.json();
+        if (seasonData && seasonData.season) {
+          setLiturgicalSeason(seasonData.season);
+        }
+
+        // Placeholder for gospel reading - will need to find a suitable API or scraping method
+        setGospelReading("Loading gospel reading...");
+
+      } catch (error) {
+        console.error("Failed to fetch liturgy data:", error);
+        setLiturgicalSeason("N/A");
+        setGospelReading("Failed to load gospel reading.");
+      }
+    };
+
+    fetchLiturgyData();
+  }, []);
+
   return (
     <div className="relative w-full h-screen flex items-center justify-center">
       {/* Content Overlay */}
@@ -36,16 +68,13 @@ const HeroSection: React.FC<HeroSectionProps> = ({ latestPost }) => {
 
         {/* Right Column: Today's Gospel Reading and Catholic Season */}
         <div className="bg-white/10 p-6 rounded-lg shadow-lg">
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <h3 className="text-2xl font-lora font-bold mb-4">Today's Gospel Reading</h3>
           <p className="mb-4">
-            {/* eslint-disable-next-line react/no-unescaped-entities */}
-            "For God so loved the world that he gave his one and only Son, that whoever believes in him shall not perish but have eternal life." (John 3:16)
+            {gospelReading}
           </p>
-          {/* eslint-disable-next-line react/no-unescaped-entities */}
           <h3 className="text-2xl font-lora font-bold mb-4">Today's Catholic Season</h3>
           <p>
-            Ordinary Time
+            {liturgicalSeason}
           </p>
         </div>
       </div>
