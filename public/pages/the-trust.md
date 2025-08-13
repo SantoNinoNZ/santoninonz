@@ -1,4 +1,3 @@
-# The Trust
 The NZ – FILIPINO STO NINO DEVOTEES TRUST was founded on 2nd February 1996 as a charitable trust incorporated under the Charitable Trusts Act 1957. It has Donee and Legal Charity status.
 
 The objectives of the Trust are:
