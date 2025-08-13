@@ -3,7 +3,7 @@ import path from 'path';
 import yaml from 'js-yaml';
 
 const postsDirectory = path.join(process.cwd(), 'public', 'posts');
-const outputFilePath = path.join(process.cwd(), 'public', 'posts-index.json');
+const outputFilePath = path.join(process.cwd(), 'public', 'posts-index.yaml');
 
 async function generatePostIndex() {
   try {
@@ -56,7 +56,7 @@ async function generatePostIndex() {
     // Sort posts by date in descending order
     posts.sort((a, b) => new Date(b.date) - new Date(a.date));
 
-    await fs.writeFile(outputFilePath, JSON.stringify(posts, null, 2), 'utf8');
+    await fs.writeFile(outputFilePath, yaml.dump(posts), 'utf8');
     console.log(`Successfully generated post index at ${outputFilePath}`);
   } catch (error) {
     console.error('Error generating post index:', error);
