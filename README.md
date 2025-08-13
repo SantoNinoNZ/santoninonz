@@ -44,6 +44,53 @@ After building, the static output will be available in the `out/` directory.
 
 This site uses Markdown files with YAML front matter for posts, indexed in `public/posts-index.yaml`. The `posts-index.yaml` file is a manually maintained index of your posts.
 
+### What is Markdown?
+
+Markdown is a lightweight markup language that you can use to add formatting elements to plaintext text documents. It's widely used for writing content on the web because of its simplicity and readability.
+
+Here are some common Markdown syntax examples:
+
+*   **Headings**:
+    ```markdown
+    # Heading 1
+    ## Heading 2
+    ### Heading 3
+    ```
+*   **Paragraphs**: Just type your text. New lines are created by leaving a blank line between paragraphs.
+*   **Bold and Italic**:
+    ```markdown
+    **bold text** or __bold text__
+    *italic text* or _italic text_
+    ```
+*   **Lists**:
+    ```markdown
+    - Item 1
+    - Item 2
+      - Sub-item 2.1
+    * Item A
+    * Item B
+
+    1. First item
+    2. Second item
+    ```
+*   **Links**:
+    ```markdown
+    [Link Text](https://www.example.com)
+    ```
+*   **Images**:
+    ```markdown
+    ![Alt text for image](/path/to/image.jpg)
+    ```
+*   **Code Blocks**:
+    ```markdown
+    ```javascript
+    // Your code here
+    console.log("Hello, Markdown!");
+    ```
+    ```
+
+For a more comprehensive guide to Markdown syntax, refer to [Markdown Guide: Basic Syntax](https://www.markdownguide.org/basic-syntax/).
+
 ### Adding a New Post
 
 1.  Create a new Markdown file (`.md`) in the `public/posts/` directory.
