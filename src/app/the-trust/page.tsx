@@ -2,7 +2,7 @@ import React from 'react';
 import { remark } from 'remark';
 import html from 'remark-html';
 import Header from "@/components/Header";
-import Image from 'next/image';
+// import Image from 'next/image'; // Removed next/image import
 
 const mainTrustContent = `
 # The Trust
@@ -78,7 +78,6 @@ Trustee of Sto. Nino Trust since 1994 and Senior Organiser of Sinulog Festival (
   { name: "Ma Consuelo ‘Chichi’ Abadingo", imageName: "ChichiAbadingo", profile: `Maria Consuelo “Chichi” Abadingo coordinates the community and choir groups involved in the yearly 9 days Novena as part of her Liturgical Committee duty. She administers the Sinulog NZ Social Media pages as well as maintains the website with updates on all activities of the Trust.
 She has over 20 years of work experience in business software development. When she is not doing geek work as an ERP Business Analyst, she attends fitness classes, and is Deputy Chair of the Holy Cross Papatoetoe Parish Liturgy Committee.` },
   { name: "Bebeth Cutten", imageName: "BebethCutten", profile: `Bebeth Cutten is a long time Trustee. She actively promotes and supports all projects of the Trust most specially the annual grand Sinulog festival.` },
-  // Trustees without images
   { name: "Maria Victoria Villaraza", profile: `` },
   { name: "Mila Rigby", profile: `` },
   { name: "Prescilla Suerto", profile: `` },
@@ -124,8 +123,8 @@ const TheTrustPage = async () => {
           {processedTrustees.map((trustee, index) => (
             <div key={index} className="flex flex-col items-center text-center p-4 border rounded-lg shadow-sm">
               {trustee.name && (
-                <Image
-                  src={`/assets/images/the-trust/${trustee.imageName || trustee.name.replace(/[^a-zA-Z0-9]/g, '')}.webp`}
+                <img
+                  src={trustee.imageName ? `/assets/images/the-trust/${trustee.imageName}.webp` : '/assets/images/the-trust/placeholder.png'}
                   alt={trustee.name}
                   width={150}
                   height={150}
