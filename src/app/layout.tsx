@@ -33,41 +33,67 @@ export default function RootLayout({
   ];
 
   const [currentVideoIndex, setCurrentVideoIndex] = useState(0);
-  const videoRef = useRef<HTMLVideoElement>(null);
+  const videoRefs = useRef<(HTMLVideoElement | null)[]>([]);
+  const previousVideoIndex = useRef<number | null>(null);
 
   useEffect(() => {
-    const videoElement = videoRef.current;
-    if (!videoElement) return;
+    // Initialize videoRefs array with nulls
+    videoRefs.current = videoRefs.current.slice(0, videoSlides.length);
+    for (let i = 0; i < videoSlides.length; i++) {
+      if (!videoRefs.current[i]) {
+        videoRefs.current[i] = null; // Placeholder for actual video elements
+      }
+    }
+  }, [videoSlides.length]);
 
+  useEffect(() => {
     const handleVideoEnd = () => {
       setCurrentVideoIndex((prevIndex: number) => (prevIndex + 1) % videoSlides.length);
     };
 
-    videoElement.addEventListener('ended', handleVideoEnd);
+    const currentVideoElement = videoRefs.current[currentVideoIndex];
 
-    videoElement.load();
-    videoElement.play().catch(error => console.error("Video play failed:", error));
+    if (previousVideoIndex.current !== null && previousVideoIndex.current !== currentVideoIndex) {
+      const prevVideoElement = videoRefs.current[previousVideoIndex.current];
+      if (prevVideoElement) {
+        prevVideoElement.pause();
+        prevVideoElement.currentTime = 0; // Reset previous video
+        prevVideoElement.removeEventListener('ended', handleVideoEnd); // Use the defined handleVideoEnd
+      }
+    }
+
+    if (currentVideoElement) {
+      currentVideoElement.addEventListener('ended', handleVideoEnd);
+      currentVideoElement.play().catch(error => console.error("Video play failed:", error));
+    }
+
+    previousVideoIndex.current = currentVideoIndex;
 
     return () => {
-      videoElement.removeEventListener('ended', handleVideoEnd);
+      if (currentVideoElement) {
+        currentVideoElement.removeEventListener('ended', handleVideoEnd);
+      }
     };
-  }, [currentVideoIndex, videoSlides.length]);
+  }, [currentVideoIndex, videoSlides.length]); // Depend on currentVideoIndex and videoSlides.length
 
   return (
     <html lang="en">
       <body className={`${roboto.variable} ${lora.variable}`}>
         <div className="fixed inset-0 z-0 overflow-hidden">
-          <video
-            ref={videoRef}
-            src={videoSlides[currentVideoIndex].src}
-            autoPlay
-            muted
-            playsInline
-            preload="auto"
-            className="absolute top-0 left-0 w-full h-full object-cover"
-          >
-            Your browser does not support the video tag.
-          </video>
+          {videoSlides.map((slide, index) => (
+            <video
+              key={index}
+              ref={el => { videoRefs.current[index] = el; }}
+              src={slide.src}
+              autoPlay={index === currentVideoIndex} // Only autoplay the current video
+              muted
+              playsInline
+              preload="auto"
+              className={`absolute top-0 left-0 w-full h-full object-cover ${index === currentVideoIndex ? '' : 'hidden'}`}
+            >
+              Your browser does not support the video tag.
+            </video>
+          ))}
           <div className="absolute inset-0 bg-black opacity-50"></div> {/* Dark overlay for text readability */}
         </div>
         <div className="relative z-10 flex flex-col min-h-screen">
