@@ -20,6 +20,9 @@ const Header: React.FC<HeaderProps> = ({ onSearchChange, searchQuery }) => {
           <li><Link href="/" className="hover:text-gray-300 transition-colors duration-300">Home</Link></li>
           <li><Link href="/about" className="hover:text-gray-300 transition-colors duration-300">About Us</Link></li>
           <li><Link href="/about-sinulog" className="hover:text-gray-300 transition-colors duration-300">About Sinulog</Link></li>
+          <li><Link href="/the-trust" className="hover:text-gray-300 transition-colors duration-300">The Trust</Link></li>
+          <li><Link href="/projects" className="hover:text-gray-300 transition-colors duration-300">Projects</Link></li>
+          <li><Link href="/join-us" className="hover:text-gray-300 transition-colors duration-300">Join Us</Link></li>
           <li><Link href="/events" className="hover:text-gray-300 transition-colors duration-300">Events</Link></li>
           <li><Link href="/contact" className="hover:text-gray-300 transition-colors duration-300">Contact</Link></li>
         </ul>
