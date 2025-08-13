@@ -42,7 +42,7 @@ After building, the static output will be available in the `out/` directory.
 
 ## Managing Posts
 
-This site uses Markdown files with YAML front matter for posts, indexed in `public/posts-index.yaml`.
+This site uses Markdown files with YAML front matter for posts, indexed in `public/posts-index.yaml`. The `posts-index.yaml` file is a manually maintained index of your posts.
 
 ### Adding a New Post
 
@@ -60,24 +60,15 @@ This site uses Markdown files with YAML front matter for posts, indexed in `publ
     ---
     ```
 3.  Add your post content below the front matter.
-4.  Run the post index generation script to update `posts-index.yaml`:
-    ```bash
-    node scripts/generate-post-index.mjs
-    ```
+4.  Manually add a new entry to `public/posts-index.yaml` for your new post. Ensure the `slug` matches the filename (without `.md`), and the `title`, `date`, and `imageUrl` (if applicable) match your front matter. The order of entries in `posts-index.yaml` determines the display order on the site.
 
 ### Editing an Existing Post
 
 1.  Locate the Markdown file (`.md`) for the post you wish to edit in the `public/posts/` directory.
 2.  Make your desired changes to the content or front matter.
-3.  Run the post index generation script to ensure the changes are reflected in `posts-index.yaml`:
-    ```bash
-    node scripts/generate-post-index.mjs
-    ```
+3.  If you changed the `title`, `date`, or `imageUrl` in the front matter, manually update the corresponding entry in `public/posts-index.yaml`.
 
 ### Deleting a Post
 
 1.  Delete the Markdown file (`.md`) of the post you wish to remove from the `public/posts/` directory.
-2.  Run the post index generation script to remove the post from `posts-index.yaml`:
-    ```bash
-    node scripts/generate-post-index.mjs
-    ```
+2.  Manually remove the corresponding entry for that post from `public/posts-index.yaml`.
