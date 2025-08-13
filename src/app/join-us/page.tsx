@@ -5,7 +5,7 @@ const JoinUsPage = () => {
   return (
     <main className="relative flex min-h-screen flex-col items-center pt-24">
       <Header />
-      <div className="container mx-auto px-4 py-8 max-w-screen-md bg-white rounded-lg shadow-lg">
+      <div className="container mx-auto px-4 py-8 max-w-screen-xl bg-white rounded-lg shadow-lg">
         <h1 className="text-4xl md:text-5xl font-lora font-bold mb-4 text-[#2B1E1A] leading-tight">
           Join Us
         </h1>
