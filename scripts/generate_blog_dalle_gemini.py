@@ -397,7 +397,8 @@ pipeline = SequentialAgent(
 # Runner setup
 APP_NAME = "blog_generation_app"
 USER_ID = "blog_user"
-SESSION_ID = "blog_session"
+# Use GITHUB_RUN_ID for unique session in CI/CD, fallback to static for local
+SESSION_ID = os.getenv('GITHUB_RUN_ID', 'blog_session')
 
 session_service = InMemorySessionService()
 runner = Runner(agent=pipeline, app_name=APP_NAME, session_service=session_service)
