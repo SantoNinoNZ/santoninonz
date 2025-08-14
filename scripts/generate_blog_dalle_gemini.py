@@ -63,7 +63,7 @@ def scrape_link(link: str) -> str:
 def generate_image(prompt: str) -> str:
     retries = 3
     rephrase_attempts = 2 # Limit rephrasing attempts
-    current_prompt = prompt + ", realistic photo" # Add realistic photo instruction
+    current_prompt = prompt
 
     for attempt in range(retries):
         try:
@@ -294,7 +294,7 @@ researcher_agent = Agent(
                 "Utilize the available tools (search_topics, scrape_link) to find relevant articles, data, and insights. "
                 "Synthesize your findings into a detailed summary that will be used by the writing team. "
                 "Focus on providing factual information and diverse perspectives if available. "
-                "Once research is complete, provide the summary as your final response.",
+                "Once research is complete, provide the summary as your final response. If you encounter any issues or cannot find relevant information, clearly state that and provide an empty or minimal summary, but always provide a response.",
     tools=[search_topics, scrape_link],
     output_key="research_findings"
 )
@@ -373,8 +373,8 @@ runner = Runner(agent=pipeline, app_name=APP_NAME, session_service=session_servi
 
 # Run the pipeline
 async def run_blog_generation_pipeline(prompt: str):
-    print("Gemini ADK Sequential Pipeline: Starting blog generation process...")
-    print("--- ADK Runner Events ---")
+    print("🚀 Gemini ADK Sequential Pipeline: Starting blog generation process...")
+    print("--- 📝 ADK Runner Events ---")
     content = types.Content(role="user", parts=[types.Part(text=prompt)])
 
     # Use await for session creation
@@ -390,19 +390,21 @@ async def run_blog_generation_pipeline(prompt: str):
 
         final_response_text = "Pipeline finished without final response"
         async for event in events:
-            print(event)
-            if event.is_final_response():
+            print(f"✨ Event received: {event.type}")
+            if event.type == "agent_output":
+                print(f"🤖 Agent '{event.agent_name}' output: {event.content.parts[0].text if event.content and event.content.parts else 'No content'}")
+            elif event.is_final_response():
                 if event.content and event.content.parts: # Add check for NoneType
                     final_response_text = event.content.parts[0].text
-                    print("\n📢 Final Publishing Status:\n", final_response_text)
+                    print("\n✅ Final Publishing Status:\n", final_response_text)
                 else:
-                    print("\n📢 Final Publishing Status: No content found in final response event.")
+                    print("\n❌ Final Publishing Status: No content found in final response event.")
 
-        print("--- End of ADK Runner Events ---")
-        print("Gemini ADK Sequential Pipeline: Pipeline complete.")
+        print("--- 🎉 End of ADK Runner Events ---")
+        print("✅ Gemini ADK Sequential Pipeline: Pipeline complete.")
 
     except Exception as e:
-        print(f"Error running pipeline: {e}")
+        print(f"🔥 Error running pipeline: {e}")
         # Handle potential errors during the async run
 
 
