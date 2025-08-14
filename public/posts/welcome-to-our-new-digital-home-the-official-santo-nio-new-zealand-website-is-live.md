@@ -1,7 +1,7 @@
 ---
 title: "Welcome to Our New Digital Home! The Official Santo Niño New Zealand Website is Live!"
 date: "2025-08-14"
-imageUrl: "/posts/assets/images/98c8752b-7788-47b3-a1f2-720e171519ac.png"
+imageUrl: "/posts/assets/images/555f2863-f835-4b47-b056-6f57f1d88913.png"
 ---
 
 Pit Señor!
