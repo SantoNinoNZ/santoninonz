@@ -21,7 +21,7 @@ jobs:
           node-version: '18' # Use a Node.js version compatible with Supabase CLI
 
       - name: Install Supabase CLI
-        run: npm install -g supabase
+        run: curl -sL https://supabase.com/download/cli/install.sh | sh
 
       - name: Link Supabase Project
         run: supabase link --project-ref ${{ secrets.SUPABASE_PROJECT_REF }}
