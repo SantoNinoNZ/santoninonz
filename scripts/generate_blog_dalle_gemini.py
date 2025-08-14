@@ -16,6 +16,7 @@ from google.adk.agents import Agent, SequentialAgent
 from google.adk.sessions import InMemorySessionService
 from google.adk.runners import Runner
 from google.genai import types # For creating message Content/Parts
+import yaml # Import for YAML operations
 
 load_dotenv()
 
@@ -72,8 +73,8 @@ def generate_image(prompt: str) -> str:
             image_response = requests.get(image_url)
             if image_response.status_code == 200:
                 image_filename = f"{uuid.uuid4()}.png"
-                # Save to the correct public/posts/images directory relative to the repo root
-                image_path_relative_to_repo = os.path.join("public/posts/images", image_filename)
+                # Save to the correct public/posts/assets/images directory relative to the repo root
+                image_path_relative_to_repo = os.path.join("public/posts/assets/images", image_filename)
                 
                 # Get the absolute path to save the image
                 repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
@@ -82,7 +83,7 @@ def generate_image(prompt: str) -> str:
                 os.makedirs(os.path.dirname(image_path_absolute), exist_ok=True)
                 with open(image_path_absolute, "wb") as f:
                     f.write(image_response.content)
-                return os.path.join("/posts/images", image_filename)  # Return relative path
+                return os.path.join("/posts/assets/images", image_filename)  # Return relative path
             else:
                 print(f"Error downloading image: {image_response.status_code}")
                 # If download fails, try generating again
@@ -158,39 +159,26 @@ def generate_slug(title: str) -> str:
 # Save blog post to file as Markdown with frontmatter
 def save_post(title: str, excerpt: str, content: str, tags: List[str], sources: List[str], image_path: str = None):
     post_id = generate_slug(title)
-    post_date = datetime.utcnow().isoformat() + "Z"
+    post_date = datetime.utcnow().strftime('%Y-%m-%d') # Format date as YYYY-MM-DD
 
     # Prepare frontmatter
     frontmatter = {
         "title": title,
-        "summary": excerpt,
         "date": post_date,
-        "authors": [{ "name": "Elijah Mondero" }],
-        "tags": tags,
-        "sources": sources,
-        "image_path": image_path
+        "imageUrl": image_path # Changed to imageUrl
     }
 
     # Format frontmatter as YAML
     frontmatter_str = "---\n"
     for key, value in frontmatter.items():
-        if isinstance(value, list):
-            frontmatter_str += f"{key}:\n"
-            for item in value:
-                # Handle authors list specifically as it's a list of dicts
-                if key == "authors" and isinstance(item, dict):
-                    frontmatter_str += f"  - name: '{item.get('name', '')}'\n"
-                else:
-                    frontmatter_str += f"  - \"{item}\"\n"
-        else:
-            frontmatter_str += f"{key}: \"{value}\"\n"
+        frontmatter_str += f"{key}: \"{value}\"\n"
     frontmatter_str += "---\n\n"
 
     # Combine frontmatter and content
     markdown_content = frontmatter_str + content
 
     repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-    # Save to the 'posts' directory, not 'public/posts'
+    # Save to the 'public/posts' directory
     post_filename = os.path.join(repo_root, "public/posts", f"{post_id}.md")
     print("Post filename:", post_filename)
     os.makedirs(os.path.dirname(post_filename), exist_ok=True)
@@ -201,81 +189,42 @@ def save_post(title: str, excerpt: str, content: str, tags: List[str], sources: 
     # Return post_id and a dictionary of the frontmatter data for index/sitemap updates
     return post_id, frontmatter
 
-# Update blog index (still generates index.json, but will be based on MD files later)
-def update_index(post_id: str, title: str, excerpt: str):
+# Update public/posts-index.yaml
+def update_posts_index(post_data: dict):
     repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-    # Keep index.json in public/posts for now, as the frontend reads it
-    index_file = os.path.join(repo_root, "public/posts/index.json")
-    print("Index file:", index_file)
-    index_data = []
+    index_file_path = os.path.join(repo_root, "public/posts-index.yaml")
+    print("Updating posts-index.yaml:", index_file_path)
 
-    if os.path.exists(index_file):
-        try:
-            with open(index_file, "r", encoding="utf-8") as f:
-                index_data = json.load(f)
-        except json.JSONDecodeError:
-            print(f"Warning: Could not decode JSON from {index_file}. Starting with an empty index.")
-            index_data = []
+    current_index = []
+    if os.path.exists(index_file_path):
+        with open(index_file_path, 'r', encoding='utf-8') as f:
+            try:
+                current_index = yaml.safe_load(f)
+                if current_index is None: # Handle empty YAML file
+                    current_index = []
+            except yaml.YAMLError as e:
+                print(f"Error reading posts-index.yaml: {e}. Starting with empty index.")
+                current_index = []
+    
+    # Create the new entry based on the README.md format
+    new_entry = {
+        "slug": generate_slug(post_data["title"]),
+        "title": post_data["title"],
+        "date": post_data["date"],
+    }
+    if post_data.get("imageUrl"):
+        new_entry["imageUrl"] = post_data["imageUrl"]
 
-    # Check if post_id already exists and remove it to update
-    index_data = [post for post in index_data if post.get("id") != post_id]
+    # Check if the post already exists and remove it to update
+    current_index = [entry for entry in current_index if entry.get("slug") != new_entry["slug"]]
 
-    # Insert the new blog post at the beginning of the list
-    index_data.insert(0, {"id": post_id, "title": title, "excerpt": excerpt})
+    # Insert the new entry at the beginning of the list
+    current_index.insert(0, new_entry)
 
-    with open(index_file, "w", encoding="utf-8") as f:
-        json.dump(index_data, f, indent=2)
+    with open(index_file_path, 'w', encoding='utf-8') as f:
+        yaml.dump(current_index, f, sort_keys=False, indent=2, default_flow_style=False, allow_unicode=True)
+    print("posts-index.yaml updated successfully.")
 
-# Update sitemap
-def update_sitemap(post_id: str, post_date: str):
-    repo_root = os.path.abspath(os.path.join(os.path.dirname(__file__), '..'))
-    sitemap_file = os.path.join(repo_root, "public/sitemap.xml")
-    print("Sitemap file:", sitemap_file)
-
-    new_url = f"https://santoninonz.github.io/post/{post_id}" # Updated domain
-    # Ensure date is in YYYY-MM-DD format
-    try:
-        # Parse ISO format and reformat
-        date_obj = datetime.fromisoformat(post_date.replace('Z', '+00:00'))
-        formatted_date = date_obj.strftime('%Y-%m-%d')
-    except ValueError:
-        print(f"Warning: Could not parse date format {post_date}. Using current date for sitemap.")
-        formatted_date = datetime.utcnow().strftime('%Y-%m-%d')
-
-    new_entry = f"""
-  <url>
-    <loc>{new_url}</loc>
-    <lastmod>{formatted_date}</lastmod>
-  </url>""" # Changed from <sitemap> to <url> as per standard sitemap.xml structure
-
-    if os.path.exists(sitemap_file):
-        with open(sitemap_file, "r", encoding="utf-8") as f:
-            sitemap_data = f.read()
-
-        # Check if the URL already exists and replace it
-        url_pattern = re.compile(rf"<loc>{re.escape(new_url)}</loc>.*?<\/url>", re.DOTALL)
-        if url_pattern.search(sitemap_data):
-             print(f"URL {new_url} already exists in sitemap. Replacing entry.")
-             sitemap_data = url_pattern.sub(new_entry, sitemap_data)
-        else:
-            # Find the position to insert the new URL before the closing </urlset> tag
-            insert_pos = sitemap_data.rfind("</urlset>")
-            if insert_pos != -1:
-                sitemap_data = sitemap_data[:insert_pos] + new_entry + sitemap_data[insert_pos:]
-            else:
-                 # If </urlset> not found, append to the end (less ideal)
-                 sitemap_data += new_entry
-
-
-        with open(sitemap_file, "w", encoding="utf-8") as f:
-            f.write(sitemap_data)
-    else:
-        # Create a new sitemap file if it doesn't exist
-        sitemap_data = f"""<?xml version="1.0" encoding="UTF-8"?>
-<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">{new_entry}
-</urlset>""" # Changed root element to <urlset>
-        with open(sitemap_file, "w", encoding="utf-8") as f:
-            f.write(sitemap_data)
 
 # New function to consolidate publishing steps
 def publish_blog_post(title: str, excerpt: str, content: str, tags: List[str], sources: List[str]) -> str:
@@ -295,11 +244,8 @@ def publish_blog_post(title: str, excerpt: str, content: str, tags: List[str], s
             image_path
         )
 
-        # Update blog index (still updates index.json)
-        update_index(post_id, title, excerpt)
-
-        # Update sitemap
-        update_sitemap(post_id, post_data["date"])
+        # Update public/posts-index.yaml
+        update_posts_index(post_data)
 
         # Construct and write PR details to GITHUB_ENV
         pr_title = title
@@ -307,6 +253,9 @@ def publish_blog_post(title: str, excerpt: str, content: str, tags: List[str], s
         pr_content = content # Use edited content for PR body
 
         pr_body = f"# {pr_title}\n\n{pr_excerpt}\n\n{pr_content}\n\n"
+        pr_body += f"This blog post was automatically generated and published by the AI pipeline.\n"
+        pr_body += f"The post has been added to `public/posts/{post_id}.md` and its entry has been added to the top of `public/posts-index.yaml`."
+
 
         # Create a slug from the title for the branch name
         title_slug = re.sub(r'[^a-z0-9]+', '-', pr_title.lower()).strip('-')
