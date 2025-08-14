@@ -38,5 +38,5 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Pass GITHUB_TOKEN to the script
         run: |
           for i in {1..5}; do
-            python scripts/generate_blog_dalle_gemini.py "${{ github.event.inputs.prompt }}" && break || sleep 10
+            python scripts/generate_blog_dalle_gemini.py "${{ github.event.inputs.prompt }}" && break || sleep $((2**i * 5))
           done
