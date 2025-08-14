@@ -409,8 +409,8 @@ async def run_blog_generation_pipeline(prompt: str):
     print("--- 📝 ADK Runner Events ---")
     content = types.Content(role="user", parts=[types.Part(text=prompt)])
 
-    # Create session (synchronous call)
-    session_service.create_session(app_name=APP_NAME, user_id=USER_ID, session_id=SESSION_ID)
+    # Use await for session creation
+    await session_service.create_session(app_name=APP_NAME, user_id=USER_ID, session_id=SESSION_ID)
 
     try:
         # Use run_async and async for
