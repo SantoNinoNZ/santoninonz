@@ -390,8 +390,9 @@ async def run_blog_generation_pipeline(prompt: str):
 
         final_response_text = "Pipeline finished without final response"
         async for event in events:
-            print(f"✨ Event received: {event.type}")
-            if event.type == "agent_output":
+            event_type = getattr(event, 'type', 'Unknown Event Type')
+            print(f"✨ Event received: {event_type}")
+            if event_type == "agent_output":
                 print(f"🤖 Agent '{event.agent_name}' output: {event.content.parts[0].text if event.content and event.content.parts else 'No content'}")
             elif event.is_final_response():
                 if event.content and event.content.parts: # Add check for NoneType
