@@ -242,17 +242,16 @@ def publish_blog_post(title: str, excerpt: str, content: str, tags: List[str], s
     print(f"  Sources: {sources}")
 
     try:
-        # Temporarily disable image generation for debugging 500 INTERNAL error
-        print("🚫 Image generation temporarily disabled for debugging.")
-        image_path = None
-        # image_prompt = title + " " + excerpt
-        # image_path = generate_image(image_prompt)
-        # if image_path:
-        #     print(f"🖼️ Image generated successfully: {image_path}")
-        # else:
-        #     print("⚠️ Image generation failed or returned None. Proceeding without an image.")
-        #     # The pipeline will continue without an image. If the downstream process (e.g., GitHub Actions)
-        #     # requires an image, this might still lead to issues outside of this script's control.
+        # Re-enable image generation
+        print("Generating image...")
+        image_prompt = title + " " + excerpt
+        image_path = generate_image(image_prompt)
+        if image_path:
+            print(f"🖼️ Image generated successfully: {image_path}")
+        else:
+            print("⚠️ Image generation failed or returned None. Proceeding without an image.")
+            # The pipeline will continue without an image. If the downstream process (e.g., GitHub Actions)
+            # requires an image, this might still lead to issues outside of this script's control.
 
         print("💾 Saving blog post...")
 
