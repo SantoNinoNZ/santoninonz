@@ -26,7 +26,7 @@ jobs:
       - name: Install dependencies
         run: |
           pip install langchain-community azure-identity openai>=1.0.0 requests beautifulsoup4 PyYAML duckduckgo-search google-adk google-generativeai
-          sudo apt-get update && sudo apt-get install -y jq
+          sudo apt-get update && sudo apt-get install -y jq gh
 
       - name: Run blog post script
         env:
@@ -35,16 +35,8 @@ jobs:
           GOOGLE_GEMINI_API_KEY: ${{ secrets.GOOGLE_GEMINI_API_KEY }}
           GOOGLE_API_KEY: ${{ secrets.GOOGLE_GEMINI_API_KEY }}
           GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }} # Pass GITHUB_TOKEN to the script
         run: |
           for i in {1..5}; do
             python scripts/generate_blog_dalle_gemini.py "${{ github.event.inputs.prompt }}" && break || sleep 10
           done
-
-      - name: Create Pull Request
-        uses: peter-evans/create-pull-request@v6
-        with:
-          branch: ${{ env.BRANCH_NAME }}
-          title: ${{ env.PR_TITLE }}
-          body: ${{ env.PR_BODY }}
-          base: main
-          token: ${{ secrets.GITHUB_TOKEN }}

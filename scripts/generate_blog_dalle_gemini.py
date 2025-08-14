@@ -17,6 +17,7 @@ from google.adk.sessions import InMemorySessionService
 from google.adk.runners import Runner
 from google.genai import types # For creating message Content/Parts
 import yaml # Import for YAML operations
+import subprocess # Import for running shell commands
 
 load_dotenv()
 
@@ -24,6 +25,7 @@ load_dotenv()
 LLM_PROVIDER = os.getenv("LLM_PROVIDER") # This will be 'gemini' for this script
 GOOGLE_GEMINI_API_KEY = os.getenv("GOOGLE_GEMINI_API_KEY")
 GEMINI_MODEL = os.getenv("GEMINI_MODEL", "gemini-1.5-pro-latest")
+GITHUB_TOKEN = os.getenv("GITHUB_TOKEN") # Get GITHUB_TOKEN from environment
 
 # Initialize Google Gemini client
 genai.configure(api_key=GOOGLE_GEMINI_API_KEY)
@@ -269,7 +271,7 @@ def publish_blog_post(title: str, excerpt: str, content: str, tags: List[str], s
         # Update public/posts-index.yaml
         update_posts_index(post_data)
 
-        # Construct and write PR details to GITHUB_ENV
+        # Construct PR details
         pr_title = title
         pr_excerpt = excerpt
         pr_content = content # Use edited content for PR body
@@ -283,23 +285,53 @@ def publish_blog_post(title: str, excerpt: str, content: str, tags: List[str], s
         title_slug = re.sub(r'[^a-z0-9]+', '-', pr_title.lower()).strip('-')
         branch_name = f"blog-{title_slug}"
 
-        # Write PR details to GITHUB_ENV
-        # Check if GITHUB_ENV is available (e.g., running in GitHub Actions)
-        if 'GITHUB_ENV' in os.environ:
-            with open(os.environ['GITHUB_ENV'], 'a') as env_file:
-                env_file.write(f"PR_TITLE={pr_title}\n")
-                env_file.write(f"BRANCH_NAME={branch_name}\n")
-                # Use a delimiter for multi-line body
-                env_file.write("PR_BODY<<EOF\n")
-                env_file.write(pr_body)
-                env_file.write("EOF\n")
-            print("PR details written to GITHUB_ENV.")
-        else:
-            print("GITHUB_ENV not available. PR details not written.")
-            print(f"PR Title: {pr_title}")
-            print(f"Branch Name: {branch_name}")
-            print(f"PR Body:\n{pr_body}")
+        # Configure Git
+        subprocess.run(["git", "config", "user.name", "github-actions[bot]"], check=True)
+        subprocess.run(["git", "config", "user.email", "github-actions[bot]@users.noreply.github.com"], check=True)
 
+        # Add and commit changes
+        subprocess.run(["git", "add", os.path.join("public/posts", f"{post_id}.md")], check=True)
+        subprocess.run(["git", "add", "public/posts-index.yaml"], check=True)
+        
+        # Check if the branch already exists locally or remotely
+        # If it exists, try to checkout and pull, otherwise create it
+        try:
+            subprocess.run(["git", "fetch", "origin", branch_name], check=False, capture_output=True)
+            branch_exists_remote = subprocess.run(["git", "show-ref", "--verify", f"refs/remotes/origin/{branch_name}"], check=False, capture_output=True).returncode == 0
+            branch_exists_local = subprocess.run(["git", "show-ref", "--verify", f"refs/heads/{branch_name}"], check=False, capture_output=True).returncode == 0
+
+            if branch_exists_local:
+                subprocess.run(["git", "checkout", branch_name], check=True)
+                print(f"Checked out existing local branch: {branch_name}")
+            elif branch_exists_remote:
+                subprocess.run(["git", "checkout", "-t", f"origin/{branch_name}"], check=True)
+                print(f"Checked out existing remote branch: {branch_name}")
+            else:
+                subprocess.run(["git", "checkout", "-b", branch_name], check=True)
+                print(f"Created new branch: {branch_name}")
+        except subprocess.CalledProcessError as e:
+            print(f"Error checking out/creating branch: {e.stderr.decode()}")
+            raise
+
+        subprocess.run(["git", "commit", "-m", f"feat: Add new blog post: {pr_title}"], check=True)
+
+        # Push the new branch
+        # Use --force-with-lease to avoid overwriting others' work if branch exists
+        subprocess.run(["git", "push", "origin", branch_name, "--force-with-lease"], check=True)
+        print(f"Pushed changes to branch: {branch_name}")
+
+        # Create Pull Request using gh CLI
+        # Ensure GITHUB_TOKEN is available as an environment variable for gh CLI
+        env_vars = os.environ.copy()
+        if GITHUB_TOKEN:
+            env_vars["GH_TOKEN"] = GITHUB_TOKEN
+
+        subprocess.run(
+            ["gh", "pr", "create", "--base", "main", "--head", branch_name, "--title", pr_title, "--body", pr_body],
+            check=True,
+            env=env_vars
+        )
+        print(f"Pull Request created for branch: {branch_name}")
 
         return "Blog post published successfully."
 
