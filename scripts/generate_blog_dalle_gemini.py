@@ -439,9 +439,8 @@ async def run_blog_generation_pipeline(prompt: str):
     except Exception as e:
         error_message = str(e)
         print(f"🔥 Error running pipeline: {error_message}")
-        if "Session not found" in error_message:
-            print("🚨 Critical Error: ADK Session not found. Exiting with error code for pipeline retry.")
-            sys.exit(1) # Exit with a non-zero code to signal failure for GitHub Actions retry
+        print("🚨 Critical Error: ADK Session not found. Exiting with error code for pipeline retry.")
+        sys.exit(1) # Exit with a non-zero code to signal failure for GitHub Actions retry
         # Handle other potential errors during the async run
 
 
