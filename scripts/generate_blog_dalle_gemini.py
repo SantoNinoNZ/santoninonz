@@ -392,8 +392,11 @@ async def run_blog_generation_pipeline(prompt: str):
         async for event in events:
             print(event)
             if event.is_final_response():
-                final_response_text = event.content.parts[0].text
-                print("\n📢 Final Publishing Status:\n", final_response_text)
+                if event.content and event.content.parts: # Add check for NoneType
+                    final_response_text = event.content.parts[0].text
+                    print("\n📢 Final Publishing Status:\n", final_response_text)
+                else:
+                    print("\n📢 Final Publishing Status: No content found in final response event.")
 
         print("--- End of ADK Runner Events ---")
         print("Gemini ADK Sequential Pipeline: Pipeline complete.")
