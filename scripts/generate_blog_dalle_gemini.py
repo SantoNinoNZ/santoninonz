@@ -93,11 +93,13 @@ def generate_image(prompt: str) -> str:
                 else:
                     print("Max retries reached for image download.")
                     return None
-        except Exception as e:
+        except (requests.exceptions.RequestException, AzureOpenAI.APIError) as e:
             error_message = str(e)
-            print(f"Error generating image (Attempt {attempt + 1}): {error_message}")
-            if "content_policy_violation" in error_message and attempt < retries - 1:
-                print("Content policy violation detected.")
+            print(f"❌ DALL-E API Error (Attempt {attempt + 1}): {error_message}")
+            if "RateLimitError" in error_message:
+                print("⚠️ Rate limit hit for DALL-E API. Retrying...")
+            elif "content_policy_violation" in error_message:
+                print("⚠️ Content policy violation detected for DALL-E prompt.")
                 if rephrase_attempts > 0:
                     print(f"Attempting to rephrase prompt using Gemini (Rephrasing attempts left: {rephrase_attempts})...")
                     rephrase_prompt_text = f"Rephrase the following image generation prompt to avoid content policy violations: {current_prompt}"
@@ -113,24 +115,27 @@ def generate_image(prompt: str) -> str:
                             print("Gemini returned an empty or identical rephrased prompt.")
                             rephrase_attempts -= 1
                             if rephrase_attempts == 0:
-                                print("Max rephrasing attempts reached.")
+                                print("Max rephrasing attempts reached for Gemini.")
                                 return None # Give up if rephrasing fails
                             else:
                                 continue # Try rephrasing again if attempts remain
                     except Exception as gemini_e:
-                        print(f"Error rephrasing prompt with Gemini: {gemini_e}")
+                        print(f"❌ Error rephrasing prompt with Gemini: {gemini_e}")
                         rephrase_attempts -= 1
                         if rephrase_attempts == 0:
-                            print("Max rephrasing attempts reached.")
+                            print("Max rephrasing attempts reached for Gemini.")
                             return None # Give up if rephrasing fails
                         else:
                             continue # Try rephrasing again if attempts remain
                 else:
-                    print("Max rephrasing attempts reached.")
+                    print("Max rephrasing attempts reached for DALL-E prompt.")
                     return None # Give up if rephrasing attempts are exhausted
             else:
-                print("Max retries reached or non-content policy violation error.")
+                print("Max retries reached or non-content policy violation error for DALL-E.")
                 return None
+        except Exception as e:
+            print(f"❌ Unexpected Error during image generation (Attempt {attempt + 1}): {e}")
+            return None
     return None # Return None if all retries fail
 
 
@@ -229,10 +234,27 @@ def update_posts_index(post_data: dict):
 # New function to consolidate publishing steps
 def publish_blog_post(title: str, excerpt: str, content: str, tags: List[str], sources: List[str]) -> str:
     """Consolidates all blog post publishing steps."""
+    print(f"Attempting to publish blog post:")
+    print(f"  Title: {title}")
+    print(f"  Excerpt length: {len(excerpt)} chars")
+    print(f"  Content length: {len(content)} chars")
+    print(f"  Tags: {tags}")
+    print(f"  Sources: {sources}")
+
     try:
-        # Generate image
-        image_prompt = title + " " + excerpt
-        image_path = generate_image(image_prompt)
+        # Temporarily disable image generation for debugging 500 INTERNAL error
+        print("🚫 Image generation temporarily disabled for debugging.")
+        image_path = None
+        # image_prompt = title + " " + excerpt
+        # image_path = generate_image(image_prompt)
+        # if image_path:
+        #     print(f"🖼️ Image generated successfully: {image_path}")
+        # else:
+        #     print("⚠️ Image generation failed or returned None. Proceeding without an image.")
+        #     # The pipeline will continue without an image. If the downstream process (e.g., GitHub Actions)
+        #     # requires an image, this might still lead to issues outside of this script's control.
+
+        print("💾 Saving blog post...")
 
         # Save blog post to file (now saves as .md)
         post_id, post_data = save_post(
@@ -294,9 +316,18 @@ researcher_agent = Agent(
                 "Utilize the available tools (search_topics, scrape_link) to find relevant articles, data, and insights. "
                 "Synthesize your findings into a detailed summary that will be used by the writing team. "
                 "Focus on providing factual information and diverse perspectives if available. "
-                "Once research is complete, provide the summary as your final response. If you encounter any issues or cannot find relevant information, clearly state that and provide an empty or minimal summary, but always provide a response.",
+                "Once research is complete, provide the summary as your final response. This final response MUST be a plain text summary, not a tool call or any other structured output. For example, start your response with 'Research Summary: ' followed by the summary. If you encounter any issues or cannot find relevant information, clearly state that in a text summary (e.g., 'Research Summary: No relevant information found.') and provide an empty or minimal summary, but always provide a text response.",
     tools=[search_topics, scrape_link],
     output_key="research_findings"
+)
+
+output_cleaner_agent = Agent(
+    name="output_cleaner",
+    model=GEMINI_MODEL, # Can be a lighter model
+    description="Extracts and cleans the text content from previous agent outputs.",
+    instruction="Your input is the raw output from the previous agent, which may contain both text and tool calls. Your task is to process this input and extract ONLY the plain text content. Concatenate all text parts into a single string. Ignore and discard any tool calls or other non-text elements. Provide this extracted plain text string as your final response. Do not add any conversational remarks or formatting. If no text is found in the input, output an empty string.",
+    tools=[],
+    output_key="cleaned_research_findings"
 )
 
 writer_agent = Agent(
@@ -312,7 +343,7 @@ writer_agent = Agent(
     Provide the dictionary as your final response.
     
     **Research Findings:**
-    {research_findings}
+    {cleaned_research_findings}
     """,
     tools=[],
     output_key="blog_post_data"
@@ -360,7 +391,7 @@ publisher_agent = Agent(
 # Agent chain
 pipeline = SequentialAgent(
     name="BlogGenerationPipeline",
-    sub_agents=[researcher_agent, writer_agent, editor_agent, publisher_agent]
+    sub_agents=[researcher_agent, output_cleaner_agent, writer_agent, editor_agent, publisher_agent]
 )
 
 # Runner setup
@@ -377,8 +408,8 @@ async def run_blog_generation_pipeline(prompt: str):
     print("--- 📝 ADK Runner Events ---")
     content = types.Content(role="user", parts=[types.Part(text=prompt)])
 
-    # Use await for session creation
-    await session_service.create_session(app_name=APP_NAME, user_id=USER_ID, session_id=SESSION_ID)
+    # Create session (synchronous call)
+    session_service.create_session(app_name=APP_NAME, user_id=USER_ID, session_id=SESSION_ID)
 
     try:
         # Use run_async and async for
