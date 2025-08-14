@@ -1,0 +1,50 @@
+name: Generate Blog with AI
+
+on:
+  workflow_dispatch:
+    inputs:
+      prompt:
+        description: "Prompt for the blog post"
+        required: true
+
+jobs:
+  generate-blog:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+      pull-requests: write
+
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Setup Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11.3'
+
+      - name: Install dependencies
+        run: |
+          pip install langchain-community azure-identity openai>=1.0.0 requests beautifulsoup4 PyYAML duckduckgo-search google-adk google-generativeai
+          sudo apt-get update && sudo apt-get install -y jq
+
+      - name: Run blog post script
+        env:
+          AZURE_OPENAI_API_KEY: ${{ secrets.AZURE_OPENAI_API_KEY }}
+          AZURE_OPENAI_ENDPOINT: ${{ secrets.AZURE_OPENAI_ENDPOINT }}
+          GOOGLE_GEMINI_API_KEY: ${{ secrets.GOOGLE_GEMINI_API_KEY }}
+          GOOGLE_API_KEY: ${{ secrets.GOOGLE_GEMINI_API_KEY }}
+          GEMINI_MODEL: ${{ secrets.GEMINI_MODEL }}
+        run: |
+          for i in {1..5}; do
+            python scripts/generate_blog_dalle_gemini.py "${{ github.event.inputs.prompt }}" && break || sleep 10
+          done
+
+      - name: Create Pull Request
+        uses: peter-evans/create-pull-request@v6
+        with:
+          branch: ${{ env.BRANCH_NAME }}
+          title: ${{ env.PR_TITLE }}
+          body: ${{ env.PR_BODY }}
+          base: main
+          token: ${{ secrets.GITHUB_TOKEN }}
