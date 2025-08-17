@@ -51,11 +51,21 @@ const Header: React.FC<HeaderProps> = ({ onSearchChange, searchQuery }) => {
           <li><Link href="/the-trust" className="hover:text-gray-300 transition-colors duration-300">The Trust</Link></li>
           <li><Link href="/projects" className="hover:text-gray-300 transition-colors duration-300">Projects</Link></li>
           <li><Link href="/join-us" className="hover:text-gray-300 transition-colors duration-300">Join Us</Link></li>
+          <li className="relative group">
+            <span className="hover:text-gray-300 transition-colors duration-300 cursor-pointer">Requests</span>
+            <ul className="absolute hidden group-hover:block bg-white/10 backdrop-blur-md rounded-md mt-2 py-2 px-4 space-y-2">
+              <li><Link href="/prayer-request" className="block hover:text-gray-300 transition-colors duration-300">Prayer Request</Link></li>
+              <li><Link href="/home-visit-request" className="block hover:text-gray-300 transition-colors duration-300">Home Visit Request</Link></li>
+            </ul>
+          </li>
           <li><Link href="/contact" className="hover:text-gray-300 transition-colors duration-300">Contact</Link></li>
-          <li><Link href="/donate" className="hover:text-gray-300 transition-colors duration-300">Donate</Link></li>
+        </ul>
+        <ul className="flex space-x-4 font-medium ml-4">
+          <li><Link href="https://www.facebook.com/SinulogNZ" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors duration-300">Facebook</Link></li>
+          <li><Link href="https://givealittle.co.nz/donate/org/sinulognz" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors duration-300">Donate</Link></li>
         </ul>
         {onSearchChange && searchQuery !== undefined && (
-          <div className="relative">
+          <div className="relative ml-4">
             <input
               type="text"
               placeholder="Search..."
@@ -82,8 +92,11 @@ const Header: React.FC<HeaderProps> = ({ onSearchChange, searchQuery }) => {
             <li><Link href="/the-trust" className="hover:text-gray-300 transition-colors duration-300" onClick={toggleMobileMenu}>The Trust</Link></li>
             <li><Link href="/projects" className="hover:text-gray-300 transition-colors duration-300" onClick={toggleMobileMenu}>Projects</Link></li>
             <li><Link href="/join-us" className="hover:text-gray-300 transition-colors duration-300" onClick={toggleMobileMenu}>Join Us</Link></li>
+            <li><Link href="/prayer-request" className="hover:text-gray-300 transition-colors duration-300" onClick={toggleMobileMenu}>Prayer Request</Link></li>
+            <li><Link href="/home-visit-request" className="hover:text-gray-300 transition-colors duration-300" onClick={toggleMobileMenu}>Home Visit Request</Link></li>
             <li><Link href="/contact" className="hover:text-gray-300 transition-colors duration-300" onClick={toggleMobileMenu}>Contact</Link></li>
-            <li><Link href="/donate" className="hover:text-gray-300 transition-colors duration-300" onClick={toggleMobileMenu}>Donate</Link></li>
+            <li><Link href="https://www.facebook.com/SinulogNZ" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors duration-300" onClick={toggleMobileMenu}>Facebook</Link></li>
+            <li><Link href="https://givealittle.co.nz/donate/org/sinulognz" target="_blank" rel="noopener noreferrer" className="hover:text-gray-300 transition-colors duration-300" onClick={toggleMobileMenu}>Donate</Link></li>
           </ul>
         </div>
       )}
