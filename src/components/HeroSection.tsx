@@ -133,33 +133,33 @@ const HeroSection: React.FC<HeroSectionProps> = ({ latestPost, upcomingEvents })
   const gospelInfo = extractBookAndExcerpt(gospelContent);
 
   return (
-    <div className="relative w-full h-screen flex flex-col items-center justify-center">
+    <div className="relative w-full min-h-screen flex flex-col items-center justify-center overflow-hidden">
       {/* Content Overlay */}
-      <div className="relative z-10 w-full max-w-screen-xl px-4 py-12 flex flex-col text-white">
+      <div className="relative z-10 w-full max-w-screen-xl px-4 py-8 sm:py-12 flex flex-col text-white">
         {/* Date and Liturgical Indication */}
-        <div className="text-lg font-bold text-right mb-4 ml-auto">
+        <div className="text-lg font-bold text-right mb-4 ml-auto pt-4">
           <p>{currentNZDate}</p>
           <p>{liturgicalIndication}</p>
         </div>
 
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {/* Left Column: Latest Post */}
-          <div className="relative group bg-white/10 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
-            <h3 className="text-2xl font-lora font-bold mb-4">Latest Post</h3>
+          <div className="relative group bg-white/10 p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+            <h3 className="text-xl sm:text-2xl font-lora font-bold mb-2 sm:mb-4">Latest Post</h3>
             {latestPost && (
               <Link href={`/posts/${latestPost.slug}`} className="block">
                 <h4 className="text-xl font-bold group-hover:text-gray-300 transition-colors duration-300">{latestPost.title}</h4>
                 <p className="text-gray-200 text-sm mb-2">{new Date(latestPost.date.split('/').reverse().join('-')).toLocaleString('en-NZ', { year: 'numeric', month: 'long', day: 'numeric' })}</p>
-                <p className="text-gray-100">{latestPost.excerpt || 'Click to read more...'}</p>
+                <p className="text-gray-100">{latestPost.excerpt || `Click to read more...`}</p>
                 <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
               </Link>
             )}
           </div>
 
           {/* Right Column: Today's Gospel Reading and Catholic Season */}
-          <div className="relative group bg-white/10 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <div className="relative group bg-white/10 p-4 sm:p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
             <Link href="/todays-reading" className="block">
-              <h3 className="text-2xl font-lora font-bold mb-4 group-hover:text-gray-300 transition-colors duration-300">Today's Readings</h3>
+              <h3 className="text-xl sm:text-2xl font-lora font-bold mb-2 sm:mb-4 group-hover:text-gray-300 transition-colors duration-300">Today's Readings</h3>
               {readingInfo.book && (
                 <p className="mb-2">
                   <strong>{readingInfo.book}:</strong> {readingInfo.excerpt}
@@ -177,8 +177,8 @@ const HeroSection: React.FC<HeroSectionProps> = ({ latestPost, upcomingEvents })
 
         {/* Upcoming Events Section */}
         {upcomingEvents.length > 0 && (
-          <div className="mt-8 bg-white/10 p-6 rounded-lg shadow-lg">
-            <h3 className="text-2xl font-lora font-bold mb-4 text-white">Upcoming Events</h3>
+          <div className="mt-8 bg-white/10 p-4 sm:p-6 rounded-lg shadow-lg">
+            <h3 className="text-xl sm:text-2xl font-lora font-bold mb-2 sm:mb-4 text-white">Upcoming Events</h3>
             <div className="grid grid-cols-1 md:grid-cols-2 gap-4">
               {upcomingEvents.map((event) => (
                 <Link key={event.slug} href={`/events/${event.slug}`} className="block group">
