@@ -1,0 +1,15 @@
+- slug: santo-nino-novena-mass
+  title: Santo Nino Novena Mass
+  type: recurring
+  recurrence: Every First and Third Friday of the Month
+  time: 7:30 PM
+  venue: St Benedicts Church
+  address: 1 Saint Benedicts Street, Eden Terrace, Auckland 1010
+- slug: santo-nino-fiesta-2025
+  title: Santo Nino Fiesta Mass 2025
+  type: dated
+  startDate: January 10, 2025
+  endDate: January 18, 2025
+  venue: St. Benedict’s Parish of Newton-Auckland
+  address: 1 St Benedict’s Street, Eden Terrace, Auckland 1010
+  rosaryTime: 6:30 pm

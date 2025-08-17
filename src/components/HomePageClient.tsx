@@ -5,12 +5,14 @@ import PostGrid from "@/components/PostGrid";
 import HeroSection from "@/components/HeroSection";
 import Header from "@/components/Header";
 import { Post } from '@/lib/posts';
+import { Event } from '@/lib/events'; // Import Event type
 
 interface HomePageClientProps {
   initialPosts: Post[];
+  upcomingEvents: Event[]; // Add upcomingEvents prop
 }
 
-const HomePageClient: React.FC<HomePageClientProps> = ({ initialPosts }) => {
+const HomePageClient: React.FC<HomePageClientProps> = ({ initialPosts, upcomingEvents }) => {
   const [searchQuery, setSearchQuery] = useState<string>("");
 
   const handleSearchChange = (query: string) => {
@@ -31,7 +33,7 @@ const HomePageClient: React.FC<HomePageClientProps> = ({ initialPosts }) => {
     <main className="relative flex min-h-screen flex-col items-center pt-24">
       <Header onSearchChange={handleSearchChange} searchQuery={searchQuery} />
 
-      {!searchQuery && <HeroSection latestPost={latestPost} />}
+      {!searchQuery && <HeroSection latestPost={latestPost} upcomingEvents={upcomingEvents} />}
 
       <section className="w-full max-w-screen-xl px-4 py-12">
         <h2 className="text-4xl font-lora font-bold text-white mb-8 text-center">
