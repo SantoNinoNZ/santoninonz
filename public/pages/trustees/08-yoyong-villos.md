@@ -1,5 +1,8 @@
 ---
-name: Jewel Villos
-imagePath: /pages/trustees/images/jewel.jpg
+name: Robert Villos
+imagePath: /pages/trustees/images/yoyong.jpg
 ---
-JEWEL VILLOS, raised by Sto Nino devotees in Cagayan de Oro, arrived in New Zealand on April 2014 that marked her long distance relationship with her family which she was not accustomed to. By God's grace she found her place working as a business lecturer in a Private Tertiary Education provider which helped her settle and further her knowledge in Adult Tertiary education. Jewel is currently working as a Faculty Academic Lead at NZMA designing academic programmes for accreditation to NZQA. Outside of work, she is the brain and hand behind Tinapay Atbp where you get your mouth watering milky Cheese Rolls. With Jewel's high energy, and entrepreneurial spirit, you'll also find her in various Filipino events. Jewel and her husband, Robert are also proud members of the Couples for Christ West Auckland Chapter.
+ROBERT VILLOS also known as Yoyong or Yongvils to his close friends and family came to New Zealand in 2015.  Being away 
+from home,this gravitated him to strengthen his faith to the Lord through Sto. Nino. Since then, he became a silent 
+devotee until Sto. Nino did his mysterious works by transforming his silent devotion to be a more visible. Together with his wife Jewel, the became the 2023 Hermano and Hermana.  Despite being a Business graduate, Yoyong pursued his career in the Trades industry here in New Zealand, specialising in group home builds. He’s currently the branch manager for Mico Bathrooms and Plumbing Wairau branch, a Fletcher Building company. Yoyong and his wife, Jewel are proud members of the Couples for Christ West Auckland Chapter.
+
