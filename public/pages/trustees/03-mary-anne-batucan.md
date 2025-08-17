@@ -1,7 +1,5 @@
 ---
 name: Mary Anne Batucan
-imagePath: /pages/trustees/images/MaryAnneBatucan.webp
+imagePath: /pages/trustees/images/maryanne.jpg
 ---
-Mary Anne Batucan is currently working as a senior software analyst for Trustwave Inc. Anne, as she is known to her friends and family, has 12 years experience in IT in the telecommunications, airline, healthcare, email and web security industries. As well as a having a full time job Anne is also a managing director of a property investment company and director of a software development company.
-
-She has been actively involved in the Trust’s activities since its inception and is currently the secretary for the trust
+MARY ANNE BATUCAN is currently working as a Technical Business Analyst for Equifax.   Anne as she is known to family and friends has had a number of years experience in IT particularly in healthcare, telecommunications, email and web security, airline and credit bureaus. She has been actively involved in the Trust’s activities since its inception and is currently the Secretary for the Trust.
