@@ -21,7 +21,7 @@ const DonatePage = async () => {
       <Header />
       <div className="container mx-auto px-4 py-8 max-w-screen-xl bg-white rounded-lg shadow-lg">
         <h1 className="text-4xl md:text-5xl font-lora font-bold mb-4 text-[#2B1E1A] leading-tight">
-          Projects
+          Donate
         </h1>
         <div
           className="prose prose-lg max-w-none text-[#2B1E1A] font-roboto"
