@@ -51,7 +51,7 @@ const Header: React.FC<HeaderProps> = ({ onSearchChange, searchQuery }) => {
           <li><Link href="/the-trust" className="hover:text-gray-300 transition-colors duration-300">The Trust</Link></li>
           <li><Link href="/projects" className="hover:text-gray-300 transition-colors duration-300">Projects</Link></li>
           <li><Link href="/join-us" className="hover:text-gray-300 transition-colors duration-300">Join Us</Link></li>
-          <li><Link href="/events" className="hover:text-gray-300 transition-colors duration-300">Events</Link></li>
+          <li><Link href="/donate" className="hover:text-gray-300 transition-colors duration-300">Donate</Link></li>
           <li><Link href="/contact" className="hover:text-gray-300 transition-colors duration-300">Contact</Link></li>
         </ul>
         {onSearchChange && searchQuery !== undefined && (
@@ -82,7 +82,7 @@ const Header: React.FC<HeaderProps> = ({ onSearchChange, searchQuery }) => {
             <li><Link href="/the-trust" className="hover:text-gray-300 transition-colors duration-300" onClick={toggleMobileMenu}>The Trust</Link></li>
             <li><Link href="/projects" className="hover:text-gray-300 transition-colors duration-300" onClick={toggleMobileMenu}>Projects</Link></li>
             <li><Link href="/join-us" className="hover:text-gray-300 transition-colors duration-300" onClick={toggleMobileMenu}>Join Us</Link></li>
-            <li><Link href="/events" className="hover:text-gray-300 transition-colors duration-300" onClick={toggleMobileMenu}>Events</Link></li>
+            <li><Link href="/donate" className="hover:text-gray-300 transition-colors duration-300" onClick={toggleMobileMenu}>Donate</Link></li>
             <li><Link href="/contact" className="hover:text-gray-300 transition-colors duration-300" onClick={toggleMobileMenu}>Contact</Link></li>
           </ul>
         </div>
