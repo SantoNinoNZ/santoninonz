@@ -15,7 +15,8 @@ def generate_url(date_str):
 def scrape_vatican_news(url):
     response = requests.get(url)
     response.raise_for_status()  # Raise an HTTPError for bad responses (4xx or 5xx)
-    soup = BeautifulSoup(response.text, 'html.parser')
+    # Explicitly decode content as UTF-8 before passing to BeautifulSoup
+    soup = BeautifulSoup(response.content.decode('utf-8'), 'html.parser')
 
     # Extract the liturgical indication (e.g., "Twentieth Sunday in Ordinary Time")
     liturgical_indication_tag = soup.find('div', class_='indicazioneLiturgica')

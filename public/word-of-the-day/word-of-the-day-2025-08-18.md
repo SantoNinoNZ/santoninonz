@@ -42,23 +42,23 @@ From the Gospel according to Matthew
 19:16-22
 
 A young man approached Jesus and said,
-âTeacher, what good must I do to gain eternal life?â
-He answered him, âWhy do you ask me about the good?
+“Teacher, what good must I do to gain eternal life?”
+He answered him, “Why do you ask me about the good?
 There is only One who is good.
-If you wish to enter into life, keep the commandments.â
-He asked him, âWhich ones?â
-And Jesus replied, âYou shall not kill;
+If you wish to enter into life, keep the commandments.”
+He asked him, “Which ones?”
+And Jesus replied, “You shall not kill;
 you shall not commit adultery;
 you shall not steal;
 you shall not bear false witness;
 honor your father and your mother;
-and you shall love your neighbor as yourself.â
+and you shall love your neighbor as yourself.”
 The young man said to him,
-âAll of these I have observed. What do I still lack?â
-Jesus said to him, âIf you wish to be perfect, go,
+“All of these I have observed. What do I still lack?”
+Jesus said to him, “If you wish to be perfect, go,
 sell what you have and give to the poor,
 and you will have treasure in heaven.
-Then come, follow me.â
+Then come, follow me.”
 When the young man heard this statement, he went away sad,
 for he had many possessions.
 

@@ -149,18 +149,22 @@ const HeroSection: React.FC<HeroSectionProps> = ({ latestPost }) => {
         </div>
 
         {/* Right Column: Today's Gospel Reading and Catholic Season */}
-        <div className="bg-white/10 p-6 rounded-lg shadow-lg">
-          <h3 className="text-2xl font-lora font-bold mb-4">Today's Readings</h3>
-          {readingInfo.book && (
-            <p className="mb-2">
-              <strong>{readingInfo.book}:</strong> {readingInfo.excerpt}
-            </p>
-          )}
-          {gospelInfo.book && (
-            <p className="mb-4">
-              <strong>{gospelInfo.book}:</strong> {gospelInfo.excerpt}
-            </p>
-          )}
+        <div className="relative group bg-white/10 p-6 rounded-lg shadow-lg hover:shadow-xl transition-all duration-300">
+          <a href="/todays-reading" className="block">
+            <h3 className="text-2xl font-lora font-bold mb-4 group-hover:text-gray-300 transition-colors duration-300">Today's Readings</h3>
+            {readingInfo.book && (
+              <p className="mb-2">
+                <strong>{readingInfo.book}:</strong> {readingInfo.excerpt}
+              </p>
+            )}
+            {gospelInfo.book && (
+              <p className="mb-4">
+                <strong>{gospelInfo.book}:</strong> {gospelInfo.excerpt}
+              </p>
+            )}
+            {/* Transparent overlay on hover */}
+            <div className="absolute inset-0 bg-black opacity-0 group-hover:opacity-10 transition-opacity duration-300 rounded-lg"></div>
+          </a>
         </div>
       </div> {/* Closing div for grid container */}
       </div> {/* Closing div for max-w-screen-xl container */}
