@@ -1,0 +1,23 @@
+{
+  "name": "Santo Niño New Zealand",
+  "short_name": "Santo Niño NZ",
+  "description": "Official website for Santo Niño New Zealand - Keeping the Faith",
+  "start_url": "/",
+  "display": "standalone",
+  "background_color": "#E8E2D1",
+  "theme_color": "#861D1D",
+  "orientation": "portrait-primary",
+  "icons": [
+    {
+      "src": "/santonino.svg",
+      "sizes": "any",
+      "type": "image/svg+xml",
+      "purpose": "any maskable"
+    }
+  ],
+  "categories": ["religion", "community", "lifestyle"],
+  "lang": "en-US",
+  "dir": "ltr",
+  "scope": "/",
+  "id": "santo-nino-nz"
+}
