@@ -9,6 +9,12 @@ on:
   push:
     branches: ["main"]
 
+  # Triggers when the scraping workflow completes
+  workflow_run:
+    workflows: ["Scrape Vatican Word of the Day"]
+    types:
+      - completed
+
   # Allows you to run this workflow manually from the Actions tab
   workflow_dispatch:
 
