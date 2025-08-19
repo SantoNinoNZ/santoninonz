@@ -2,7 +2,7 @@ name: Scrape Vatican Word of the Day
 
 on:
   schedule:
-    - cron: '0 0 * * *' # Run daily at midnight UTC
+    - cron: '0 11 * * *' # Run daily at 11:00 UTC (midnight NZDT / 11pm NZST)
   workflow_dispatch: # Allows manual triggering
 
 permissions:
